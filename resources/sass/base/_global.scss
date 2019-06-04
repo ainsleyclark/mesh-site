@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+// _base.scss
+// This file contains very basic styles to reset document.
+// -----------------------------------------------------------------------------
+
+html {
+	font-size: 92.5%;
+
+	@include media-tab {
+		font-size: 97.5%;
+	}
+
+	@include media-desk {
+		font-size: 100%;
+	}
+}
+
+html, 
+body,
+a,
+a:visited {
+	color: #3c4858;
+}
+
+
+
+main {
+	position: relative;
+}
+
+
+//! Come back to, conflicts with lists
+// a:not(.nohover) {
+// 	transition: color 0.2s;
+
+// 	@include on-event {
+// 		color: color(primary);
+// 	}
+// }
