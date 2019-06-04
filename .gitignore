@@ -1,0 +1,7 @@
+node_modules
+.vagrant
+*.ai
+fontawesome
+.vscode
+homestead.yaml
+/vendor
