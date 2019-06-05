@@ -39,78 +39,73 @@ class RenderComponents extends Command
      */
     public function handle()
     {
-        //
-        $scssimports = [
-            'global' => [
-                "normalize" => "@import '../../src/base/normalize';"
-            ],
-            'util' => [
-                "spacing" => "@import '../../src/util/_spacing';",
-                "position" => "@import '../../src/util/_position';",
-                "sizing" => "@import '../../src/util/_sizing';",
-                "colors" => "@import '../../src/util/_colors';",
-                "type" => "@import '../../src/util/_type';",
-                "borders" => "@import '../../src/util/_borders';",
-                "spacers" => "@import '../../src/util/_spacers';",
-                "float" => "@import '../../src/util/_float';",
-                "visibility" => "@import '../../src/util/_visibility';",
-                "media" => "@import '../../src/util/_media';",
-            ],
-            'components' => [
-                "alerts" => "@import '../../src/components/_alerts';",
-                "badges" => "@import '../../src/components/_badges';",
-                "breadcrumb" => "@import '../../src/components/_breadcrumb';",
-                "button" => "@import '../../src/components/_button';",
-                "card" => "@import '../../src/components/_card';",
-                "collapse" => "@import '../../src/components/_collapse';",
-                "epic" => "@import '../../src/components/_epic';",
-                "list" => "@import '../../src/components/_list';",
-                "modal" => "@import '../../src/components/_modal';",
-                "pagination" => "@import '../../src/components/_pagination';",
-                "table" => "@import '../../src/components/_table';",
-                "tabs" => "@import '../../src/components/_tabs';",
-                "tooltip" => "@import '../../src/components/_tooltip';",
-                "toast" => "@import '../../src/components/_toast';",
+        $scss_dir = '../mesh-src/src';
+        $userVars = [
+            'scssimports' => [
+                'global' => [
+                    "normalize" => '@import \''.$scss_dir.'/base/normalize\';'
+                ],
+                'util' => [
+                    "spacing" => '@import \''.$scss_dir.'/util/_spacing\';',
+                    "position" => '@import \''.$scss_dir.'/util/_position\';',
+                    "sizing" => '@import \''.$scss_dir.'/util/_sizing\';',
+                    "colors" => '@import \''.$scss_dir.'/util/_colors\';',
+                    "type" => '@import \''.$scss_dir.'/util/_type\';',
+                    "borders" => '@import \''.$scss_dir.'/util/_borders\';',
+                    "spacers" => '@import \''.$scss_dir.'/util/_spacers\';',
+                    "float" => '@import \''.$scss_dir.'/util/_float\';',
+                    "visibility" => '@import \''.$scss_dir.'/util/_visibility\';',
+                    "media" => '@import \''.$scss_dir.'/util/_media\';' 
+                ],
+                'components' => [
+                    "alerts" => '@import \''.$scss_dir.'/components/_alerts\';',
+                    "badges" => '@import \''.$scss_dir.'/components/_badges\';',
+                    "breadcrumb" => '@import \''.$scss_dir.'/components/_breadcrumb\';',
+                    "button" => '@import \''.$scss_dir.'/components/_button\';',
+                    "card" => '@import \''.$scss_dir.'/components/_card\';',
+                    "collapse" => '@import \''.$scss_dir.'/components/_collapse\';',
+                    "epic" => '@import \''.$scss_dir.'/components/_epic\';',
+                    "list" => '@import \''.$scss_dir.'/components/_list\';',
+                    "modal" => '@import \''.$scss_dir.'/components/_modal\';',
+                    "pagination" => '@import \''.$scss_dir.'/components/_pagination\';',
+                    "table" => '@import \''.$scss_dir.'/components/_table\';',
+                    "tabs" => '@import \''.$scss_dir.'/components/_tabs\';',
+                    "tooltip" => '@import \''.$scss_dir.'/components/_tooltip\';',
+                    "toast" => '@import \''.$scss_dir.'/components/_toast\';'
+                ]
             ]
         ];
 
-        $this->line(print_r($scssimports));
 
-        $scss = View::make('builder.components', $scssimports)->render();
-        $fileName = md5(serialize($scssimports).time());
-        $tempFile = base_path('mesh-src/temp-css/'.$fileName);
+        //$this->line(print_r($userVars['scssimports']));
+
+        $scss = View::make('builder.components', $userVars['scssimports'])->render();
+        $fileName = md5(serialize($userVars['scssimports']).time());
+        $tempFile = base_path('temp/' . $fileName);
+        file_put_contents('temp/' . $fileName . '.scss', $scss);
+
+        $scssFile = $tempFile . '.scss';
 
         chdir('mesh-src');
-        $newdir = shell_exec('mkdir '.$tempFile);
-        file_put_contents($tempFile . '/' . $fileName . '.scss', $scss);
+
+        $test = shell_exec('gulp website --input ' . $scssFile . ' --output ' . base_path('temp/') . $fileName . '.css --build_dir ' . base_path('temp/'));
+
+        $this->line($test);
+        // //Delete scss file
+        //unlink($scssFile);
 
 
-        //! NEED TO CLEAN THIS UP, NOT NECCESSARY TO USE MESH.CSS CAN REDEFINE IT IN DOWNLOAD METHOD OF RESPONSE CLASS
-
-        //Build CSS
-        shell_exec('node_modules/.bin/node-sass --include-path scss temp-css/'.$fileName.'/'.$fileName.'.scss temp-css/'.$fileName.'/mesh.css --output-style expanded');
-        //Add Prefix
-        shell_exec("node_modules/.bin/postcss temp-css/" . $fileName . '/mesh.css --use=autoprefixer --no-map --output=temp-css/' . $fileName . '/mesh.css');
-        //Clean
-        shell_exec('node_modules/.bin/prettier --config ./config/.prettierrc --write "temp-css/' . $fileName . '/mesh.css" --ignore-path ./config/.prettierignore');
-        //Minify
-        shell_exec('node_modules/.bin/cleancss --level=1 --output temp-css/' . $fileName . '/mesh.min.css temp-css/' . $fileName . '/mesh.css');
-
-        //Delete scss file
-        unlink($tempFile . '/' . $fileName . '.scss');
+        // $path = base_path().'/mesh-src/temp-css/51e7edc9df0378dde14656157f84e3a6/mesh.css';
 
 
-        $path = base_path().'/mesh-src/temp-css/51e7edc9df0378dde14656157f84e3a6/mesh.css';
-
-
-        $download = Response::download($tempFile . '/' . 'mesh.css');
+        // $download = Response::download($tempFile . '/' . 'mesh.css');
 
         
-        //$this->line($newdir);
-        $this->line($download);
-        //$this->line($tempFile);
-        $FILENAMESTRING = '071a9648b6b368b3f5a16f7a7922462f';
-        $TEMPORARYFILE = '/Users/Ainsley/Desktop/Web/mesh-site/mesh-src/temp-css/b0abbfa257f71847e73fcd528e1e2e2d TEMPFILE';
+        // //$this->line($newdir);
+        // $this->line($download);
+        // //$this->line($tempFile);
+        // $FILENAMESTRING = '071a9648b6b368b3f5a16f7a7922462f';
+        // $TEMPORARYFILE = '/Users/Ainsley/Desktop/Web/mesh-site/mesh-src/temp-css/b0abbfa257f71847e73fcd528e1e2e2d TEMPFILE';
 
 
     }

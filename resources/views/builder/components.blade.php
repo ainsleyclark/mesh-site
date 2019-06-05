@@ -14,23 +14,23 @@
 
 //Abstracts
 // ==========================================================================
-@import '../../src/abstracts/_functions.scss';
-@import '../../src/abstracts/_mixins';
-@import '../../src/abstracts/_variables';
+@import '../mesh-src/src/abstracts/_functions.scss';
+@import '../mesh-src/src/abstracts/_mixins';
+@import '../mesh-src/src/abstracts/_variables';
 
 //Base
 // ==========================================================================
 @foreach($global as $name => $import)
 {!! $import !!}
 @endforeach
-@import '../../src/base/_global';
+@import '../mesh-src/src/base/_global';
 
 //Grid
 // ==========================================================================
-@import '../../src/grid/_grid';
-@import '../../src/grid/_flex';
-@import '../../src/grid/_order';
-@import '../../src/grid/_display';
+@import '../mesh-src/src/grid/_grid';
+@import '../mesh-src/src/grid/_flex';
+@import '../mesh-src/src/grid/_order';
+@import '../mesh-src/src/grid/_display';
 
 //Util
 // ==========================================================================
