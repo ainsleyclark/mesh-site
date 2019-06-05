@@ -4,6 +4,8 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\View;
+use Carbon;
+use ZipArchive;
 use Response;
 
 class RenderComponents extends Command
@@ -30,6 +32,35 @@ class RenderComponents extends Command
     public function __construct()
     {
         parent::__construct();
+    }
+
+    public function liveExecuteCommand($cmd){
+
+        while (@ ob_end_flush()); // end all output buffers if any
+
+        $proc = popen("$cmd 2>&1 ; echo Exit status : $?", 'r');
+
+        $live_output     = "";
+        $complete_output = "";
+
+        while (!feof($proc))
+        {
+            $live_output     = fread($proc, 4096);
+            $complete_output = $complete_output . $live_output;
+            echo "$live_output";
+            @ flush();
+        }
+
+        pclose($proc);
+
+        // get exit status
+        preg_match('/[0-9]+$/', $complete_output, $matches);
+
+        // return exit status and intended output
+        return array (
+                        'exit_status'  => intval($matches[0]),
+                        'output'       => str_replace("Exit status : " . $matches[0], '', $complete_output)
+                    );
     }
 
     /**
@@ -85,14 +116,23 @@ class RenderComponents extends Command
         file_put_contents('temp/' . $fileName . '.scss', $scss);
 
         $scssFile = $tempFile . '.scss';
+        $cssFiles = [
+            $tempFile . '.css',
+            $tempFile . '.min.css'
+        ];
 
         chdir('mesh-src');
 
-        $test = shell_exec('gulp website --input ' . $scssFile . ' --output ' . base_path('temp/') . $fileName . '.css --build_dir ' . base_path('temp/'));
+        $this->liveExecuteCommand('gulp website --input ' . $scssFile . ' --output ' . base_path('temp/') . $fileName . '.css --build_dir ' . base_path('temp/'));
+        //! OR
+        //$shell_response = shell_exec('gulp website --input ' . $scssFile . ' --output ' . base_path('temp/') . $fileName . '.css --build_dir ' . base_path('temp/'));
 
-        $this->line($test);
-        // //Delete scss file
-        //unlink($scssFile);
+        //Delete scss file
+        unlink($scssFile);
+
+
+
+        $this->zipFiles($cssFiles);
 
 
         // $path = base_path().'/mesh-src/temp-css/51e7edc9df0378dde14656157f84e3a6/mesh.css';
@@ -108,5 +148,33 @@ class RenderComponents extends Command
         // $TEMPORARYFILE = '/Users/Ainsley/Desktop/Web/mesh-site/mesh-src/temp-css/b0abbfa257f71847e73fcd528e1e2e2d TEMPFILE';
 
 
+    }
+
+    public function zipFiles($files) {
+
+        // define the name of the archive and create a new ZipArchive instance.
+        $archiveFile = base_path("app/Downloads/");
+        $archive = new ZipArchive();
+
+        // check if the archive could be created.
+        if ($archive->open($archiveFile, ZipArchive::CREATE | ZipArchive::OVERWRITE)) {
+
+            foreach ($files as $file) {
+                if ($archive->addFile($file, basename($file))) {
+                        $archive->addFile($file, basename($file));
+                    continue;
+                } else {
+                    throw new Exception("file `{$file}` could not be added to the zip file: " . $archive->getStatusString());
+                }
+            }
+
+            // close the archive.
+
+                $archive->close();
+                return response()->download($archiveFile, basename($archiveFile))->deleteFileAfterSend(true);
+
+        } else {
+            throw new Exception("zip file could not be created: " . $archive->getStatusString());
+        }
     }
 }
