@@ -15,3 +15,6 @@ fontawesome
 .DS_Store
 **/.DS_Store
 .vscode/
+
+# mesh-src folders:
+/mesh-src/README.md
