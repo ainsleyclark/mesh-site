@@ -199,7 +199,7 @@ Notifications
 <article class="section-scroll" id="variables">
     <h2 class="b-b-light hash">Variables</h2>
     <p class="secondary-lead">
-        Choose from different badge options and enable/disable classes you reqire. Customise the font style & padding of the badges too.
+        Choose from different badge options and enable/disable classes you require. Customise the font style & padding of the badges too.
     </p>
     <div class="table-scroll">
         <table class="table">

@@ -55,7 +55,7 @@ class GettingStartedController extends Controller
             ]
         ]);
 
-        return view('documentation.gettingstarted.builder', $this->pageData);
+        return view('builder.builder-home', $this->pageData);
     }
 
     public function notation() { 

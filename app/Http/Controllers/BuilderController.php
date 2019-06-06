@@ -1,74 +1,16 @@
 <?php
 
-namespace App\Console\Commands;
+namespace App\Http\Controllers;
 
-use Illuminate\Console\Command;
-use Illuminate\Support\Facades\View;
-use Carbon;
-use ZipArchive;
-use Response;
+use Illuminate\Http\Request;
 
-class RenderComponents extends Command
+class BuilderController extends Controller
 {
-    /**
-     * The name and signature of the console command.
-     *
-     * @var string
-     */
-    protected $signature = 'test';
 
     /**
-     * The console command description.
      *
-     * @var string
      */
-    protected $description = 'Command description';
-
-    /**
-     * Create a new command instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        parent::__construct();
-    }
-
-    public function liveExecuteCommand($cmd){
-
-        while (@ ob_end_flush()); // end all output buffers if any
-
-        $proc = popen("$cmd 2>&1 ; echo Exit status : $?", 'r');
-
-        $live_output     = "";
-        $complete_output = "";
-
-        while (!feof($proc))
-        {
-            $live_output     = fread($proc, 4096);
-            $complete_output = $complete_output . $live_output;
-            echo "$live_output";
-            @ flush();
-        }
-
-        pclose($proc);
-
-        // get exit status
-        preg_match('/[0-9]+$/', $complete_output, $matches);
-
-        // return exit status and intended output
-        return array (
-                        'exit_status'  => intval($matches[0]),
-                        'output'       => str_replace("Exit status : " . $matches[0], '', $complete_output)
-                    );
-    }
-
-    /**
-     * Execute the console command.
-     *
-     * @return mixed
-     */
-    public function handle()
+    public function getImportsArray()
     {
         $scss_dir = '../../mesh-src/src';
         $userVars = [
@@ -86,7 +28,7 @@ class RenderComponents extends Command
                     "spacers" => '@import \''.$scss_dir.'/util/_spacers\';',
                     "float" => '@import \''.$scss_dir.'/util/_float\';',
                     "visibility" => '@import \''.$scss_dir.'/util/_visibility\';',
-                    "media" => '@import \''.$scss_dir.'/util/_media\';' 
+                    "media" => '@import \''.$scss_dir.'/util/_media\';'
                 ],
                 'components' => [
                     "alerts" => '@import \''.$scss_dir.'/components/_alerts\';',
@@ -111,7 +53,12 @@ class RenderComponents extends Command
 
     }
 
-    public function compileScss($scssImports) {
+    /**
+     * Renders master scss view, compiles scss & deletes scss file
+     *
+     * @param $scssImports
+     */
+    protected function compileScss($scssImports) {
 
         // Get variables
         $scss = View::make('builder.components', $scssImports)->render();
@@ -144,30 +91,59 @@ class RenderComponents extends Command
 
         } catch (Exception $e) {
 
-            
+            //! LEARN HOW TO DEAL WITH EXCEPTIONS
 
         }
-
     }
 
+
+    /**
+     * Delete files in given directory and removes folder
+     *
+     * @param $dirPath
+     */
     private function deleteDir($dirPath) {
-        if (! is_dir($dirPath)) {
-            throw new InvalidArgumentException('$dirPath must be a directory');
-        }
-        if (substr($dirPath, strlen($dirPath) - 1, 1) != '/') {
-            $dirPath .= '/';
-        }
+
         $files = glob($dirPath . '*', GLOB_MARK);
+        
+        // Throw exception if directory is invalid
+        if (! is_dir($dirPath)) {
+
+            throw new InvalidArgumentException('$dirPath must be a directory');
+
+        }
+
+        if (substr($dirPath, strlen($dirPath) - 1, 1) != '/') {
+
+            $dirPath .= '/';
+
+        }
+
+        // Unlink files
         foreach ($files as $file) {
+
             if (is_dir($file)) {
+
                 self::deleteDir($file);
+
             } else {
+
                 unlink($file);
+
             }
         }
+
+        // Remove directory
         rmdir($dirPath);
     }
 
+
+    /**
+     * Zip all contents of folder, downloads them, removes folder no matter what.
+     *
+     * @param $folder
+     * @return \Symfony\Component\HttpFoundation\BinaryFileResponse
+     */
     public function zipDownload($folder) {
 
         // Variables
@@ -215,10 +191,39 @@ class RenderComponents extends Command
             $this->deleteDir($folder);
         }
     }
+
+    /**
+     * Executes command line args live.
+     *
+     * @param $cmd
+     * @return array
+     */
+    public function liveExecuteCommand($cmd){
+
+        while (@ ob_end_flush()); // end all output buffers if any
+
+        $proc = popen("$cmd 2>&1 ; echo Exit status : $?", 'r');
+
+        $live_output     = "";
+        $complete_output = "";
+
+        while (!feof($proc))
+        {
+            $live_output     = fread($proc, 4096);
+            $complete_output = $complete_output . $live_output;
+            echo "$live_output";
+            @ flush();
+        }
+
+        pclose($proc);
+
+        // get exit status
+        preg_match('/[0-9]+$/', $complete_output, $matches);
+
+        // return exit status and intended output
+        return array (
+            'exit_status'  => intval($matches[0]),
+            'output'       => str_replace("Exit status : " . $matches[0], '', $complete_output)
+        );
+    }
 }
-
-
-
-
-
-     
