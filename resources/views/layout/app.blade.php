@@ -7,6 +7,7 @@
     <title>{{($activePage == 'home') ? ("meshCSS | " . $pageDescription) : ($pageTitle . ' | meshCSS')}}</title>
     <meta name="description" content="{{$pageDescription}}">
     <link rel="canonical" href="{{$siteURL}}" />
+    <meta name="csrf" content="{{csrf_token()}}" >
     <!-- Open Graph -->
     <meta property="og:locale" content="en_GB">
     <meta property="og:type" content="website">

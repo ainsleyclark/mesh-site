@@ -19,15 +19,16 @@
 
 Route::get('/', 'PagesController@home' );
 
-Route::get('/test', function($image = null) {
+/*
+|--------------------------------------------------------------------------
+| Builder
+|--------------------------------------------------------------------------
+*/
 
-    $path = base_path().'/mesh-src/temp-css/51e7edc9df0378dde14656157f84e3a6/mesh.css';
+Route::get('/builder', 'Docs\GettingStartedController@builder' );
+Route::post('/builder/ajax/render', 'BuilderController@process');
+Route::get('/builder/download/{id}', 'DownloadZipController@index');
 
-    if (file_exists($path)) { 
-        return Response::download($path);
-    }
-
-});
 
 /*
 |--------------------------------------------------------------------------
@@ -37,7 +38,6 @@ Route::get('/test', function($image = null) {
 
 Route::get('/documentation/getting-started/introduction', 'Docs\GettingStartedController@introduction' );
 Route::get('/documentation/getting-started/installation', 'Docs\GettingStartedController@installation' );
-Route::get('/builder', 'Docs\GettingStartedController@builder' );
 Route::get('/documentation/getting-started/notation', 'Docs\GettingStartedController@notation' );
 
 /*

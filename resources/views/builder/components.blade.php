@@ -20,7 +20,7 @@
 
 //Base
 // ==========================================================================
-@foreach($global as $name => $import)
+@foreach($base as $name => $import)
 {!! $import !!}
 @endforeach
 @import '../mesh-src/src/base/_global';

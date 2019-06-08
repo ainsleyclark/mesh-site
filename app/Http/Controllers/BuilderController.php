@@ -3,54 +3,40 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Console\Command;
+use Illuminate\Support\Facades\View;
+use Carbon;
+use ZipArchive;
+use Response;
 
 class BuilderController extends Controller
 {
 
-    /**
-     *
-     */
-    public function getImportsArray()
-    {
+    protected $scss_imports = [];
+    protected $temp_id = '';
+
+    public function process(Request $request) {
+
         $scss_dir = '../../mesh-src/src';
-        $userVars = [
-            'scssimports' => [
-                'global' => [
-                    "normalize" => '@import \''.$scss_dir.'/base/normalize\';'
-                ],
-                'util' => [
-                    "spacing" => '@import \''.$scss_dir.'/util/_spacing\';',
-                    "position" => '@import \''.$scss_dir.'/util/_position\';',
-                    "sizing" => '@import \''.$scss_dir.'/util/_sizing\';',
-                    "colors" => '@import \''.$scss_dir.'/util/_colors\';',
-                    "type" => '@import \''.$scss_dir.'/util/_type\';',
-                    "borders" => '@import \''.$scss_dir.'/util/_borders\';',
-                    "spacers" => '@import \''.$scss_dir.'/util/_spacers\';',
-                    "float" => '@import \''.$scss_dir.'/util/_float\';',
-                    "visibility" => '@import \''.$scss_dir.'/util/_visibility\';',
-                    "media" => '@import \''.$scss_dir.'/util/_media\';'
-                ],
-                'components' => [
-                    "alerts" => '@import \''.$scss_dir.'/components/_alerts\';',
-                    "badges" => '@import \''.$scss_dir.'/components/_badges\';',
-                    "breadcrumb" => '@import \''.$scss_dir.'/components/_breadcrumb\';',
-                    "button" => '@import \''.$scss_dir.'/components/_button\';',
-                    "card" => '@import \''.$scss_dir.'/components/_card\';',
-                    "collapse" => '@import \''.$scss_dir.'/components/_collapse\';',
-                    "epic" => '@import \''.$scss_dir.'/components/_epic\';',
-                    "list" => '@import \''.$scss_dir.'/components/_list\';',
-                    "modal" => '@import \''.$scss_dir.'/components/_modal\';',
-                    "pagination" => '@import \''.$scss_dir.'/components/_pagination\';',
-                    "table" => '@import \''.$scss_dir.'/components/_table\';',
-                    "tabs" => '@import \''.$scss_dir.'/components/_tabs\';',
-                    "tooltip" => '@import \''.$scss_dir.'/components/_tooltip\';',
-                    "toast" => '@import \''.$scss_dir.'/components/_toast\';'
-                ]
-            ]
-        ];
+        $build_array = $request->input('scss')['build'];
 
-        $this->compileScss($userVars['scssimports']);
+        foreach($build_array as $array_name => $array) {
+            foreach($array as $component => $include) {
+                if($include == true)  {
+                    //! NEED TO ADD NOT EQUAL TO HERE
+                    $this->scss_imports[$array_name] = [
+                        $component => '@import \'' .$scss_dir . '/' . $array_name . '/' . $component . '\';'
+                    ];
+                }
+            }
+        }
 
+        $download_dir = $this->compileScss();
+        $zip_file = $this->zipDownload($download_dir);
+
+        // Return the zip url
+        return response($this->temp_id);
+        
     }
 
     /**
@@ -58,36 +44,36 @@ class BuilderController extends Controller
      *
      * @param $scssImports
      */
-    protected function compileScss($scssImports) {
+    protected function compileScss() {
 
         // Get variables
-        $scss = View::make('builder.components', $scssImports)->render();
-        $fileName = md5(serialize($scssImports).time());
-        $temp_folder_dir = base_path('temp/' . $fileName . '/');
+        $scss = View::make('builder.components', $this->scss_imports)->render();
+        $this->temp_id = md5(serialize($this->scss_imports).time());
+        $temp_folder_dir = base_path('temp/' . $this->temp_id . '/');
         $scssFile = $temp_folder_dir . 'mesh.scss';
 
         try {
 
             // Make new folder with ID
-            shell_exec('mkdir ' . base_path() . '/temp/' . $fileName);
+            shell_exec('mkdir ' . base_path() . '/temp/' . $this->temp_id);
 
             // Create new .scss file in temp location based on scss var
             file_put_contents($temp_folder_dir . 'mesh.scss', $scss);
 
             // Change directory to the mesh-src folder
-            chdir('mesh-src');
+            chdir(base_path('/mesh-src'));
 
             // Compile scss via gulp
-            $this->liveExecuteCommand('gulp website --input ' . $scssFile . ' --output ' . $temp_folder_dir . 'mesh.css --build_dir ' . $temp_folder_dir);
-        
+            shell_exec('gulp website --input ' . $scssFile . ' --output ' . $temp_folder_dir . 'mesh.css --build_dir ' . $temp_folder_dir);
+
             // Change to parent directory
-            chdir('../');
+            chdir(base_path());
 
             // Delete scss file
             unlink($scssFile);
 
             //Send to zip & download
-            $this->zipDownload($temp_folder_dir);
+            return $temp_folder_dir;
 
         } catch (Exception $e) {
 
@@ -108,28 +94,19 @@ class BuilderController extends Controller
         
         // Throw exception if directory is invalid
         if (! is_dir($dirPath)) {
-
             throw new InvalidArgumentException('$dirPath must be a directory');
-
         }
 
         if (substr($dirPath, strlen($dirPath) - 1, 1) != '/') {
-
             $dirPath .= '/';
-
         }
 
         // Unlink files
         foreach ($files as $file) {
-
             if (is_dir($file)) {
-
                 self::deleteDir($file);
-
             } else {
-
                 unlink($file);
-
             }
         }
 
@@ -147,7 +124,7 @@ class BuilderController extends Controller
     public function zipDownload($folder) {
 
         // Variables
-        $zip_file = $folder . 'meshBuilder.zip';
+        $zip_file = storage_path() . '/zips/' . $this->temp_id . '.zip';
         $zip = new \ZipArchive();
         $files = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($folder));
 
@@ -171,10 +148,22 @@ class BuilderController extends Controller
                         }  
                     }
                 }
-        
+
+                $headers = [
+                    'Cache-control: maxage=1',
+                    'Pragma: no-cache',
+                    'Expires: 0',
+                    'Content-Type : application/octet-stream',
+                    'Content-Transfer-Encoding: binary',
+                    'Content-Type: application/force-download',
+                    //"Content-length: " . filesize($zip_file)
+                ];
+
                 //Close & Download ZIP
                 if ($zip->close()) {
-                    return response()->download($zip_file);
+                    
+                    return $zip_file;
+                    
                 } else {
                     throw new Exception("Could not close Zip file: " . $zip->getStatusString());
                 }
@@ -217,10 +206,10 @@ class BuilderController extends Controller
 
         pclose($proc);
 
-        // get exit status
+        // Get exit status
         preg_match('/[0-9]+$/', $complete_output, $matches);
 
-        // return exit status and intended output
+        // Return exit status and intended output
         return array (
             'exit_status'  => intval($matches[0]),
             'output'       => str_replace("Exit status : " . $matches[0], '', $complete_output)

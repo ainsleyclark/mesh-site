@@ -11,17 +11,7 @@
 <!-- =====================
     Page JS (Place in <script></script> tags)
     ===================== -->
-<script>
-let components = document.querySelectorAll('.component');
-
-for (let i = 0; i < components.length; i++) {
-    console.log(components[i].);
-}
-
-
-</script>
-
-
+<script src="{{ asset('js/builder.js') }}"></script>
 
 @endpush
 
@@ -37,10 +27,10 @@ for (let i = 0; i < components.length; i++) {
     </p>
 
     <div class="builder-cont">
-        <form action="/builder/ajax/render">
+        <form>
             <label for="testcheckbox">Test Checkbox</label>
             <input type="checkbox" name="test" id="testcheckbox" class="component">
-            <button type="submit" class="btn btn-primary build-css">Build CSS</button>
+            <button type="button" class="btn btn-primary build-css">Build CSS</button>
         </form>
     </div>
 

@@ -3,6 +3,9 @@
     "/css/app.css": "/css/app.css",
     "/css/mesh.css": "/css/mesh.css",
     "/css/mesh-grid.css": "/css/mesh-grid.css",
+    "/js/builder.js": "/js/builder.js",
     "/js/app.es5.js": "/js/app.es5.js",
-    "/js/app.es5.min.js": "/js/app.es5.min.js"
+    "/js/app.es5.min.js": "/js/app.es5.min.js",
+    "/js/builder.es5.js": "/js/builder.es5.js",
+    "/js/builder.es5.min.js": "/js/builder.es5.min.js"
 }

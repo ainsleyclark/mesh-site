@@ -11,11 +11,18 @@ const mix = require('laravel-mix');
  |
  */
 
+//Main JS & SASS
 mix.js('resources/js/app.js', 'public/js')
     .babel('public/js/app.js', 'public/js/app.es5.js')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('mesh-src/src/mesh.scss', 'public/css')
     .sass('mesh-src/src/mesh-grid.scss', 'public/css')
     .minify('public/js/app.es5.js');
-    
+
+//Builder File
+mix.js('resources/js/builder.js', 'public/js')
+    .babel('public/js/builder.js', 'public/js/builder.es5.js')
+    .minify('public/js/builder.es5.js');
+
+//BrowserSync
 mix.browserSync('meshcss.com');
