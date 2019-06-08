@@ -27,6 +27,10 @@ class BuilderController extends Controller
                     $this->scss_imports[$array_name] = [
                         $component => '@import \'' .$scss_dir . '/' . $array_name . '/' . $component . '\';'
                     ];
+
+                    //! HERE IS AN  ERROR BECAUSE OF THE UNDERSCORE IN NORMALIZE AND THE ALERT IS NOT ALERT ITS ALERTS!!!
+
+                    $this->scss_imports[$array_name][$component] = '@import \'' .$scss_dir . '/' . $array_name . '/' . $component . '\';';
                 }
             }
         }
