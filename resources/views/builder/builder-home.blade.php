@@ -28,6 +28,30 @@
 
     <div class="builder-cont">
         <form>
+            <div class="d-flex flex-column">
+                <h3 class="c-secondary">Global</h3>
+                <hr class="c-black">
+                <div class="form-group">
+                    <label for="testcheckbox">Normalize</label>
+                    <input type="checkbox" name="test" id="normalize" class="component">
+                </div>
+                <div class="form-group">
+                    <label for="testcheckbox">Normalize</label>
+                    <input type="checkbox" name="test" id="position" class="component">
+                </div>
+                <div class="form-group">
+                    <label for="testcheckbox">Normalize</label>
+                    <input type="checkbox" name="test" id="card" class="component">
+                </div>
+                <h3 class="c-secondary">Utility</h3>
+
+                <h3 class="c-secondary">Components</h3>
+
+
+            </div>
+
+
+            
             <label for="testcheckbox">Test Checkbox</label>
             <input type="checkbox" name="test" id="testcheckbox" class="component">
             <button type="button" class="btn btn-primary build-css">Build CSS</button>

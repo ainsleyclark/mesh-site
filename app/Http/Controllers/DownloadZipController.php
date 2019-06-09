@@ -13,9 +13,18 @@ class DownloadZipController extends Controller
         $zip_id = $request->id;
         $zip_directory = storage_path() . '/zips/' . $zip_id . '.zip';
 
+        $headers = [
+            header("Cache-Control: public"),
+            header("Content-Description: File Transfer"),
+            header("Content-Type: application/zip"),
+            header("Content-Length:" . filesize($zip_directory)),
+            header("Content-Disposition: attachment; filename=meshBuilder.zip"),
+            header("Content-Transfer-Encoding: binary")
+        ];
+
         try {
 
-            return response()->download($zip_directory, 'meshBuilder.zip')->deleteFileAfterSend();
+            return response()->download($zip_directory, 'meshBuilder.zip', $headers)->deleteFileAfterSend();
 
         } catch (FileNotFoundException  $e) {
 

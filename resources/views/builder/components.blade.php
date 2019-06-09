@@ -14,32 +14,39 @@
 
 //Abstracts
 // ==========================================================================
-@import '../mesh-src/src/abstracts/_functions.scss';
-@import '../mesh-src/src/abstracts/_mixins';
-@import '../mesh-src/src/abstracts/_variables';
+@import '{{ base_path() }}/mesh-src/src/abstracts/_functions.scss';
+@import '{{ base_path() }}/mesh-src/src/abstracts/_mixins';
+@import '{{ base_path() }}/mesh-src/src/abstracts/_variables';
 
 //Base
 // ==========================================================================
-@foreach($base as $name => $import)
+@if( !empty($base))
+    @foreach($base as $name => $import)
 {!! $import !!}
-@endforeach
-@import '../mesh-src/src/base/_global';
+    @endforeach
+@endif
+
+@import '{{ base_path() }}/mesh-src/src/base/_global';
 
 //Grid
 // ==========================================================================
-@import '../mesh-src/src/grid/_grid';
-@import '../mesh-src/src/grid/_flex';
-@import '../mesh-src/src/grid/_order';
-@import '../mesh-src/src/grid/_display';
+@import '{{ base_path() }}/mesh-src/src/grid/_grid';
+@import '{{ base_path() }}/mesh-src/src/grid/_flex';
+@import '{{ base_path() }}/mesh-src/src/grid/_order';
+@import '{{ base_path() }}/mesh-src/src/grid/_display';
 
 //Util
 // ==========================================================================
-@foreach($util as $name => $import)
+@if( !empty($util))
+    @foreach($util as $name => $import)
 {!! $import !!}
-@endforeach
+    @endforeach
+@endif
 
 //Components
 // ==========================================================================
-@foreach($components as $name => $import)
+@if( !empty($components))
+    @foreach($components as $name => $import)
 {!! $import !!}
-@endforeach
+    @endforeach
+@endif

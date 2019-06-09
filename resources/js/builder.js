@@ -6,13 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let scss = {
         build: {
             base: {
-                normalize: true,
+                normalize: false,
             },
             util: {
-                position: true,
+                position: false,
             },
             components: {
-                alert: true,
+                alerts: true,
                 breadcrumb: true,
                 card: true,
         
@@ -25,8 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     let json = JSON.stringify(scss);
-
-    console.log(json);
     
     document.querySelectorAll('.component').forEach((element) => {
         console.log(element.checked);
@@ -40,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             scss
         })
         .then(function (response) {
+            //console.log(response);
             const id = response.data
             const url = '/builder/download/' + id;
             const link = document.createElement('a');

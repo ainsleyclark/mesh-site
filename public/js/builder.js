@@ -2060,13 +2060,13 @@ document.addEventListener('DOMContentLoaded', function () {
   var scss = {
     build: {
       base: {
-        normalize: true
+        normalize: false
       },
       util: {
-        position: true
+        position: false
       },
       components: {
-        alert: true,
+        alerts: true,
         breadcrumb: true,
         card: true
       }
@@ -2074,7 +2074,6 @@ document.addEventListener('DOMContentLoaded', function () {
     variables: {}
   };
   var json = JSON.stringify(scss);
-  console.log(json);
   document.querySelectorAll('.component').forEach(function (element) {
     console.log(element.checked);
   });
@@ -2083,6 +2082,7 @@ document.addEventListener('DOMContentLoaded', function () {
       _token: token,
       scss: scss
     }).then(function (response) {
+      //console.log(response);
       var id = response.data;
       var url = '/builder/download/' + id;
       var link = document.createElement('a');
