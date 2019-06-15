@@ -50,8 +50,11 @@ class GettingStartedController extends Controller
 
         $this->pageData = array_merge($this->pageData, [
             'pageTitle' => 'Builder',
-            'pageDescription' => 'Something Something.',
+            'pageDescription' => 'Only download what you need with meshBuilder, an extremely powerful tool helping you customize what components to import and colors to use.',
             'pageContents' => [
+                'usage' => 'What does it do?',
+                'import' => 'Import',
+                'colors' => 'Colors',
             ]
         ]);
 

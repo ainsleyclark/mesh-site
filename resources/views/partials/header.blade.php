@@ -9,7 +9,7 @@
                     <div class="logo-cont d-flex align-items-center">
                         <img class="logo" src="/assets/svg/meshlogo.svg" alt="mesh Logo">
                     </div>
-                    <div class="text-cont d-none d-tab-block">
+                    <div class="text-cont d-none d-tab-block c-white">
                         <h3>meshCSS</h3>
                     </div>
                 </a>
@@ -21,7 +21,7 @@
                         <a class="hover" href="/documentation/getting-started/introduction"><li class="mx-3">Documentation</li></a>
                         <a class="hover" href="https://github.com/ainsleyclark/mesh" target="_blank"><li class="mx-3">Github</li></a>
                         <a class="ml-3" href="/documentation/getting-started/introduction">
-                            <button class="btn btn-rounded btn-outline btn-primary btn-icon download">Download
+                            <button class="btn btn-rounded btn-outline btn-white btn-icon download">Download
                             <svg class="ml-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 471.2 471.2" style="enable-background:new 0 0 471.2 471.2;" xml:space="preserve">
                                 <g>
                                     <path d="M457.7,230.15c-7.5,0-13.5,6-13.5,13.5v122.8c0,33.4-27.2,60.5-60.5,60.5H87.5c-33.4,0-60.5-27.2-60.5-60.5v-124.8    c0-7.5-6-13.5-13.5-13.5s-13.5,6-13.5,13.5v124.8c0,48.3,39.3,87.5,87.5,87.5h296.2c48.3,0,87.5-39.3,87.5-87.5v-122.8    C471.2,236.25,465.2,230.15,457.7,230.15z" data-original="#000000" class="active-path" data-old_color="#ffffff" fill="#ffffff"/>
