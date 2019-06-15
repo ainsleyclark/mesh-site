@@ -11,6 +11,7 @@ header.primary {
 	z-index: 9999;
 	background: $white;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	background-color: $primary;
 
 	@include media-tab {
 		height: $header-height;
@@ -26,10 +27,6 @@ header.primary {
 	}
 
 	.logo-cont {
-		
-		&:hover {
-			color: $primary;
-		}
 
 		.logo {
 			width: 45px;
@@ -45,10 +42,10 @@ header.primary {
 			}
 
 			a {
-				color: $text-color;
+				color: $white;
 
 				&:hover {
-					color: $primary;
+					color: $purple;
 				}
 			}
 
@@ -61,7 +58,7 @@ header.primary {
 					max-height: 20px;
 
 					path {
-						fill: $primary;
+						fill: $white;
 					}
 				}
 

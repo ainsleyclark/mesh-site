@@ -1,34 +1,39 @@
 const axios = require('axios');
 const token = document.querySelector('meta[name="csrf"]').getAttribute('content');
 
-document.addEventListener('DOMContentLoaded', () => {
+let scss = {
+    build: {
+        base: {
 
-    let scss = {
-        build: {
-            base: {
-                normalize: false,
-            },
-            util: {
-                position: false,
-            },
-            components: {
-                alerts: true,
-                breadcrumb: true,
-                card: true,
-        
-            }
         },
-        variables: {
+        util: {
 
+        },
+        components: {
 
         }
-    };
+    },
+    variables: {
+
+
+    }
+};
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
 
     let json = JSON.stringify(scss);
     
     document.querySelectorAll('.component').forEach((element) => {
-        console.log(element.checked);
+        element.addEventListener('click', () => {
+            $type = element.getAttribute('data-type');
+            let id = element.getAttribute('id');
 
+            element.checked == true ? scss.build.$type = true : scss.build.type = false;
+            console.log(scss.build);
+            
+        });
     });
 
     document.querySelector('.build-css').addEventListener('click', () => {
@@ -55,3 +60,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 }); //End content loaded
+
+
+
+
+
+// let scss = {
+//     build: {
+//         base: {
+//             normalize: false,
+//         },
+//         util: {
+//             position: false,
+//         },
+//         components: {
+//             alerts: true,
+//             breadcrumb: true,
+//             card: true,
+    
+//         }
+//     },
+//     variables: {
+
+
+//     }
+// };

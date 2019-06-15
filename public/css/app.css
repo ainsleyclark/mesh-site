@@ -263,21 +263,18 @@ header.primary {
   z-index: 9999;
   background: #ffffff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #ff2451;
 }
 
 @media (min-width: 768px) {
   header.primary {
-    height: 72px;
+    height: 80px;
   }
 }
 
 header.primary.home {
   background: transparent;
   border-bottom: none;
-}
-
-header.primary .logo-cont:hover {
-  color: #ff2451;
 }
 
 header.primary .logo-cont .logo {
@@ -293,11 +290,11 @@ header.primary nav.primary ul li {
 }
 
 header.primary nav.primary ul a {
-  color: #3c4858;
+  color: #ffffff;
 }
 
 header.primary nav.primary ul a:hover {
-  color: #ff2451;
+  color: #8270b8;
 }
 
 header.primary nav.primary ul .download {
@@ -311,7 +308,7 @@ header.primary nav.primary ul .download svg {
 }
 
 header.primary nav.primary ul .download svg path {
-  fill: #ff2451;
+  fill: #ffffff;
 }
 
 header.primary nav.primary ul .download:hover svg path {
@@ -319,12 +316,12 @@ header.primary nav.primary ul .download:hover svg path {
 }
 
 .header-spacer {
-  height: 72px;
+  height: 80px;
 }
 
 .sidenav {
   position: fixed;
-  top: 72px;
+  top: 80px;
   width: 320px;
   height: calc(100vh - 75px);
   border-right: 1px #e5e5e5 solid;
@@ -542,7 +539,7 @@ footer .footer-icon {
 
 @media (min-width: 768px) {
   footer {
-    height: 72px;
+    height: 80px;
   }
 }
 

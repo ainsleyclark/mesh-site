@@ -2056,26 +2056,23 @@ process.umask = function() { return 0; };
 var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 
 var token = document.querySelector('meta[name="csrf"]').getAttribute('content');
+var scss = {
+  build: {
+    base: {},
+    util: {},
+    components: {}
+  },
+  variables: {}
+};
 document.addEventListener('DOMContentLoaded', function () {
-  var scss = {
-    build: {
-      base: {
-        normalize: false
-      },
-      util: {
-        position: false
-      },
-      components: {
-        alerts: true,
-        breadcrumb: true,
-        card: true
-      }
-    },
-    variables: {}
-  };
   var json = JSON.stringify(scss);
   document.querySelectorAll('.component').forEach(function (element) {
-    console.log(element.checked);
+    element.addEventListener('click', function () {
+      $type = element.getAttribute('data-type');
+      var id = element.getAttribute('id');
+      element.checked == true ? scss.build.$type = true : scss.build.type = false;
+      console.log(scss.build);
+    });
   });
   document.querySelector('.build-css').addEventListener('click', function () {
     axios.post('/builder/ajax/render', {
@@ -2094,6 +2091,23 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 }); //End content loaded
+// let scss = {
+//     build: {
+//         base: {
+//             normalize: false,
+//         },
+//         util: {
+//             position: false,
+//         },
+//         components: {
+//             alerts: true,
+//             breadcrumb: true,
+//             card: true,
+//         }
+//     },
+//     variables: {
+//     }
+// };
 
 /***/ }),
 
