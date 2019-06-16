@@ -6963,6 +6963,257 @@ label.close {
   overflow-x: auto;
 }
 
+.h-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  background-color: #999999;
+}
+
+@media (max-width: 599px) {
+  .h-tabs {
+    display: block;
+  }
+}
+
+.h-tabs-label {
+  font-size: 14px;
+  height: 48px;
+  padding: 0 24px;
+  cursor: pointer;
+  min-width: 160px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  vertical-align: top;
+  text-decoration: none;
+  position: relative;
+  text-transform: uppercase;
+  -webkit-tap-highlight-color: transparent;
+  font-weight: 500;
+}
+
+@media (max-width: 599px) {
+  .h-tabs-label {
+    min-width: 72px;
+  }
+}
+
+.h-tabs-label:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 80px;
+  right: 80px;
+  display: block;
+  height: 2px;
+  background-color: #3f51b5;
+  opacity: 0;
+  transition: left 1s, right 1s;
+}
+
+.h-tabs-label:hover {
+  opacity: 0.8;
+}
+
+.h-tabs-toggle {
+  display: none;
+  position: absolute;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  top: -999999px;
+  left: -999999px;
+}
+
+.h-tabs-panel {
+  display: none;
+  order: 99;
+  flex-grow: 999999;
+  width: 100%;
+  padding: 1rem;
+  background-color: #fff;
+  color: #000;
+}
+
+.h-tabs-slider {
+  visibility: visible;
+  left: 0;
+  right: 0;
+  width: 160px;
+  position: absolute;
+  background-color: #3f51b5;
+  top: 45px;
+  height: 2px;
+  transition: 1s cubic-bezier(0.35, 0, 0.25, 1);
+}
+
+.h-tabs-toggle:checked + .h-tabs-label {
+  color: #3f51b5;
+}
+
+.h-tabs-toggle:checked + .h-tabs-label:after {
+  visibility: visible;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.h-tabs-toggle:checked + .h-tabs-label + .h-tabs-panel {
+  display: block;
+}
+
+.v-tabs {
+  color: #333;
+  display: block;
+  font-family: arial, sans-serif;
+  margin: auto;
+  position: relative;
+  overflow: auto;
+  width: 100%;
+}
+
+.v-tabs-label {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 15px 20px;
+  position: relative;
+  width: 200px;
+  z-index: 100;
+}
+
+@media (max-width: 599px) {
+  .v-tabs-label {
+    min-width: 72px;
+  }
+}
+
+.v-tabs-toggle {
+  position: absolute;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  top: -999999px;
+  left: -999999px;
+}
+
+.v-tabs-panel {
+  display: none;
+  left: 230px;
+  min-width: 300px;
+  padding: 0 21px;
+  position: absolute;
+  top: 0;
+}
+
+.v-tabs-panel:after {
+  bottom: 0;
+  content: "";
+  display: block;
+  left: -229px;
+  position: absolute;
+  top: 0;
+  width: 198px;
+  z-index: 1;
+}
+
+.v-tabs-toggle:checked + .v-tabs-label:after {
+  visibility: visible;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.v-tabs-toggle:checked + .v-tabs-label + .v-tabs-panel {
+  display: block;
+}
+
+.tabs-link,
+.tabs-danger,
+.tabs-warning,
+.tabs-info,
+.tabs-success,
+.tabs-secondary,
+.tabs-primary,
+.tabs-light,
+.tabs-muted,
+.tabs-dark,
+.tabs-black,
+.tabs-white {
+  border: 0;
+  color: #ffffff;
+}
+
+.tabs-white {
+  color: #3c4858;
+  background-color: #ffffff;
+}
+
+.tabs-black {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.tabs-dark {
+  color: #ffffff;
+  background-color: #363636;
+}
+
+.tabs-muted {
+  color: #ffffff;
+  background-color: #999999;
+}
+
+.tabs-light {
+  color: #3c4858;
+  background-color: #e8e8e8;
+}
+
+.tabs-primary {
+  color: #ffffff;
+  background-color: #ff2451;
+}
+
+.tabs-secondary {
+  color: #ffffff;
+  background-color: #8270b8;
+}
+
+.tabs-success {
+  color: #ffffff;
+  background-color: #55b559;
+}
+
+.tabs-info {
+  color: #ffffff;
+  background-color: #37abd4;
+}
+
+.tabs-warning {
+  color: #ffffff;
+  background-color: #ff9e0f;
+}
+
+.tabs-danger {
+  color: #ffffff;
+  background-color: #f55145;
+}
+
+.tabs-link {
+  color: #ffffff;
+  background-color: #3763d4;
+}
+
 [tooltip] {
   position: relative;
   cursor: pointer;
