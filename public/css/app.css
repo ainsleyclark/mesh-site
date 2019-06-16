@@ -107,7 +107,8 @@ pre {
   background: #f9f9f9;
   border-radius: 3px;
   padding: 10px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   font-size: 0.8rem;
   border: 1px solid rgba(0, 0, 0, 0.125);
   margin: 0 0 25px;
@@ -266,7 +267,7 @@ header.primary {
 }
 
 header.primary.home {
-  background-color: transparent;
+  background-color: purple;
   border-bottom: 0;
 }
 
@@ -320,8 +321,12 @@ header.primary nav.primary ul .download:hover svg path {
   border-right: 1px #e5e5e5 solid;
   padding: 45px 45px 60px;
   overflow-y: scroll;
-  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 500ms linear;
+  transition: -webkit-transform 500ms linear;
   transition: transform 500ms linear;
+  transition: transform 500ms linear, -webkit-transform 500ms linear;
   will-change: transform;
   background-color: #ffffff;
   z-index: 1;
@@ -366,7 +371,8 @@ header.primary nav.primary ul .download:hover svg path {
 
 @media (min-width: 1024px) {
   .sidenav {
-    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
 }
 
@@ -387,6 +393,7 @@ header.primary nav.primary ul .download:hover svg path {
 }
 
 .smallnav-cont ul a {
+  -webkit-transition: color 0.2s;
   transition: color 0.2s;
 }
 
