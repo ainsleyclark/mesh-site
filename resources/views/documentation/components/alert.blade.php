@@ -11,15 +11,7 @@
 <!-- =====================
     Page JS (Place in <script></script> tags)
     ===================== -->
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        (document.querySelectorAll('.js-alert .alert .close') || []).forEach(function(close){
-            close.addEventListener('click', function () {
-                close.parentNode.remove();
-            });
-        });
-    });
-</script>
+<script src="{{ asset('js/docs/alert.js') }}"></script>
 @endpush
 
 @section('docscontent')
@@ -308,9 +300,9 @@ This is a danger alert with close button
     <p class="secondary-lead">
         mesh doesnt ship with any JS, but you can use the following function to add functionality to dismiss the close buttons. This script adds an event listener to all the <code class="inline">close</code> buttons.
     </p>
-    <pre class="highlight"><code class="javascript">document.addEventListener('DOMContentLoaded', function () {
-    (document.querySelectorAll('.alert .close') || []).forEach(function(close){
-        close.addEventListener('click', function () {
+    <pre class="highlight"><code class="javascript">document.addEventListener('DOMContentLoaded', () => {
+    (document.querySelectorAll('.alert .close') || []).forEach((close) => {
+        close.addEventListener('click', () => {
             close.parentNode.remove();
         });
     });

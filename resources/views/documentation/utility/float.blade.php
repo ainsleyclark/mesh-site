@@ -11,13 +11,7 @@
 <!-- =====================
     Page JS (Place in <script></script> tags)
     ===================== -->
-<script>
-    //Turn clearfix text on & |/off
-    document.querySelector('#clearfixBtn').addEventListener('click', function() {
-        this.innerHTML = this.innerHTML.indexOf('off') ? "Turn clearfix on" : "Turn clearfix off";
-        document.querySelector('#clearfixDemo').classList.toggle('clearfix');
-    });
-</script>
+<script src="{{ asset('js/docs/float.js') }}"></script>
 @endpush
 
 @section('docscontent')

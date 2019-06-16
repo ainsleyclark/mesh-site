@@ -1122,6 +1122,10 @@ ul {
   justify-content: space-around !important;
 }
 
+.justify-content-evenly {
+  justify-content: space-evenly !important;
+}
+
 .align-self-start {
   align-self: flex-start !important;
 }
@@ -1253,6 +1257,10 @@ ul {
 
   .justify-content-mob-around {
     justify-content: space-around !important;
+  }
+
+  .justify-content-mob-evenly {
+    justify-content: space-evenly !important;
   }
 
   .align-self-mob-start {
@@ -1389,6 +1397,10 @@ ul {
     justify-content: space-around !important;
   }
 
+  .justify-content-tab-evenly {
+    justify-content: space-evenly !important;
+  }
+
   .align-self-tab-start {
     align-self: flex-start !important;
   }
@@ -1523,6 +1535,10 @@ ul {
     justify-content: space-around !important;
   }
 
+  .justify-content-desk-evenly {
+    justify-content: space-evenly !important;
+  }
+
   .align-self-desk-start {
     align-self: flex-start !important;
   }
@@ -1655,6 +1671,10 @@ ul {
 
   .justify-content-hd-around {
     justify-content: space-around !important;
+  }
+
+  .justify-content-hd-evenly {
+    justify-content: space-evenly !important;
   }
 
   .align-self-hd-start {

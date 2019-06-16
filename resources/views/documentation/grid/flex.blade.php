@@ -192,6 +192,7 @@
             <li><strong class="c-secondary">center</strong> (center) - aligns all items in the center of the flex container.</li>
             <li><strong class="c-secondary">between</strong> (space-between) - spaces the items evenly in the flex container, <strong>with no</strong> space on the left side on the first block and right hand side of the last block.</li>
             <li><strong class="c-secondary">around</strong> (space-around) - spaces the items evenly in the flex container, <strong>with</strong> space on the left side on the first block and right hand side of the last block.</li>
+            <li><strong class="c-secondary">evenly</strong> (space-evenly) - spaces the items evenly in the flex container, <strong>with</strong> space equally distributed on the left side on the first block and right hand side of the last block.</li>
         </ul>
     </div>
     <!-- //! ADD WHITE BORDER HERE WHEN BORDER CLASS IS COMPLETED -->
@@ -246,6 +247,16 @@
                 <div class="text ml-1 px-2 px-tab-4 br">5</div>
             </div>
         </div>
+        <h4><code class="inline bg-white">justify-content-evenly</code></h4>
+        <div class="br bg-light mb-3 c-white">
+            <div class="d-flex justify-content-evenly mb-3">
+                <div class="text mr-1 px-2 px-tab-4 br">1</div>
+                <div class="text mx-1 px-2 px-tab-4 br">2</div>
+                <div class="text mx-1 px-2 px-tab-4 br">3</div>
+                <div class="text mx-1 px-2 px-tab-4 br">4</div>
+                <div class="text ml-1 px-2 px-tab-4 br">5</div>
+            </div>
+        </div>
     </div>
     <h3>Responsive variations:</h3>
     <pre class="highlight"><code class="html">&lt;!-- Default --&gt;
@@ -254,30 +265,35 @@
 &lt;div class="d-flex justify-content-center"&gt;&lt;/div&gt;
 &lt;div class="d-flex justify-content-between"&gt;&lt;/div&gt;
 &lt;div class="d-flex justify-content-around"&gt;&lt;/div&gt;
+&lt;div class="d-flex justify-content-evenly"&gt;&lt;/div&gt;
 &lt;!-- Mobile --&gt;
 &lt;div class="d-flex justify-content-mob-start"&gt;&lt;/div&gt;
 &lt;div class="d-flex justify-content-mob-end"&gt;&lt;/div&gt;
 &lt;div class="d-flex justify-content-mob-center"&gt;&lt;/div&gt;
 &lt;div class="d-flex justify-content-mob-between"&gt;&lt;/div&gt;
 &lt;div class="d-flex justify-content-mob-around"&gt;&lt;/div&gt;
+&lt;div class="d-flex justify-content-mob-evenly"&gt;&lt;/div&gt;
 &lt;!-- Tablet --&gt;
 &lt;div class="d-flex justify-content-tab-start"&gt;&lt;/div&gt;
 &lt;div class="d-flex justify-content-tab-end"&gt;&lt;/div&gt;
 &lt;div class="d-flex justify-content-tab-center"&gt;&lt;/div&gt;
 &lt;div class="d-flex justify-content-tab-between"&gt;&lt;/div&gt;
 &lt;div class="d-flex justify-content-tab-around"&gt;&lt;/div&gt;
+&lt;div class="d-flex justify-content-tab-evenly"&gt;&lt;/div&gt;
 &lt;!-- Desktop --&gt;
 &lt;div class="d-flex justify-content-desk-start"&gt;&lt;/div&gt;
 &lt;div class="d-flex justify-content-desk-end"&gt;&lt;/div&gt;
 &lt;div class="d-flex justify-content-desk-center"&gt;&lt;/div&gt;
 &lt;div class="d-flex justify-content-desk-between"&gt;&lt;/div&gt;
 &lt;div class="d-flex justify-content-desk-around"&gt;&lt;/div&gt;
+&lt;div class="d-flex justify-content-desk-evenly"&gt;&lt;/div&gt;
 &lt;!-- HD --&gt;
 &lt;div class="d-flex justify-content-hd-start"&gt;&lt;/div&gt;
 &lt;div class="d-flex justify-content-hd-end"&gt;&lt;/div&gt;
 &lt;div class="d-flex justify-content-hd-center"&gt;&lt;/div&gt;
 &lt;div class="d-flex justify-content-hd-between"&gt;&lt;/div&gt;
-&lt;div class="d-flex justify-content-hd-around"&gt;&lt;/div&gt;</code><img class="copy-to-clipboard"src="/assets/icons/copy.svg" alt="Copy icon"><img class="copy-tick"src="/assets/icons/checked.svg" alt="Success icon"></pre>
+&lt;div class="d-flex justify-content-hd-around"&gt;&lt;/div&gt;
+&lt;div class="d-flex justify-content-hd-evenly"&gt;&lt;/div&gt;</code><img class="copy-to-clipboard"src="/assets/icons/copy.svg" alt="Copy icon"><img class="copy-tick"src="/assets/icons/checked.svg" alt="Success icon"></pre>
 </article>
 
 <!-- Align items -->

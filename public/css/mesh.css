@@ -1124,6 +1124,10 @@ ul {
   justify-content: space-around !important;
 }
 
+.justify-content-evenly {
+  justify-content: space-evenly !important;
+}
+
 .align-self-start {
   align-self: flex-start !important;
 }
@@ -1255,6 +1259,10 @@ ul {
 
   .justify-content-mob-around {
     justify-content: space-around !important;
+  }
+
+  .justify-content-mob-evenly {
+    justify-content: space-evenly !important;
   }
 
   .align-self-mob-start {
@@ -1391,6 +1399,10 @@ ul {
     justify-content: space-around !important;
   }
 
+  .justify-content-tab-evenly {
+    justify-content: space-evenly !important;
+  }
+
   .align-self-tab-start {
     align-self: flex-start !important;
   }
@@ -1525,6 +1537,10 @@ ul {
     justify-content: space-around !important;
   }
 
+  .justify-content-desk-evenly {
+    justify-content: space-evenly !important;
+  }
+
   .align-self-desk-start {
     align-self: flex-start !important;
   }
@@ -1657,6 +1673,10 @@ ul {
 
   .justify-content-hd-around {
     justify-content: space-around !important;
+  }
+
+  .justify-content-hd-evenly {
+    justify-content: space-evenly !important;
   }
 
   .align-self-hd-start {
@@ -4672,6 +4692,10 @@ small {
   font-weight: 300 !important;
 }
 
+.t-italic {
+  font-style: italic !important;
+}
+
 .t-uppercase {
   text-transform: uppercase !important;
 }
@@ -4960,6 +4984,10 @@ small {
   .t-hd-justify {
     text-align: justify !important;
   }
+}
+
+.b-none {
+  border: 0 !important;
 }
 
 .b {

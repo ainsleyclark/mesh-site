@@ -4,8 +4,12 @@
     "/css/mesh.css": "/css/mesh.css",
     "/css/mesh-grid.css": "/css/mesh-grid.css",
     "/js/builder.js": "/js/builder.js",
-    "/js/app.es5.js": "/js/app.es5.js",
-    "/js/app.es5.min.js": "/js/app.es5.min.js",
-    "/js/builder.es5.js": "/js/builder.es5.js",
-    "/js/builder.es5.min.js": "/js/builder.es5.min.js"
+    "/js/docs/alert.js": "/js/docs/alert.js",
+    "/js/docs/badges.js": "/js/docs/badges.js",
+    "/js/docs/collapse.js": "/js/docs/collapse.js",
+    "/js/docs/float.js": "/js/docs/float.js",
+    "/js/docs/grid.js": "/js/docs/grid.js",
+    "/js/docs/text.js": "/js/docs/text.js",
+    "/js/docs/toast.js": "/js/docs/toast.js",
+    "/js/docs/visibility.js": "/js/docs/visibility.js"
 }
