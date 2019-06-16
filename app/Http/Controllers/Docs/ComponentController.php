@@ -288,7 +288,7 @@ class ComponentController extends Controller
 
         $this->pageData = array_merge($this->pageData, [
             'pageTitle' => 'Toasts',
-            'pageDescription' => 'Something about this page',
+            'pageDescription' => 'Use our stylish snack-bars to display informative content easily, you can even use our JS code to have them appear and fade out.',
             'activePage' => 'toast',
             'pageContents' => [
                 'usage' => 'Usage',

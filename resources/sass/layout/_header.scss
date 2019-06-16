@@ -4,33 +4,20 @@
 // -----------------------------------------------------------------------------
 
 header.primary {
-	height: 65px;
-
+	height: $header-height;
 	position: fixed;
 	width: 100%;
 	z-index: 9999;
+	border-bottom: 1px solid rgba(0,0,0,0.15);
 	background: $white;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-	background-color: $primary;
-
-	@include media-tab {
-		height: $header-height;
-	}
 
 	&.home {
-		background: transparent;
-		border-bottom: none;
-
-		@include media-tab {
-			//border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-		}
+		background-color: transparent;
+		border-bottom: 0;
 	}
 
-	.logo-cont {
-
-		.logo {
-			width: 45px;
-		}
+	.logo {
+		width: 45px;
 	}
 
 	nav.primary {
@@ -42,10 +29,10 @@ header.primary {
 			}
 
 			a {
-				color: $white;
+				color: $text-color;
 
 				&:hover {
-					color: $purple;
+					color: $primary;
 				}
 			}
 
@@ -58,7 +45,7 @@ header.primary {
 					max-height: 20px;
 
 					path {
-						fill: $white;
+						fill: $primary;
 					}
 				}
 
@@ -75,3 +62,4 @@ header.primary {
 .header-spacer {
 	height: $header-height;
 }
+

@@ -25,9 +25,9 @@ function meshToast(text, opts = {}) {
 }
 
 //Demos
-meshToast('Mmmmmmmmmmmm Toast', { displayTime: '5s' });
+// meshToast('Mmmmmmmmmmmm Toast', { displayTime: '5s' });
 meshToast('<span>Test</span>', { displayTime: '5s', color: "bg-secondary" });
-meshToast('Mmmmmmmmmmmm Toast', { displayTime: '5s', classes: "rounded" });
+// meshToast('Mmmmmmmmmmmm Toast', { displayTime: '5s', classes: "rounded" });
 
 
 meshToast('Mmmmmmmmmmmm Toast', { 

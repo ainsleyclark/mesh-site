@@ -1,5 +1,6 @@
 const mix = require('laravel-mix');
 const fs = require('fs');
+const browsersupport = require("./mesh-src/browserslistrc.js");
 
 /*
  |--------------------------------------------------------------------------
@@ -32,5 +33,4 @@ jsFiles.forEach(item => {
 })
 
 //BrowserSync
-mix.browserSync('meshcss.com')
-    .disableNotifications();
+// mix.browserSync('meshcss.com')

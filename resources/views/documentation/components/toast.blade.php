@@ -19,8 +19,6 @@
     Docs Section - Main HTML
     ===================== -->
 
-Im inside the docs content
-
 <!-- Variables -->
 <article class="section-scroll" id="variables">
 

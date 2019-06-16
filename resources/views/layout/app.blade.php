@@ -25,7 +25,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
     <!-- //! Consider using one style sheet here for font awesome -->
-    <link rel="stylesheet" href="{{asset('css/vendor/fontawesome/css/all.min.css')}}">
+    {{-- <link rel="stylesheet" href="{{asset('css/vendor/fontawesome/css/all.min.css')}}"> --}}
     <link rel="stylesheet"  type="text/css" href="{{asset('css/mesh.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
     @stack('styles')
