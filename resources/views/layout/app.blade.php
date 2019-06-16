@@ -61,7 +61,7 @@
             @yield('content')
         </main>
         <script src="{{ asset('js/vendor/highlight/highlight.pack.js') }}"></script>
-        <script src="{{ asset('js/app.es5.js') }}"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
         @stack('scripts')
     </body>
 </html>

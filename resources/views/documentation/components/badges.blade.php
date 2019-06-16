@@ -11,15 +11,7 @@
 <!-- =====================
     Page JS (Place in <script></script> tags)
     ===================== -->
-<script> 
-    document.addEventListener('DOMContentLoaded', function () {
-        (document.querySelectorAll('.badge-close .badge-delete') || []).forEach(function(close){
-            close.addEventListener('click', function () {
-                close.parentNode.remove();
-            });
-        });
-    });
-</script>
+<script src="{{ asset('js/docs/badges.js') }}"></script>
 @endpush
 
 @section('docscontent')
@@ -187,12 +179,12 @@ Notifications
             <i class="badge-delete fas fa-times"></i>
         </span>
     </div>
-    <pre class="highlight"><code class="javascript">document.addEventListener('DOMContentLoaded', function () {
-    (document.querySelectorAll('.badge-close .badge-delete') || []).forEach(function(close){
-        close.addEventListener('click', function () {
+    <pre class="highlight"><code class="javascript">document.addEventListener('DOMContentLoaded', () => {
+    (document.querySelectorAll('.badge-close .badge-delete') || []).forEach(close => {
+        close.addEventListener('click', () => {
             close.parentNode.remove();
         });
-    }); 
+    });
 });</code></code><img class="copy-to-clipboard"src="/assets/icons/copy.svg" alt="Copy icon"><img class="copy-tick"src="/assets/icons/checked.svg" alt="Success icon"></pre>
 
 <!-- Variables -->

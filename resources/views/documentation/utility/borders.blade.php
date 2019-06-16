@@ -56,6 +56,10 @@
             </thead>
             <tbody>
                 <tr>
+                    <td>.b-none</td>
+                    <td>border: 0</td>
+                </tr>
+                <tr>
                     <td>.b</td>
                     <td>border: 1px solid rgba(0, 0, 0, 0.3);</td>
                 </tr>

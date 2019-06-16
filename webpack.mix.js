@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+const fs = require('fs');
 
 /*
  |--------------------------------------------------------------------------
@@ -13,16 +14,23 @@ const mix = require('laravel-mix');
 
 //Main JS & SASS
 mix.js('resources/js/app.js', 'public/js')
-    .babel('public/js/app.js', 'public/js/app.es5.js')
+    .babel('public/js/app.js', 'public/js/app.js')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('mesh-src/src/mesh.scss', 'public/css')
     .sass('mesh-src/src/mesh-grid.scss', 'public/css')
-    .minify('public/js/app.es5.js');
 
 //Builder File
 mix.js('resources/js/builder.js', 'public/js')
-    .babel('public/js/builder.js', 'public/js/builder.es5.js')
-    .minify('public/js/builder.es5.js');
+    .babel('public/js/builder.js', 'public/js/builder.js')
+
+//Docs Pages
+let jsFiles = fs.readdirSync('resources/js/docs');
+
+jsFiles.forEach(item => {
+    mix.js('resources/js/docs/' + item, 'public/js/docs/' + item)
+    .babel('public/js/docs/' + item, 'public/js/docs/' + item)
+})
 
 //BrowserSync
-mix.browserSync('meshcss.com');
+mix.browserSync('meshcss.com')
+    .disableNotifications();
