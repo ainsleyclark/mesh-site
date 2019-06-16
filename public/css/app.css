@@ -267,7 +267,7 @@ header.primary {
 }
 
 header.primary.home {
-  background-color: purple;
+  background-color: transparent;
   border-bottom: 0;
 }
 
