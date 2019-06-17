@@ -17,7 +17,7 @@ class ComponentController extends Controller
 
         $this->pageData = array_merge($this->pageData, [
             'pageTitle' => 'Alert',
-            'pageDescription' => 'Use mesh alerts to display informaitve information easily with varying colors and styles.',
+            'pageDescription' => 'Use mesh alerts to display informative text easily with varying colors and styles.',
             'activePage' => 'alert',
             'pageContents' => [
                 'usage' => 'Usage',
