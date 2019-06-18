@@ -20,6 +20,113 @@
     ===================== -->
 
 
+<div class="tabs my-4">
+
+    <input type="radio" class="tabs-toggle" name="tabs" id="tab-1" checked="checked">
+    <label class="tabs-label" for="tab-1">First Tab</label>
+    <div class="tabs-panel">
+        <h3>First Tab Content</h3>
+        <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. Tbh la croix lo-fi squid poke before they sold out air plant tumblr fanny pack. Aesthetic chartreuse chambray, locavore tattooed food truck banh mi gastropub air plant organic bitters keffiyeh lo-fi jean shorts glossier. Leggings scenester PBR&B, bitters ramps sustainable lo-fi tofu. Truffaut flannel cray tacos, occupy organic sustainable bicycle rights flexitarian squid woke scenester.</p>
+        <p>Cornhole iceland meditation lyft normcore tote bag meggings vexillologist. Synth copper mug chartreuse, roof party dreamcatcher kickstarter keffiyeh kogi bespoke skateboard wolf williamsburg swag live-edge. Craft beer pork belly four loko post-ironic. Bitters asymmetrical four dollar toast 3 wolf moon vaporware austin, kinfolk helvetica heirloom poke tumeric vice hashtag mumblecore salvia. Seitan glossier sriracha, pickled locavore brunch beard green juice.</p>
+    </div>
+    
+    <input type="radio" class="tabs-toggle" name="tabs" id="tab-2" >
+    <label class="tabs-label" for="tab-2">Second Tab</label>
+    <div class="tabs-panel">
+            <h3>Second Tab Content</h3>
+            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. Tbh la croix lo-fi squid poke before they sold out air plant tumblr fanny pack. Aesthetic chartreuse chambray, locavore tattooed food truck banh mi gastropub air plant organic bitters keffiyeh lo-fi jean shorts glossier. Leggings scenester PBR&B, bitters ramps sustainable lo-fi tofu. Truffaut flannel cray tacos, occupy organic sustainable bicycle rights flexitarian squid woke scenester.</p>
+            <p>Cornhole iceland meditation lyft normcore tote bag meggings vexillologist. Synth copper mug chartreuse, roof party dreamcatcher kickstarter keffiyeh kogi bespoke skateboard wolf williamsburg swag live-edge. Craft beer pork belly four loko post-ironic. Bitters asymmetrical four dollar toast 3 wolf moon vaporware austin, kinfolk helvetica heirloom poke tumeric vice hashtag mumblecore salvia. Seitan glossier sriracha, pickled locavore brunch beard green juice.</p>
+    </div>
+    
+    <input type="radio" class="tabs-toggle" name="tabs" id="tab-3">
+    <label class="tabs-label" for="tab-3">Third Tab</label>
+    <div class="tabs-panel">
+            <h3>Third Tab Content</h3>
+            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. Tbh la croix lo-fi squid poke before they sold out air plant tumblr fanny pack. Aesthetic chartreuse chambray, locavore tattooed food truck banh mi gastropub air plant organic bitters keffiyeh lo-fi jean shorts glossier. Leggings scenester PBR&B, bitters ramps sustainable lo-fi tofu. Truffaut flannel cray tacos, occupy organic sustainable bicycle rights flexitarian squid woke scenester.</p>
+            <p>Cornhole iceland meditation lyft normcore tote bag meggings vexillologist. Synth copper mug chartreuse, roof party dreamcatcher kickstarter keffiyeh kogi bespoke skateboard wolf williamsburg swag live-edge. Craft beer pork belly four loko post-ironic. Bitters asymmetrical four dollar toast 3 wolf moon vaporware austin, kinfolk helvetica heirloom poke tumeric vice hashtag mumblecore salvia. Seitan glossier sriracha, pickled locavore brunch beard green juice.</p>
+    </div>
+
+</div>
+
+<div class="tabs tabs-bottom my-4">
+
+        <input type="radio" class="tabs-toggle" name="tabs-bottom" id="tab-bottom-1" checked="checked">
+        <label class="tabs-label" for="tab-bottom-1">First Tab</label>
+        <div class="tabs-panel">
+            <h3>First Tab Content</h3>
+            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. Tbh la croix lo-fi squid poke before they sold out air plant tumblr fanny pack. Aesthetic chartreuse chambray, locavore tattooed food truck banh mi gastropub air plant organic bitters keffiyeh lo-fi jean shorts glossier. Leggings scenester PBR&B, bitters ramps sustainable lo-fi tofu. Truffaut flannel cray tacos, occupy organic sustainable bicycle rights flexitarian squid woke scenester.</p>
+            <p class="mb-0">Cornhole iceland meditation lyft normcore tote bag meggings vexillologist. Synth copper mug chartreuse, roof party dreamcatcher kickstarter keffiyeh kogi bespoke skateboard wolf williamsburg swag live-edge. Craft beer pork belly four loko post-ironic. Bitters asymmetrical four dollar toast 3 wolf moon vaporware austin, kinfolk helvetica heirloom poke tumeric vice hashtag mumblecore salvia. Seitan glossier sriracha, pickled locavore brunch beard green juice.</p>
+        </div>
+        
+        <input type="radio" class="tabs-toggle" name="tabs-bottom" id="tab-bottom-2" >
+        <label class="tabs-label" for="tab-bottom-2">Second Tab</label>
+        <div class="tabs-panel">
+                <h3>Second Tab Content</h3>
+                <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. Tbh la croix lo-fi squid poke before they sold out air plant tumblr fanny pack. Aesthetic chartreuse chambray, locavore tattooed food truck banh mi gastropub air plant organic bitters keffiyeh lo-fi jean shorts glossier. Leggings scenester PBR&B, bitters ramps sustainable lo-fi tofu. Truffaut flannel cray tacos, occupy organic sustainable bicycle rights flexitarian squid woke scenester.</p>
+                <p class="mb-0">Cornhole iceland meditation lyft normcore tote bag meggings vexillologist. Synth copper mug chartreuse, roof party dreamcatcher kickstarter keffiyeh kogi bespoke skateboard wolf williamsburg swag live-edge. Craft beer pork belly four loko post-ironic. Bitters asymmetrical four dollar toast 3 wolf moon vaporware austin, kinfolk helvetica heirloom poke tumeric vice hashtag mumblecore salvia. Seitan glossier sriracha, pickled locavore brunch beard green juice.</p>
+        </div>
+        
+        <input type="radio" class="tabs-toggle" name="tabs-bottom" id="tab-bottom-3">
+        <label class="tabs-label" for="tab-bottom-3">Third Tab</label>
+        <div class="tabs-panel">
+                <h3>Third Tab Content</h3>
+                <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. Tbh la croix lo-fi squid poke before they sold out air plant tumblr fanny pack. Aesthetic chartreuse chambray, locavore tattooed food truck banh mi gastropub air plant organic bitters keffiyeh lo-fi jean shorts glossier. Leggings scenester PBR&B, bitters ramps sustainable lo-fi tofu. Truffaut flannel cray tacos, occupy organic sustainable bicycle rights flexitarian squid woke scenester.</p>
+                <p class="mb-0">Cornhole iceland meditation lyft normcore tote bag meggings vexillologist. Synth copper mug chartreuse, roof party dreamcatcher kickstarter keffiyeh kogi bespoke skateboard wolf williamsburg swag live-edge. Craft beer pork belly four loko post-ironic. Bitters asymmetrical four dollar toast 3 wolf moon vaporware austin, kinfolk helvetica heirloom poke tumeric vice hashtag mumblecore salvia. Seitan glossier sriracha, pickled locavore brunch beard green juice.</p>
+        </div>
+    
+</div>
+
+<div class="tabs tabs-left my-4">
+
+        <input type="radio" class="tabs-toggle" name="tabs-left" id="tab-left-1" checked="checked">
+        <label class="tabs-label" for="tab-left-1">First Tab</label>
+        <div class="tabs-panel">
+            <h3>First Tab Content</h3>
+            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
+        </div>
+    
+        <input type="radio" class="tabs-toggle" name="tabs-left" id="tab-left-2" >
+        <label class="tabs-label" for="tab-left-2">Second Tab</label>
+        <div class="tabs-panel">
+                <h3>Second Tab Content</h3>
+                <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
+        </div>
+        
+        <input type="radio" class="tabs-toggle" name="tabs-left" id="tab-left-3">
+        <label class="tabs-label" for="tab-left-3">Third Tab</label>
+        <div class="tabs-panel">
+            <h3>Third Tab Content</h3>
+            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
+            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
+            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
+            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
+            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
+            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
+            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
+            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
+            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
+            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
+            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
+            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
+        </div>
+    
+</div>
+
+
+
+
+
+            
+            
+            
+            
+        
+        
+
+
+
+
+
 
 <!-- Usage -->
 <article class="section-scroll" id="Usage">
@@ -62,7 +169,7 @@
         The result will be simular to the one below.
     </p>
 
-    <div class="h-tabs">
+    {{-- <div class="h-tabs">
         <input type="radio" class="h-tabs-toggle" name="tabs" id="tab-1" checked="checked">
         <label class="h-tabs-label" for="tab-1">First Tab</label>
         <div class="h-tabs-panel">
@@ -80,7 +187,7 @@
         <div class="h-tabs-panel">
             <h3>Third Tab Content</h3>
         </div>
-    </div>
+    </div> --}}
 </article>
 
 <!-- Vertical -->
