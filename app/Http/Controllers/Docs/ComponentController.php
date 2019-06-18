@@ -166,7 +166,7 @@ class ComponentController extends Controller
 
         $this->pageData = array_merge($this->pageData, [
             'pageTitle' => 'Header',
-            'pageDescription' => 'Something about this page',
+            'pageDescription' => 'A lightweight header for your website',
             'activePage' => 'header',
             'pageContents' => [
                 'usage' => 'Usage',
@@ -222,10 +222,14 @@ class ComponentController extends Controller
 
         $this->pageData = array_merge($this->pageData, [
             'pageTitle' => 'Nav',
-            'pageDescription' => 'Something about this page',
+            'pageDescription' => 'Use the mesh nav to easily add responsive navigation to your site',
             'activePage' => 'navigation',
             'pageContents' => [
                 'usage' => 'Usage',
+                'search-form' => 'Search Form',
+                'dropdown' => 'Dropdown',
+                'animations' => 'Animations',
+                'withjs' => "With JavaScript",
                 'variables' => 'Variables',
             ]
         ]);
