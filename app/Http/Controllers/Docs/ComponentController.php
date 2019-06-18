@@ -95,7 +95,7 @@ class ComponentController extends Controller
 
         $this->pageData = array_merge($this->pageData, [
             'pageTitle' => 'Card',
-            'pageDescription' => 'Use styled materialistic cards in various styles & formats with ease with our card component.',
+            'pageDescription' => 'Create materialistic cards with various styles & formats with our card component.',
             'activePage' => 'card',
             'pageContents' => [
                 'usage' => 'Usage',
@@ -117,7 +117,7 @@ class ComponentController extends Controller
 
         $this->pageData = array_merge($this->pageData, [
             'pageTitle' => 'Collapse',
-            'pageDescription' => 'Something about this page',
+            'pageDescription' => 'Use our collapse component to easily show and hide content',
             'activePage' => 'collapse',
             'pageContents' => [
                 'usage' => 'Usage',
