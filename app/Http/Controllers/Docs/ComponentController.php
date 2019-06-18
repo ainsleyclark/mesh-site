@@ -95,7 +95,7 @@ class ComponentController extends Controller
 
         $this->pageData = array_merge($this->pageData, [
             'pageTitle' => 'Card',
-            'pageDescription' => 'Use styled materialistic cards in various styles & formats with ease with our card component.',
+            'pageDescription' => 'Create materialistic cards with various styles & formats with our card component.',
             'activePage' => 'card',
             'pageContents' => [
                 'usage' => 'Usage',
@@ -117,7 +117,7 @@ class ComponentController extends Controller
 
         $this->pageData = array_merge($this->pageData, [
             'pageTitle' => 'Collapse',
-            'pageDescription' => 'Something about this page',
+            'pageDescription' => 'Use our collapse component to easily show and hide content',
             'activePage' => 'collapse',
             'pageContents' => [
                 'usage' => 'Usage',
@@ -166,7 +166,7 @@ class ComponentController extends Controller
 
         $this->pageData = array_merge($this->pageData, [
             'pageTitle' => 'Header',
-            'pageDescription' => 'Something about this page',
+            'pageDescription' => 'A lightweight header for your website',
             'activePage' => 'header',
             'pageContents' => [
                 'usage' => 'Usage',
@@ -222,10 +222,14 @@ class ComponentController extends Controller
 
         $this->pageData = array_merge($this->pageData, [
             'pageTitle' => 'Nav',
-            'pageDescription' => 'Something about this page',
+            'pageDescription' => 'Use the mesh nav to easily add responsive navigation to your site',
             'activePage' => 'navigation',
             'pageContents' => [
                 'usage' => 'Usage',
+                'search-form' => 'Search Form',
+                'dropdown' => 'Dropdown',
+                'animations' => 'Animations',
+                'withjs' => "With JavaScript",
                 'variables' => 'Variables',
             ]
         ]);
