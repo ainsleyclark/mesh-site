@@ -23,7 +23,7 @@
     <meta name="twitter:image" content="{{$ogImage}}">
     <!-- CSS -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    {{-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet"> --}}
     <!-- //! Consider using one style sheet here for font awesome -->
     {{-- <link rel="stylesheet" href="{{asset('css/vendor/fontawesome/css/all.min.css')}}"> --}}
     <link rel="stylesheet"  type="text/css" href="{{asset('css/mesh.css')}}">
@@ -60,8 +60,21 @@
         <main>
             @yield('content')
         </main>
+        <script type="text/javascript">
+            WebFontConfig = {
+                google: { families: [ 'Roboto:300,400,700' ] }
+            };
+            (function() {
+                var wf = document.createElement('script');
+                wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+                wf.type = 'text/javascript';
+                wf.async = 'true';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(wf, s);
+        })(); </script>
         <script src="{{ asset('js/vendor/highlight/highlight.pack.js') }}"></script>
         <script src="{{ asset('js/app.js') }}"></script>
         @stack('scripts')
+
     </body>
 </html>
