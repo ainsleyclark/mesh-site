@@ -20,7 +20,7 @@
     ===================== -->
 
 
-<div class="tabs my-4">
+<div class="tabs tabs-animate my-4">
 
     <input type="radio" class="tabs-toggle" name="tabs" id="tab-1" checked="checked">
     <label class="tabs-label" for="tab-1">First Tab</label>
@@ -97,19 +97,34 @@
         <div class="tabs-panel">
             <h3>Third Tab Content</h3>
             <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
-            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
-            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
-            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
-            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
-            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
-            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
-            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
-            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
-            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
-            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
-            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
         </div>
     
+</div>
+
+
+<div class="tabs tabs-right tabs-animate my-4">
+
+    <input type="radio" class="tabs-toggle" name="tabs-right" id="tab-right-1" checked="checked">
+    <label class="tabs-label" for="tab-right-1">First Tab</label>
+    <div class="tabs-panel">
+        <h3>First Tab Content</h3>
+        <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
+    </div>
+
+    <input type="radio" class="tabs-toggle" name="tabs-right" id="tab-right-2" >
+    <label class="tabs-label" for="tab-right-2">Second Tab</label>
+    <div class="tabs-panel">
+            <h3>Second Tab Content</h3>
+            <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
+    </div>
+    
+    <input type="radio" class="tabs-toggle" name="tabs-right" id="tab-right-3">
+    <label class="tabs-label" for="tab-right-3">Third Tab</label>
+    <div class="tabs-panel">
+        <h3>Third Tab Content</h3>
+        <p>+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. </p>
+    </div>
+
 </div>
 
 
