@@ -22,7 +22,10 @@
 <!-- Notate -->
 <article class="section-scroll" id="classes">
     <h2 class="b-b-light hash">How we notate</h2>
-    <p class="secondary-lead">We have tried to make things extremley simple for you when it comes to class names and notation. Most of the utilities you will encounter starts with the letter of the utility <span class="c-secondary">p for position</span> for example, followed by a dash <span class="c-seconary">-</span> then preceeded by the property. Here is a taster, but please see the indiviudal page on
+    <p class="secondary-lead">We have made everything as simple as possible when it comes to class names and notation.
+        Most of the utilities you will encounter start with the letter of the utility, <span class="c-secondary">p for
+            position</span> for example, followed by a dash <span class="c-seconary">-</span> then followed by the
+        property. Here is a taster, but please see the indiviudal pages on
         the left for more details.</p>
     <ul class="list-line">
         <li>Columns - <code class="inline">col-12 col-mob-6 col-tab-4 col-desk-3 col-hd-1</code></li>
@@ -39,8 +42,11 @@
 <!-- !important -->
 <article class="section-scroll" id="important">
     <h2 class="b-b-light hash">!important</h2>
-    <p class="secondary-lead">Using !important with CSS can be a logistical nightmare, usually it's best avoided at all costs. Unfortuantley we are not mind readers and we can't tell what classes & styles and what combination of them you will be using with your web builds.
-        <br>Which is why we have has to add the <code class="inline">!important</code> proeprty to our utility classes to override and specificity.
+    <p class="secondary-lead">Using !important with CSS can be a logistical nightmare, usually it's best avoided at all
+        costs. While we have gone to every effort to avoid it, we have decided that our utility classes should have
+        final say in the cascade.
+        <br>This is why we have has to add the <code class="inline">!important</code> property to our utility classes
+        to override specificity.
     </p>
 </article>
 
