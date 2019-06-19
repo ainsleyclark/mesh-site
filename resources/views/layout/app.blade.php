@@ -60,6 +60,7 @@
         <main>
             @yield('content')
         </main>
+        <!-- Roboto Font (Render blocking) -->
         <script type="text/javascript">
             WebFontConfig = {
                 google: { families: [ 'Roboto:300,400,700' ] }
