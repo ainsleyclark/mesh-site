@@ -10,7 +10,7 @@ function meshToast(text, opts = {}) {
     const toastText = document.createElement("span");
 
     toastBody.setAttribute('class', "toast-body " + options.classes);
-    toastText.innerText = text;
+    toastText.innerHTML = text;
     toastBody.appendChild(toastText);
     toastContainer.appendChild(toastBody);
 
@@ -26,7 +26,7 @@ function meshToast(text, opts = {}) {
 
 //Demos
 // meshToast('Mmmmmmmmmmmm Toast', { displayTime: '5s' });
-meshToast('<span>Test</span>', { displayTime: '5s', color: "bg-secondary" });
+//meshToast('<span>Test</span>', { displayTime: '5s', color: "bg-secondary" });
 // meshToast('Mmmmmmmmmmmm Toast', { displayTime: '5s', classes: "rounded" });
 
 

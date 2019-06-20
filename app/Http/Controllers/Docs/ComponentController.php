@@ -21,6 +21,7 @@ class ComponentController extends Controller
             'activePage' => 'alert',
             'pageContents' => [
                 'usage' => 'Usage',
+                'plain' => 'Plain',
                 'background' => 'Full background',
                 'close' => 'Close',
                 'icons' => 'Icon',
