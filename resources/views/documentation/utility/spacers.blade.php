@@ -23,12 +23,14 @@
 <article class="section-scroll" id="usage">
     <h2 class="b-b-light hash">Usage</h2>
     <p class="secondary-lead">
-        The spacer classes help to separate content vertically and create a 'gap' between elements on the page. You can choose from a wide variety of sizes to suit your needs.
+        The spacer classes help to separate content vertically and create a 'gap' between elements on the page. You can
+        choose from a wide variety of sizes to suit your needs.
     </p>
     <div class="text-cont">
         <h3>Notation:</h3>
         <ul class="list-line">
-            <li>You can target the spacer classes by using <code class="inline">spacer-{size}</code>. The size being one of the classes below.</li>
+            <li>You can target the spacer classes by using <code class="inline">spacer-{size}</code>. The size being one
+                of the classes below.</li>
         </ul>
     </div>
     <div class="text-cont">
@@ -129,7 +131,8 @@
     <h2 class="b-b-light hash">Examples</h2>
     <h3 class="mt-3">Vertical spacing:</h3>
     <p>
-        Here, the grey space in the middle is caused by a <code class="inline">spacer-50</code> class which pushes the last element to the bottom of the container.
+        Here, the grey space in the middle is caused by a <code class="inline">spacer-50</code> class which pushes the
+        last element to the bottom of the container.
     </p>
     <div class="column-demo c-white mb-3">
         <div class="br d-flex bg-light justify-content-center flex-wrap t-center">
@@ -138,7 +141,8 @@
             <div class="text br w-100"></div>
         </div>
     </div>
-    <pre class="highlight"><code class="html">&lt;div class="d-flex justify-content-center flex-wrap"&gt;
+    <pre
+        class="highlight"><code class="html">&lt;div class="d-flex justify-content-center flex-wrap"&gt;
     &lt;div class="w-100"&gt;&lt;/div&gt;
     &lt;div class="spacer-50"&gt;&lt;/div&gt;
     &lt;div class="w-100"&gt;&lt;/div&gt;
@@ -153,16 +157,17 @@
     </p>
     <div class="table-scroll">
         <table class="table">
-                <thead>
-                    <tr>
-                        <th class="w-40">Variable</th>
-                        <th class="w-20">Value</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$spacer-properties: (
+            <thead>
+                <tr>
+                    <th class="w-40">Variable</th>
+                    <th class="w-20">Value</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <pre class="variables highlight"><code class="scss">$spacer-properties: (
     1px, 
     2px, 
     3px, 
@@ -184,12 +189,14 @@
     300px, 
     400px, 
     500px
-);</code></pre></td>
-                        <td>Map(pixel/rem/em)</td>
-                        <td>To remove or add spacers, just edit the map above - you can add spacers in pixels, rem's or em's.</td>
-                    </tr>
-            </table>
-        </div>
+);</code></pre>
+                    </td>
+                    <td>Map(pixel/rem/em)</td>
+                    <td>To remove or add spacers, just edit the map above - you can add spacers in pixels, rems or ems.
+                    </td>
+                </tr>
+        </table>
+    </div>
 </article>
 
 @endsection

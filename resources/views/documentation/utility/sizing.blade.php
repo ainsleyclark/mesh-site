@@ -27,13 +27,19 @@
 <article class="section-scroll" id="usage">
     <h2 class="b-b-light hash">Usage</h2>
     <p class="secondary-lead">
-        You can change the width and height of an element by using <code class="inline">{property}-{breakpoint}</code>
+        You can change the width and height of an element by using <code class="inline">{property}-{size}</code>
     </p>
     <div class="text-cont">
         <h3>Notation:</h3>
         <ul class="list-line">
-            <li>You can target the position class by using <code class="inline">p-{breakpoint}-{property}</code>. The breakpoint being optional and one of our five breakpoints, the properties being outlined below.</li>
-            <li>These classes effect the breakpoint and upwards, for example - <code class="inline">p-tab-absolute</code> will make the element's position absolute on tablet, desktop & HD screens.</li>
+
+
+            <li>You can target the breakpoint class by using <code class="inline">{property}-{breakpoint}-{size}</code>.
+            </li>
+            <li>The optional breakpoint being one of our five breakpoints, outlined below.</li>
+            <li>Due to mesh being mobile first, these classes affect the breakpoint and upwards, for example - <code
+                    class="inline">w-tab-40</code> will make the element 100% width at mobile then scale up at tablet to
+                become 40% width of the container.</li>
         </ul>
     </div>
     <div class="text-cont">
@@ -152,7 +158,8 @@
     <h2 class="b-b-light hash">Examples</h2>
     <h3 class="mt-3">Responsive width:</h3>
     <p>
-        Here these divs are 100% width at mobile then scale up at tablet to become 40% width of the container. Go ahead and resize the screen to see the effect.
+        Here these divs are 100% width at mobile then scale up at tablet to become 40% width of the container. Go ahead
+        and resize the screen to see the effect.
     </p>
     <div class="column-demo c-white mb-3">
         <div class="br d-flex mb-3 justify-content-center t-center flex-wrap">
@@ -164,11 +171,13 @@
             </div>
         </div>
     </div>
-    <pre class="highlight"><code class="html">&lt;div class="w-100 w-tab-40"&gt;w-100 w-tab-40&lt;/div&gt;
+    <pre
+        class="highlight"><code class="html">&lt;div class="w-100 w-tab-40"&gt;w-100 w-tab-40&lt;/div&gt;
 &lt;div class="w-100 w-tab-40"&gt;w-100 w-tab-40&lt;/div&gt;</code><img class="copy-to-clipboard"src="/assets/icons/copy.svg" alt="Copy icon"><img class="copy-tick"src="/assets/icons/checked.svg" alt="Success icon"></pre>
     <h3 class="mt-3">Responsive height:</h3>
     <p>
-        Here the first div is 60% height of the container and then moves down to 40% for desktop, the last div is doing the reverse.
+        Here the first div is 60% height of the container and then moves down to 40% for desktop, the last div is doing
+        the reverse.
     </p>
     <div class="column-demo c-white mb-3">
         <div class="br d-flex mb-3 justify-content-center py-2 t-center flex-wrap align-items-baseline height-200">
@@ -180,14 +189,16 @@
             </div>
         </div>
     </div>
-    <pre class="highlight"><code class="html">&lt;div class="w-100 h-60 h-desk-40"&gt;w-100 h-60 h-desk-40&lt;/div&gt;
+    <pre
+        class="highlight"><code class="html">&lt;div class="w-100 h-60 h-desk-40"&gt;w-100 h-60 h-desk-40&lt;/div&gt;
 &lt;div class="w-100 h-40 h-desk-60"&gt;w-100 h-40 h-desk-60&lt;/div&gt;</code><img class="copy-to-clipboard"src="/assets/icons/copy.svg" alt="Copy icon"><img class="copy-tick"src="/assets/icons/checked.svg" alt="Success icon"></pre>
 </article>
 
 <!-- Variations -->
 <article class="section-scroll" id="variations">
     <h2 class="b-b-light hash">Variations</h2>
-    <pre class="highlight mt-3"><code class="html">&lt;!-- Default --&gt;
+    <pre
+        class="highlight mt-3"><code class="html">&lt;!-- Default --&gt;
 &lt;div class="w-10"&gt;&lt;/div&gt;
 &lt;div class="w-20"&gt;&lt;/div&gt;
 &lt;div class="w-30"&gt;&lt;/div&gt;
@@ -252,16 +263,17 @@
     </p>
     <div class="table-scroll">
         <table class="table">
-                <thead>
-                    <tr>
-                        <th class="w-40">Variable</th>
-                        <th class="w-20">Value</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$sizing-properties: (
+            <thead>
+                <tr>
+                    <th class="w-40">Variable</th>
+                    <th class="w-20">Value</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <pre class="variables highlight"><code class="scss">$sizing-properties: (
     10%, 
     20%, 
     30%, 
@@ -272,13 +284,15 @@
     80%, 
     90%, 
     100%
-);</code></pre></td>
-                        <td>Map(percentage)</td>
-                        <td>To add or remove width & height responsive classes, simply edit the map above with a percentage.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+);</code></pre>
+                    </td>
+                    <td>Map(percentage)</td>
+                    <td>To add or remove width & height responsive classes, simply edit the map above with a percentage.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </article>
 
 @endsection

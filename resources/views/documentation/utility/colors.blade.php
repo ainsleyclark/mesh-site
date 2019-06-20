@@ -23,8 +23,10 @@
 <article class="section-scroll" id="usage">
     <h2 class="b-b-light hash">Usage</h2>
     <p class="secondary-lead">
-        All website's colors are different, there's no doubt in that. Which is why we highly reccomend you use the mesh builder to change the default colors in order to create a custom css file.
-        <br><strong>Color and background color</strong> are able to be manipulated inline with the color utility classes.
+        Every website's colors are different, there's no doubt in that. Which is why we highly recommend you use the
+        mesh builder to change the default colors in order to create a custom css file.
+        <br><strong>Color and background color</strong> are able to be manipulated inline with the color utility
+        classes.
     </p>
     <div class="text-cont">
         <h3>Notation:</h3>
@@ -229,16 +231,17 @@
     </p>
     <div class="table-scroll">
         <table class="table">
-                <thead>
-                    <tr>
-                        <th>Variable</th>
-                        <th class="w-20">Value</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$palette: (
+            <thead>
+                <tr>
+                    <th>Variable</th>
+                    <th class="w-20">Value</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <pre class="variables highlight"><code class="scss">$palette: (
     white: #ffffff,
     black: #000000,
     dark: #363636,
@@ -251,23 +254,31 @@
     warning: #ff9e0f,
     danger: #f55145,
     link: #3763d4
-);</code></pre></td>
-                        <td>Map(name:color)</td>
-                        <td>This map defines the main color pallete used with mesh. Its a great place to define colors for your web build. The name corresponds to the html class name and the color defines the hex or rgba value.
-                            <br>Note: Changing/deleting white, black or primary will throw an error, so its best to define them yourself. Please also bear in mind each color can add a fair chunk of kb to mesh.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$color-attr: (
+);</code></pre>
+                    </td>
+                    <td>Map(name:color)</td>
+                    <td>This map defines the main color pallete used with mesh. Its a great place to define colors for
+                        your web build. The name corresponds to the html class name and the color defines the hex or
+                        rgba value.
+                        <br>Note: Changing/deleting white, black or primary will throw an error, so its best to define
+                        them yourself. Please also bear in mind each color can add a fair chunk of kb to mesh.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre class="variables highlight"><code class="scss">$color-attr: (
     c: 'color',
     bg: 'background-color'
-);</code></pre></td>
-                        <td>Map(class:attribute)</td>
-                        <td>THe class of the <code class="inline">color-attr</code> map corresponds to the css attribute, you can add and delete as you please. Other common properties include <code class="inline">fill</code> and <code class="inline">stroke</code>.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+);</code></pre>
+                    </td>
+                    <td>Map(class:attribute)</td>
+                    <td>The class of the <code class="inline">color-attr</code> map corresponds to the css attribute,
+                        you can add and delete as you please. Other common properties include <code
+                            class="inline">fill</code> and <code class="inline">stroke</code>.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </article>
 
 @endsection
