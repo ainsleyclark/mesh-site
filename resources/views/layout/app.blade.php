@@ -57,7 +57,7 @@
         <![endif]-->
         @include('partials.header')
         @if ($activePage !='home') <div class="header-spacer"></div> @endif
-        <main>
+        <main class="{{ $activePage }}-page">
             @yield('content')
         </main>
         <script src="{{ asset('js/vendor/highlight/highlight.pack.js') }}"></script>

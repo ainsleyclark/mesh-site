@@ -11,7 +11,7 @@
 <!-- =====================
     Page JS (Place in <script></script> tags)
     ===================== -->
-<script src="{{ asset('js/docs/collapse.js') }}"></script>
+
 @endpush
 
 @section('docscontent')

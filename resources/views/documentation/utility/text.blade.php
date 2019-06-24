@@ -15,7 +15,7 @@
 <!-- =====================
     Page JS (Place in <script></script> tags)
     ===================== -->
-<script src="{{ asset('js/docs/text.js') }}"></script>
+    
 @endpush
 
 @section('docscontent')

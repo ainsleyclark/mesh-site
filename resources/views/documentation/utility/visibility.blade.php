@@ -11,10 +11,7 @@
 <!-- =====================
     Page JS (Place in <script></script> tags)
     ===================== -->
-<script>
-<script src="{{ asset('js/docs/visibility.js') }}"></script>
-</script>
-        
+         
 @endpush
 
 @section('docscontent')
