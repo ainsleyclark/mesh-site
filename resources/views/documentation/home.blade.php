@@ -30,9 +30,9 @@ h1 {
     height: auto;
 }
 
-.home-illusration {
+/* .home-illusration {
     transform: scale(1.3);
-}
+} */
 
 .home-background {
 	top: 0;
@@ -119,9 +119,8 @@ h1 {
             </div>
             <div class="col-10 col-desk-6 col-hd-7">
                 <div class="img-cont">
-                    <img class="home-illustration" src="assets/svg/home-illustration.svg">
+                    <img class="home-illustration img-responsive" src="assets/img/home-illustration.png">
                 </div>
-                @include('svg.logo')
             </div>
         </div>
     </div>
