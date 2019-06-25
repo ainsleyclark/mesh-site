@@ -238,11 +238,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 toastBody.style.animationDuration = options.displayTime;
             }
         }
+
+        //Make toast button
+        document.querySelector('#makeToast').addEventListener('click', function() {
+            meshToast('Mmmmmmmmmmmm Toast', { displayTime: '5s' });
+        });
         
         //Demos
         //meshToast('Mmmmmmmmmmmm Toast', { displayTime: '5s' });
-        meshToast('<span>Test</span>', { displayTime: '5s', color: "bg-secondary" });
-        //meshToast('Mmmmmmmmmmmm Toast', { displayTime: '5s', classes: "rounded" });
+        //meshToast('<span>Message sent</span><i class="fab fa-telegram-plane ml-4 fa-lg"></i>', { displayTime: '5s', color: "bg-secondary" });
 
     }
 

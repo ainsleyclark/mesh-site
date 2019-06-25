@@ -22,7 +22,7 @@
 <!-- Usage -->
 <article class="section-scroll" id="usage">
     <h2 class="b-b-light hash">Usage</h2>
-    <p class="mt-2">
+    <p class="secondary-lead">
         All alerts are prefixed with the <code class="inline">alert</code> class. This gives the element some common
         properties for the alert, such as margin and padding. There are three different types of alerts to choose from, take a look at below.
     </p>

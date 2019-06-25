@@ -14,7 +14,7 @@ class Controller extends BaseController
 
     protected $pagespeed;
     protected $websiteData; 
-    protected $pageData;
+    public $pageData;
  
     public function __construct(){
 

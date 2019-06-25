@@ -119,7 +119,7 @@ h1 {
             </div>
             <div class="col-10 col-desk-6 col-hd-7">
                 <div class="img-cont">
-                    <img class="home-illustration img-responsive" src="assets/img/home-illustration.png">
+                    <img class="home-illustration img-responsive" src="assets/img/mesh-illustration.png">
                 </div>
             </div>
         </div>
