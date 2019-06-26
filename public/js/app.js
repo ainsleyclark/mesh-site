@@ -140,8 +140,8 @@ const main = document.querySelector('main').classList;
 document.addEventListener('DOMContentLoaded', () => {
 
     //Alerts
-    if(main == 'alert-page') {
-        (document.querySelectorAll('.js-alert .alert .close') || []).forEach((close) => {
+    if(main == 'page-alert') {
+        document.querySelectorAll('.js-alert .alert .close').forEach((close) => {
             close.addEventListener('click', () => {
                 close.parentNode.remove();
             });
@@ -149,8 +149,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     //Badges
-    if(main == 'badges-page') {
-        (document.querySelectorAll('.badge-close .badge-delete') || []).forEach(close => {
+    if(main == 'page-badges') {
+        document.querySelectorAll('.badge-close .badge-delete').forEach(close => {
             close.addEventListener('click', () => {
                 close.parentNode.remove();
             });
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     //Turn clearfix text on & |/off
-    if(main == 'float-page') {
+    if(main == 'page-float') {
         document.querySelector('#clearfixBtn').addEventListener('click', function() {
             this.innerHTML = this.innerHTML.indexOf('off') ? "Turn clearfix on" : "Turn clearfix off";
             document.querySelector('#clearfixDemo').classList.toggle('clearfix');
@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     //Grid demos
-    if(main == 'grid-page') {
+    if(main == 'page-grid') {
         
         //Switch to fullwidth
         document.querySelector('#btnBrowser').addEventListener('click', function() {
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     //Turn responsive text on & off
-    if(main == 'text-page') {
+    if(main == 'page-text') {
         document.querySelector('#responsiveTextBtn').addEventListener('click', function() {
             this.innerHTML = this.innerHTML.indexOf('off') ? "Turn responsive text on" : "Turn responsive text off";
             let responsiveText = document.querySelector('#responsiveText');
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     //Invisible - Display none
-    if(main == 'visibility-page') {
+    if(main == 'page-visibility') {
         document.querySelector('#visibleBtn').addEventListener('click', function() {
             let invisibleDemo = document.querySelector('#invisibleDemo');
             let invisibleCode = document.querySelector('#invisibleCode');
@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     //Toast
-    if(main == 'toast-page') {
+    if(main == 'page-toast') {
 
         function meshToast(text, opts = {}) {
 
@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     //Collapse
-    if(main == 'collapse-page') {
+    if(main == 'page-collapse') {
 
         function Collapse(options) {
             let defaultOpt = {

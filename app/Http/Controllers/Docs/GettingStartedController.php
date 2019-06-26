@@ -51,6 +51,7 @@ class GettingStartedController extends Controller
         $this->pageData = array_merge($this->pageData, [
             'pageTitle' => 'Builder',
             'pageDescription' => 'Only download what you need with meshBuilder, an extremely powerful tool helping you customize what components to import and colors to use.',
+            'activePage' => 'builder',
             'pageContents' => [
                 'usage' => 'What does it do?',
                 'import' => 'Import',
@@ -61,11 +62,27 @@ class GettingStartedController extends Controller
         return view('builder.builder-home', $this->pageData);
     }
 
+    public function javascript() { 
+
+        $this->pageData = array_merge($this->pageData, [
+            'pageTitle' => 'Javascript',
+            'pageDescription' => 'We realise everything can\'t be done in CSS & somethings are best done with JavaScript. Which is why we have included a simple JS script to get you going.',
+            'activePage' => 'javascript',
+            'pageContents' => [
+                'Usage' => 'usage',
+                'Script' => 'script',
+            ]
+        ]);
+
+        return view('documentation.gettingstarted.javascript', $this->pageData);
+    }
+
     public function notation() { 
 
         $this->pageData = array_merge($this->pageData, [
             'pageTitle' => 'Notation',
             'pageDescription' => 'Get to grips with the mesh notation and see how easy it is.',
+            'activePage' => 'notation',
             'pageContents' => [
                 'classes' => 'Classes',
                 'important' => '!important',

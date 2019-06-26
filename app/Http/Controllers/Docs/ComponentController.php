@@ -224,7 +224,7 @@ class ComponentController extends Controller
         $this->pageData = array_merge($this->pageData, [
             'pageTitle' => 'Nav',
             'pageDescription' => 'Use the mesh nav to easily add responsive navigation to your site',
-            'activePage' => 'navigation',
+            'activePage' => 'nav',
             'pageContents' => [
                 'usage' => 'Usage',
                 'search-form' => 'Search Form',

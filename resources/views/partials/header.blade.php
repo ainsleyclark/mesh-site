@@ -2,7 +2,7 @@
     Header
     ===================== -->
 
-<header class="primary d-flex align-items-center @if($activePage == 'home') {{ $activePage }} @endif">
+<header class="primary d-flex align-items-center @if ($activePage == 'home' || $activePage == 'error' ) {{ $activePage }} @endif">
     <div class="container-fullwidth px-tab-4">
         <div class="row">
             <div class="col-6">

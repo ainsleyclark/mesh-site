@@ -30,10 +30,6 @@ h1 {
     height: auto;
 }
 
-/* .home-illusration {
-    transform: scale(1.3);
-} */
-
 .home-background {
 	top: 0;
 	left: 0;
@@ -61,11 +57,6 @@ h1 {
     }
 
 }
-
-@media (min-width: 1024px) {
-
-}
-
 
 </style>
 @endpush

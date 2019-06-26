@@ -1,5 +1,4 @@
 const mix = require('laravel-mix');
-const fs = require('fs');
 const browsersupport = require("./mesh-src/browserslistrc.js");
 
 /*
@@ -13,16 +12,14 @@ const browsersupport = require("./mesh-src/browserslistrc.js");
  |
  */
 
-//Main JS & SASS
-// mix.js('resources/js/app.js', 'public/js')
-//     .babel('public/js/app.js', 'public/js/app.es5.js')
+
+mix.setPublicPath("public");
 
 mix.scripts([
     'resources/js/app.js',
     'resources/js/docs.js'
 ], 'public/js/app.js')
-.babel('public/js/app.js', 'public/js/app.es5.js');
-
+// .babel('public/js/app.js', 'public/js/app.es5.js');
 
 mix.sass('resources/sass/app.scss', 'public/css')
     .sass('mesh-src/src/mesh-grid.scss', 'public/css')
@@ -38,7 +35,7 @@ mix.sass('resources/sass/app.scss', 'public/css')
 mix.js('resources/js/builder.js', 'public/js')
     .babel('public/js/builder.js', 'public/js/builder.js')
 
-//BrowserSync
-mix.browserSync('meshcss.com')
+// //BrowserSync
+// mix.browserSync('meshcss.com')
 
 

@@ -1,6 +1,6 @@
 @extends('layout.app')
 @section('content')
-
+<div class="header-spacer"></div>
 @include('partials.sidenav')
 
 <section class="content button-page">

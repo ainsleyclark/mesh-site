@@ -266,7 +266,8 @@ header.primary {
   background: #ffffff;
 }
 
-header.primary.home {
+header.primary.home,
+header.primary.error {
   background-color: transparent;
   border-bottom: 0;
 }
