@@ -1,7 +1,9 @@
 {
-    "/js/builder.js": "/js/builder.js",
+    "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/css/mesh-grid.css": "/css/mesh-grid.css",
     "/css/mesh.css": "/css/mesh.css",
-    "/js/app.js": "/js/app.js"
+    "/js/builder.js": "/js/builder.js",
+    "/js/app.es5.js": "/js/app.es5.js",
+    "/js/builder.es5.js": "/js/builder.es5.js"
 }

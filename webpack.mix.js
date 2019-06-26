@@ -13,29 +13,30 @@ const browsersupport = require("./mesh-src/browserslistrc.js");
  */
 
 
-mix.setPublicPath("public");
-
-mix.scripts([
+//JS Files
+mix.js([
     'resources/js/app.js',
     'resources/js/docs.js'
 ], 'public/js/app.js')
-// .babel('public/js/app.js', 'public/js/app.es5.js');
+.babel('public/js/app.js', 'public/js/app.es5.js')
 
+//Builder File
+mix.js('resources/js/builder.js', 'public/js')
+    .babel('public/js/builder.js', 'public/js/builder.es5.js')
+
+//Sass Files
 mix.sass('resources/sass/app.scss', 'public/css')
     .sass('mesh-src/src/mesh-grid.scss', 'public/css')
     .sass('mesh-src/src/mesh.scss', 'public/css').options({
+    processCssUrls: false,
         autoprefixer: {
             options: {
                 overrideBrowserslist: browsersupport.overrideBrowserslist
             }
         }
-    });  
-    
-//Builder File
-mix.js('resources/js/builder.js', 'public/js')
-    .babel('public/js/builder.js', 'public/js/builder.js')
+    })
 
-// //BrowserSync
-// mix.browserSync('meshcss.com')
+//BrowserSync
+mix.browserSync('meshcss.com')
 
 

@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //Toast
     if(main == 'page-toast') {
-
+//
         function meshToast(text, opts = {}) {
 
             const defaults = {
