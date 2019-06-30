@@ -18,7 +18,7 @@ mix.js([
     'resources/js/app.js',
     'resources/js/docs.js'
 ], 'public/js/app.js')
-.babel('public/js/app.js', 'public/js/app.es5.js')
+
 
 //Builder File
 mix.js('resources/js/builder.js', 'public/js')
@@ -28,14 +28,21 @@ mix.js('resources/js/builder.js', 'public/js')
 mix.sass('resources/sass/app.scss', 'public/css')
     .sass('mesh-src/src/mesh-grid.scss', 'public/css')
     .sass('mesh-src/src/mesh.scss', 'public/css').options({
-    processCssUrls: false,
+        processCssUrls: false
+    })
+
+//Prod
+if (mix.inProduction()) {
+    mix.babel('public/js/app.js', 'public/js/app.js').babel('public/js/builder.js', 'public/js/builder.js')
+    mix.options({
         autoprefixer: {
             options: {
                 overrideBrowserslist: browsersupport.overrideBrowserslist
             }
         }
     })
-
+}
+    
 //BrowserSync
 mix.browserSync('meshcss.com')
 
