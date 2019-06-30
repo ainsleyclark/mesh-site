@@ -18,12 +18,13 @@
 <!-- =====================
     Docs Section - Main HTML
     ===================== -->
-    
+
 <!-- Usage -->
 <article class="section-scroll" id="usage">
     <h2 class="b-b-light hash">Usage</h2>
     <p class="secondary-lead">
-        Tables should be prefixed with the <code class="inline">table</code> class. This will give padding to the table and define borders, as well as making the borders collapsible. 
+        Tables should be prefixed with the <code class="inline">table</code> class. This will give padding to the table
+        and define borders, as well as making the borders collapsible.
         <br><strong>Note:</strong> You can have any combination of the class below.
     </p>
     <table class="table my-3">
@@ -68,7 +69,8 @@
             </tr>
         </tbody>
     </table>
-    <pre class="highlight"><code class="html">&lt;table class=&quot;table&quot;&gt;
+    <pre
+        class="highlight"><code class="html">&lt;table class=&quot;table&quot;&gt;
     &lt;thead&gt;
         &lt;tr&gt;
             &lt;th&gt;#&lt;/th&gt;
@@ -116,7 +118,8 @@
 <article class="section-scroll" id="striped">
     <h2 class="b-b-light hash">Striped</h2>
     <p class="secondary-lead">
-        To make every other table row a striped color, simply add the <code class="inline">table-striped</code> alongside the table, see below.
+        To make every other table row a striped color, simply add the <code class="inline">table-striped</code>
+        alongside the table, see below.
     </p>
     <div class="text-cont">
         <p>Something</p>
@@ -163,7 +166,8 @@
             </tr>
         </tbody>
     </table>
-    <pre class="highlight"><code class="html">&lt;table class=&quot;table <strong>table-striped</strong>&quot;&gt;
+    <pre
+        class="highlight"><code class="html">&lt;table class=&quot;table <strong>table-striped</strong>&quot;&gt;
     &lt;thead&gt;
         &lt;tr&gt;
             &lt;th&gt;#&lt;/th&gt;
@@ -211,13 +215,14 @@
 <article class="section-scroll" id="hover">
     <h2 class="b-b-light hash">Hover</h2>
     <p class="secondary-lead">
-        To create a hover effect on the table rows, just add the <code class="inline">table-hover</code> class alongside the table, see below.
+        To create a hover effect on the table rows, just add the <code class="inline">table-hover</code> class alongside
+        the table, see below.
     </p>
     <div class="text-cont">
         <p>Something</p>
     </div>
-   </td>
-   <table class="table table-hover my-3">
+    </td>
+    <table class="table table-hover my-3">
         <thead>
             <tr>
                 <th>#</th>
@@ -259,7 +264,8 @@
             </tr>
         </tbody>
     </table>
-    <pre class="highlight"><code class="html">&lt;table class=&quot;table <strong>table-hover</strong>&quot;&gt;
+    <pre
+        class="highlight"><code class="html">&lt;table class=&quot;table <strong>table-hover</strong>&quot;&gt;
     &lt;thead&gt;
         &lt;tr&gt;
             &lt;th&gt;#&lt;/th&gt;
@@ -308,8 +314,10 @@
 <article class="section-scroll" id="scroll">
     <h2 class="b-b-light hash">Scroll</h2>
     <p class="secondary-lead">
-        In order for the table to become responsive, or have an <code class="inline">overflow-x: auto;</code> property, wrap the table inside a <code class="inline">div</code> and add the <code class="inline">table-scroll</code> class.
-        <br>This will prevent text wrapping and enable a scroll behaviour, go ahead and resize the screen.
+        In order for the table to become responsive, or have an <code class="inline">overflow-x: auto;</code> property,
+        wrap the table inside a <code class="inline">div</code> and add the <code class="inline">table-scroll</code>
+        class.
+        <br>This will prevent text wrapping and enable a scroll behaviour. Go ahead and resize the screen.
     </p>
     <div class="table-scroll my-3">
         <table class="table table-hover">
@@ -367,7 +375,8 @@
             </tbody>
         </table>
     </div>
-    <pre class="highlight"><code class="html"><strong>&lt;div class=&quot;table-scroll&quot;&gt;</strong>
+    <pre
+        class="highlight"><code class="html"><strong>&lt;div class=&quot;table-scroll&quot;&gt;</strong>
     &lt;table class=&quot;table table-hover&quot;&gt;
         &lt;thead&gt;
             &lt;tr&gt;
@@ -429,7 +438,8 @@
 <article class="section-scroll" id="icon">
     <h2 class="b-b-light hash">Icon</h2>
     <p class="secondary-lead">
-        The possibilities are endless with the table component, you can use them in conjunction with any icons, see below for the full works.
+        The possibilities are endless with the table component, you can use them in conjunction with any icons, see
+        below for the full works.
     </p>
     <div class="table-scroll my-3">
         <table class="table table-striped table-hover">
@@ -517,7 +527,8 @@
             </tbody>
         </table>
     </div>
-    <pre class="highlight"><code class="html">&lt;div class=&quot;table-scroll&quot;&gt;
+    <pre
+        class="highlight"><code class="html">&lt;div class=&quot;table-scroll&quot;&gt;
     &lt;table class=&quot;table table-striped table-hover&quot;&gt;
         &lt;thead&gt;
             &lt;tr&gt;
@@ -613,47 +624,65 @@
     </p>
     <div class="table-scroll">
         <table class="table">
-                <thead>
-                    <tr>
-                        <th>Variable</th>
-                        <th class="w-20">Value</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$table-row-padding: 12px 32px 12px 0 !default;</code></pre></td>
-                        <td>Pixel/em/rem</td>
-                        <td>The padding amount of each row in a table in pixels, em's or rem's.</td>
-                    </tr>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$table-border-color: #ddd !default;</code></pre></td>
-                        <td>CSS border property</td>
-                        <td>Border of the rows, header & footer via the use of a CSS property.</td>
-                    </tr>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$table-striped-color: #f9f9f9 !default;</code></pre></td>
-                        <td>Color</td>
-                        <td>Color of the striped border table (even rows).</td>
-                    </tr>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$table-hover-color: rgb(245, 245, 245) !default;</code></pre></td>
-                        <td>Color</td>
-                        <td>Coor of the hover row class.</td>
-                    </tr>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$table-header-font-size: 1.1rem !default;</code></pre></td>
-                        <td>Pixel/em/rem</td>
-                        <td>Header font size of the table.</td>
-                    </tr>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$table-row-font-size: 14px !default;</code></pre></td>
-                        <td>Pixel/em/rem</td>
-                        <td>Row font size of the table.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+            <thead>
+                <tr>
+                    <th>Variable</th>
+                    <th class="w-20">Value</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <pre
+                            class="variables highlight"><code class="scss">$table-row-padding: 12px 32px 12px 0 !default;</code></pre>
+                    </td>
+                    <td>Pixel/em/rem</td>
+                    <td>The padding amount of each row in a table in pixels, em's or rem's.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre
+                            class="variables highlight"><code class="scss">$table-border-color: #ddd !default;</code></pre>
+                    </td>
+                    <td>CSS border property</td>
+                    <td>Border of the rows, header & footer via the use of a CSS property.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre
+                            class="variables highlight"><code class="scss">$table-striped-color: #f9f9f9 !default;</code></pre>
+                    </td>
+                    <td>Color</td>
+                    <td>Color of the striped border table (even rows).</td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre
+                            class="variables highlight"><code class="scss">$table-hover-color: rgb(245, 245, 245) !default;</code></pre>
+                    </td>
+                    <td>Color</td>
+                    <td>Coor of the hover row class.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre
+                            class="variables highlight"><code class="scss">$table-header-font-size: 1.1rem !default;</code></pre>
+                    </td>
+                    <td>Pixel/em/rem</td>
+                    <td>Header font size of the table.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre
+                            class="variables highlight"><code class="scss">$table-row-font-size: 14px !default;</code></pre>
+                    </td>
+                    <td>Pixel/em/rem</td>
+                    <td>Row font size of the table.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </article>
 
 @endsection

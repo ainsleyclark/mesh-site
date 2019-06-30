@@ -22,18 +22,26 @@
 <article class="section-scroll" id="usage">
     <h2 class="b-b-light hash">What does it do?</h2>
     <p class="secondary-lead">
-        The meshBuilder is an extremley powerful tool allowing you to import individual mesh components and set variables before downloading the compiled CSS. 
-        <br>This is achievable by using our scss files, by editing the <code class="inline">_variables.scss</code> file to edit the component & utility variables and the <code class="inline">mesh.scss</code> file to import different files.
-        <br>That being said its extremley easy and quick to do so using our builder.
+        The meshBuilder allows you to import individual mesh components and set variables before downloading the
+        compiled CSS.
+        <br>This is achieved by via our scss files, by editing the <code class="inline">_variables.scss</code> file
+        to edit the component & utility variables and the <code class="inline">mesh.scss</code> file to import different
+        files.
+        <br>It's easy and quick to do so using our builder.
     </p>
     <p>
-        <strong>Note:</strong> We only support import & colors for the time being. There are more features coming, if you want to see something included in the meshBuilder that isn't already, visit the github page to create a feature request.
+        <strong>Note:</strong> We only support import & colors for the time being, but there are more features coming.
+        If
+        you want to see something included in the meshBuilder that isn't already, visit the github page to create a
+        feature request.
     </p>
 </article>
 <article class="section-scroll" id="import">
     <h2 class="b-b-light hash">Import</h2>
     <p class="secondary-lead">
-        Please select what features you would like to include in your project. Please note that the mesh grid (grid, display, flex & order) and colors will automatically be included. This helps to prevent any errors when compiling the scss.
+        Please select what features you would like to include in your project. Please note that the mesh grid (grid,
+        display, flex & order) and colors will automatically be included. This helps to prevent any errors when
+        compiling the scss.
     </p>
     <div class="builder-cont my-3">
         <div class="row">
@@ -76,7 +84,7 @@
                         </div>
                         <div class="form-group">
                             <label for="visibility">Visibility</label>
-                            <input type="checkbox"  data-type="util" id="visibility" class="component" checked>
+                            <input type="checkbox" data-type="util" id="visibility" class="component" checked>
                         </div>
                         <div class="form-group">
                             <label for="media">Media</label>

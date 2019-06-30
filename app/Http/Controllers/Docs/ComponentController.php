@@ -259,7 +259,7 @@ class ComponentController extends Controller
 
         $this->pageData = array_merge($this->pageData, [
             'pageTitle' => 'Table',
-            'pageDescription' => 'Forget boring styled tables and use our table component to bring rows & columns to life.',
+            'pageDescription' => 'Simple and sleek tables to clearly display your information.',
             'activePage' => 'table',
             'pageContents' => [
                 'usage' => 'Usage',
@@ -313,7 +313,7 @@ class ComponentController extends Controller
 
         $this->pageData = array_merge($this->pageData, [
             'pageTitle' => 'Tooltip',
-            'pageDescription' => 'Create tooltips on any element to display extra information on hover with the mesh tooltip component.',
+            'pageDescription' => 'Use mesh tooltips on any element to display extra information on hover.',
             'activePage' => 'tooltip',
             'pageContents' => [
                 'usage' => 'Usage',
