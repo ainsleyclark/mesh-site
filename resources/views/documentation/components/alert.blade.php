@@ -11,7 +11,7 @@
 <!-- =====================
     Page JS (Place in <script></script> tags)
     ===================== -->
-<script src="{{ asset('js/docs/alert.js') }}"></script>
+    
 @endpush
 
 @section('docscontent')
@@ -22,11 +22,42 @@
 <!-- Usage -->
 <article class="section-scroll" id="usage">
     <h2 class="b-b-light hash">Usage</h2>
-    <p class="mt-2">
+    <p class="secondary-lead">
         All alerts are prefixed with the <code class="inline">alert</code> class. This gives the element some common
-        properties for the alert, such as margin and padding.
+        properties for the alert, such as margin and padding. There are three different types of alerts to choose from, take a look at below.
     </p>
-    <p class="mb-3">You can have <strong>any combination</strong> of the classes listed below.</p>
+    <div class="alert alert-secondary">
+        This is a plain alert
+    </div>
+    <div class="alert alert-secondary alert-close alert-background">
+        <i class="fas fa-info-circle mr-2"></i>
+        <strong>This is full background alert:</strong>
+        I like alerts, they display some decent content.
+        <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert alert-white alert-close alert-background py-0 pl-0 d-flex align-items-center">
+        <div class="bg-secondary p-4 mr-3">
+            <i class="fas fa-paper-plane c-white"></i>
+        </div>
+        <div class="d-flex flex-column justify-content-center">
+            <strong>Matereialstic</strong>
+            <span>This is a matereialstic alert</span>
+        </div>
+        <button type="button" class="close mx-4 p-0" aria-label="Close">
+            <span class="c-secondary" aria-hidden="true">&times;</span>
+        </button> 
+    </div>
+</article>
+
+<!-- Plain -->
+<article class="section-scroll" id="plain">
+    <h2 class="b-b-light hash">Plain</h2>
+    <p class="mt-2">
+        Plain alerts feature a border on the left & content. The text color is dynamically made and slightly darker than the alert itself.
+        <br> You just need to label your container with the <code class="inline">alert</code> class and add your color by specifiying <code class="inline">alert-{color}</code>.
+    </p>
     <div class="text-cont">
         <div class="alert">
             This is a default alert
@@ -73,7 +104,6 @@ This is a danger alert
 This is a link alert
 &lt;/div&gt;</code><img class="copy-to-clipboard"src="/assets/icons/copy.svg" alt="Copy icon"><img class="copy-tick"src="/assets/icons/checked.svg" alt="Success icon"></pre>
 </article>
-
 
 <!-- Background Alerts -->
 <article class="section-scroll" id="background">
@@ -189,7 +219,7 @@ This is a danger alert with close button
     <h2 class="b-b-light hash">Icon:</h2>
     <p class="secondary-lead">
         Adding any icons to alerts is easy, you can do it natively with slight margin added to separate the content.
-        See below for an example:
+        See below for an example"
     </p>
     <div class="text-cont">
         <div class="alert alert-success alert-close alert-background">
@@ -233,6 +263,53 @@ This is a danger alert with close button
     &lt;button type="button" class="close" aria-label="Close"&gt;
         &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
     &lt;/button&gt;
+&lt;/div&gt;</code><img class="copy-to-clipboard"src="/assets/icons/copy.svg" alt="Copy icon"><img class="copy-tick"src="/assets/icons/checked.svg" alt="Success icon"></pre>
+</article>
+
+<!-- Material Alerts -->
+<article class="section-scroll" id="material">
+    <h2 class="b-b-light hash">Materialistic:</h2>
+    <p class="secondary-lead">
+        You can design matereialstic looking cards without any need of <strong>any additional classes</strong> easy as that, take a look at the notation below and copy if you like the look of it!
+        <br>Note: You are not limited to the primary color, you can use any in your palette.
+    </p>
+    <div class="text-cont">
+        <div class="alert alert-white alert-close alert-background py-0 pl-0 d-flex align-items-center">
+            <div class="bg-primary p-4 mr-3">
+                <i class="fas fa-shopping-cart c-white"></i>
+            </div>
+            <div class="d-flex flex-column justify-content-center">
+                <strong>Added to cart</strong>
+                <span>The item was added to the shopping cart.</span>
+            </div>
+            <button type="button" class="close mx-4 p-0" aria-label="Close">
+                <span class="c-primary" aria-hidden="true">&times;</span>
+            </button> 
+        </div>
+        <div class="alert alert-white alert-close alert-background py-0 pl-0 d-flex align-items-center">
+            <div class="bg-secondary p-4 mr-3">
+                <i class="fas fa-paper-plane c-white"></i>
+            </div>
+            <div class="d-flex flex-column justify-content-center">
+                <strong>Message sent</strong>
+                <span>Your message has been sent, thanks for reaching out!</span>
+            </div>
+            <button type="button" class="close mx-4 p-0" aria-label="Close">
+                <span class="c-secondary" aria-hidden="true">&times;</span>
+            </button> 
+        </div>
+    </div>
+    <pre class="highlight"><code class="html">&lt;div class=&quot;alert alert-white alert-close alert-background py-0 pl-0 d-flex align-items-center&quot;&gt;
+    &lt;div class=&quot;bg-primary p-4 mr-3&quot;&gt;
+        &lt;i class=&quot;fas fa-shopping-cart c-white&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;d-flex flex-column justify-content-center&quot;&gt;
+        &lt;strong&gt;Added to cart&lt;/strong&gt;
+        &lt;span&gt;The item was added to the shopping cart.&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;button type=&quot;button&quot; class=&quot;close mx-4 p-0&quot; aria-label=&quot;Close&quot;&gt;
+        &lt;span class=&quot;c-primary&quot; aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+    &lt;/button&gt; 
 &lt;/div&gt;</code><img class="copy-to-clipboard"src="/assets/icons/copy.svg" alt="Copy icon"><img class="copy-tick"src="/assets/icons/checked.svg" alt="Success icon"></pre>
 </article>
 
@@ -378,18 +455,10 @@ This is a danger alert with close button
                 </tr>
                 <tr>
                     <td>
-                        <pre
-                            class="variables highlight"><code class="scss">$alert-enable-background-shadows: true;</code></pre>
+                        <pre class="variables highlight"><code class="scss">$alert-enable-background-shadows: true;</code></pre>
                     </td>
                     <td>Boolean</td>
                     <td>Enables/disables the shadow effect for full coloured background styled alert.</td>
-                </tr>
-                <tr>
-                    <td>
-                        <pre class="variables highlight"><code class="scss">$alert-enable-rounded: true;</code></pre>
-                    </td>
-                    <td>Boolean</td>
-                    <td>Enables/disables the border-radius on all alerts.</td>
                 </tr>
                 <tr>
                     <td>

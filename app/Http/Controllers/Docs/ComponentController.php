@@ -21,6 +21,7 @@ class ComponentController extends Controller
             'activePage' => 'alert',
             'pageContents' => [
                 'usage' => 'Usage',
+                'plain' => 'Plain',
                 'background' => 'Full background',
                 'close' => 'Close',
                 'icons' => 'Icon',
@@ -223,7 +224,7 @@ class ComponentController extends Controller
         $this->pageData = array_merge($this->pageData, [
             'pageTitle' => 'Nav',
             'pageDescription' => 'Use the mesh nav to easily add responsive navigation to your site',
-            'activePage' => 'navigation',
+            'activePage' => 'nav',
             'pageContents' => [
                 'usage' => 'Usage',
                 'search-form' => 'Search Form',
@@ -277,10 +278,15 @@ class ComponentController extends Controller
 
         $this->pageData = array_merge($this->pageData, [
             'pageTitle' => 'Tabs',
-            'pageDescription' => 'Something about tabs',
+            'pageDescription' => 'Display content efficiently and choose from different tab styles & classes with our easy to use tab component.',
             'activePage' => 'tabs',
             'pageContents' => [
                 'usage' => 'Usage',
+                'plain' => 'Plain',
+                'animate' => 'Animate',
+                'bottom' => 'Bottom',
+                'left' => 'Left',
+                'right' => 'Right',
                 'variables' => 'Variables',
             ]
         ]);

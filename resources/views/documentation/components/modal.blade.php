@@ -59,7 +59,7 @@
     <div class="modal-cont">
         <label for="exampleModal" class="btn btn-secondary c-white">Click Me</label>
         <input type="checkbox" class="modal-toggle" id="exampleModal">
-        <div class="modal modal-centered" aria-hidden="true">
+        <div class="modal" aria-hidden="true">
             <div class="modal-container">
                 <div class="modal-header">
                     <h3>Modal Title</h3>

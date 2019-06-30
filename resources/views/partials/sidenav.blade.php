@@ -11,6 +11,7 @@
                 <a class="{{($activePage == 'introduction') ? 'active' : ''}}" href="/documentation/getting-started/introduction"><li>Introduction</li></a>
                 <a class="{{($activePage == 'installation') ? 'active' : ''}}" href="/documentation/getting-started/installation"><li>Installation</li></a>
                 <a class="{{($activePage == 'builder') ? 'active' : ''}}" href="/builder"><li>meshBuilder</li></a>
+                <a class="{{($activePage == 'javascript') ? 'active' : ''}}" href="/documentation/getting-started/javascript"><li>Javascript</li></a>
                 <a class="{{($activePage == 'notation') ? 'active' : ''}}" href="/documentation/getting-started/notation"><li>Notation</li></a>
             </ul>
         </li>

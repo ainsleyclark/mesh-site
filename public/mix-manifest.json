@@ -3,5 +3,7 @@
     "/css/app.css": "/css/app.css",
     "/css/mesh-grid.css": "/css/mesh-grid.css",
     "/css/mesh.css": "/css/mesh.css",
-    "/js/app.es5.js": "/js/app.es5.js"
+    "/js/builder.js": "/js/builder.js",
+    "/js/app.es5.js": "/js/app.es5.js",
+    "/js/builder.es5.js": "/js/builder.es5.js"
 }
