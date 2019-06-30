@@ -17,7 +17,7 @@ class UtilityController extends Controller
 
         $this->pageData = array_merge($this->pageData, [
             'pageTitle' => 'Borders',
-            'pageDescription' => 'Use our border utility classes to quickly style an elements border with color classes & shape their border radius.',
+            'pageDescription' => 'Use these utility classes to rapidly style elements border with color classes & shape their border radius.',
             'activePage' => 'borders',
             'pageContents' => [
                 'borders' => 'Borders',
@@ -33,7 +33,7 @@ class UtilityController extends Controller
 
         $this->pageData = array_merge($this->pageData, [
             'pageTitle' => 'Colors',
-            'pageDescription' => 'A small color pallette has been added to mesh to keep things quick, but its totally customisable. Manipulate the elements color and background color quickly.',
+            'pageDescription' => "A small color pallette has been added to mesh to keep things quick, but it's totally customisable. Manipulate the element color and background color quickly.",
             'activePage' => 'colors',
             'pageContents' => [
                 'usage' => 'Usage',
@@ -83,7 +83,7 @@ class UtilityController extends Controller
 
         $this->pageData = array_merge($this->pageData, [
             'pageTitle' => 'Position',
-            'pageDescription' => 'Use our position classes to easily adjust the position of an element responsivley.',
+            'pageDescription' => 'Use our position classes to easily adjust the position of an element while remaining responsive.',
             'activePage' => 'position',
             'parentDirectory' => basename(__DIR__),
             'pageContents' => [
@@ -119,7 +119,7 @@ class UtilityController extends Controller
 
         $this->pageData = array_merge($this->pageData, [
             'pageTitle' => 'Spacers',
-            'pageDescription' => 'Use spacers to separate content when margin & padding isn&#39;t large enough with these helpful classes.',
+            'pageDescription' => "Use these helpful classes to separate content when margin & padding isn't large enough.",
             'activePage' => 'spacers',
             'pageContents' => [
                 'usage' => 'Usage',

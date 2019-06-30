@@ -42,13 +42,15 @@
 <!-- Font Sizes -->
 <article class="section-scroll" id="sub">
     <h2 class="b-b-light hash">Sub headings</h2>
-    <p class="secondary-lead">A lead class is available by apply <code class="inline">.lead</code> to your element, this text is perfect for sub headings on pages and large paragraphs.</p>
+    <p class="secondary-lead">A lead class is available by applying <code class="inline">.lead</code> to your element.
+        This text is perfect for sub headings on pages and large paragraphs.</p>
     <div class="text-cont bg-light br p-3">
         <h1 class="normal-headings">Welcome to mesh</h1>
         <p class="lead">I'm an example sub heading using the lead class.</p>
     </div>
 
-    <pre class="highlight mt-3"><code class="html py-2">&lt;h1&gt;Welcome to mesh&lt;/h1&gt;
+    <pre
+        class="highlight mt-3"><code class="html py-2">&lt;h1&gt;Welcome to mesh&lt;/h1&gt;
 &lt;p class="lead"&gtI'm an example sub heading using the lead class.&lt;/p&gt;</code><img class="copy-to-clipboard"src="/assets/icons/copy.svg" alt="Copy icon"><img class="copy-tick"src="/assets/icons/checked.svg" alt="Success icon"></pre>
 </article>
 
@@ -120,10 +122,13 @@
 <!-- Responsive Text -->
 <article class="section-scroll" id="responsive">
     <h2 class="b-b-light hash">Responsive text</h2>
-    <p class="secondary-lead">Below is a demo of our responsive text class, you can target it by using the <code class="inline">t-responsive</code> class.</p>
+    <p class="secondary-lead">Below is a demo of our responsive text class, you can target it by using the <code
+            class="inline">t-responsive</code> class.</p>
     <button class="btn btn-rounded btn-secondary" id="responsiveTextBtn">Turn responsive text off</button>
     <div class="text-cont">
-        <p class="t-responsive" id="responsiveText">With responsive text, the font size gradually gets smaller on different viewports. Its totally customizable, you can adjust the base font size and how many points you would like. Go ahead and resize the screen to watch me get smaller!</p>
+        <p class="t-responsive" id="responsiveText">With responsive text, the font size gradually gets smaller on
+            different viewports. Its totally customizable, you can adjust the base font size and how many points you
+            would like. Go ahead and resize the screen to watch me get smaller!</p>
     </div>
 </article>
 
@@ -131,7 +136,9 @@
 <article class="section-scroll" id="align">
     <h2 class="b-b-light hash">Alignment</h2>
     <p class="secondary-lead">
-        Text alignment is simple with mesh, you can adjust it responsively by using <code class="inline">t-{breakpoint}-{property}</code> The breakpoint being optional and one of our five breakpoints, the properties being outlined below.
+        Text alignment is simple with mesh, you can adjust it responsively by using <code
+            class="inline">t-{breakpoint}-{property}</code> The optional breakpoint can be one of our five
+        breakpoints, outlined below.
     </p>
     <div class="text-cont">
         <table class="table-code w-100 t-left mt-3">
@@ -164,7 +171,8 @@
         </table>
     </div>
     <h3 class="mt-3">Responsive variations:</h3>
-    <pre class="highlight"><code class="html">&lt;!-- Default --&gt;
+    <pre
+        class="highlight"><code class="html">&lt;!-- Default --&gt;
 &lt;div class="t-center"&gt;&lt;/div&gt;
 &lt;div class="t-left"&gt;&lt;/div&gt;
 &lt;div class="t-right"&gt;&lt;/div&gt;
@@ -199,90 +207,122 @@
     </p>
     <div class="table-scroll">
         <table class="table">
-                <thead>
-                    <tr>
-                        <th>Variable</th>
-                        <th class="w-20">Value</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$type-enable-responsive-text: true;</code></pre></td>
-                        <td>Boolean</td>
-                        <td>Enables/disables the responsive text class.</td>
-                    </tr>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$font-stack: Roboto, -apple-system, 
+            <thead>
+                <tr>
+                    <th>Variable</th>
+                    <th class="w-20">Value</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <pre
+                            class="variables highlight"><code class="scss">$type-enable-responsive-text: true;</code></pre>
+                    </td>
+                    <td>Boolean</td>
+                    <td>Enables/disables the responsive text class.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre class="variables highlight"><code class="scss">$font-stack: Roboto, -apple-system, 
 BlinkMacSystemFont, 'Segoe UI', 
 Oxygen-Sans, Ubuntu, Cantarell, 
-'Helvetica Neue', sans-serif;</code></pre></td>
-                        <td>CSS font family</td>
-                        <td>Add your chosen font stack here, to use "Roboto" (default for mesh) make sure you use a google import.</td>
-                    </tr>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$h1-font-size: 3.31rem;</code></pre></td>
-                        <td>Pixel/em/rem</td>
-                        <td>H1 font size in pixels, em's or rem's.</td>
-                    </tr>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$h2-font-size: 2.25rem;</code></pre></td>
-                        <td>Pixel/em/rem</td>
-                        <td>H2 font size in pixels, em's or rem's.</td>
-                    </tr>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$h3-font-size: 1.56rem;</code></pre></td>
-                        <td>Pixel/em/rem</td>
-                        <td>H3 font size in pixels, em's or rem's.</td>
-                    </tr>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$h4-font-size: 1.12rem;</code></pre></td>
-                        <td>Pixel/em/rem</td>
-                        <td>H4 font size in pixels, em's or rem's.</td>
-                    </tr>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$h5-font-size: 1.06rem;</code></pre></td>
-                        <td>Pixel/em/rem</td>
-                        <td>H5 font size in pixels, em's or rem's.</td>
-                    </tr>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$h6-font-size: 0.75rem;</code></pre></td>
-                        <td>Pixel/em/rem</td>
-                        <td>H6 font size in pixels, em's or rem's.</td>
-                    </tr>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$lead-font-size: 1.25rem;</code></pre></td>
-                        <td>Pixel/em/rem</td>
-                        <td>Lead font size in pixels, em's or rem's.</td>
-                    </tr>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$paragraph-font-size: 1rem;</code></pre></td>
-                        <td>Pixel/em/rem</td>
-                        <td>Paragraph font size in pixels, em's or rem's.</td>
-                    </tr>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$small-font-size: 75%;</code></pre></td>
-                        <td>Percentage/pixel/em/rem</td>
-                        <td>Small tag font size in percentage, pixels, em's or rem's.</td>
-                    </tr>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$black-text-color: #3c4858;</code></pre></td>
-                        <td>Color</td>
-                        <td><strong>Important:</strong>defines the color of all text, the mesh default uses an off black.</td>
-                    </tr>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$white-text-color: #ffffff;</code></pre></td>
-                        <td>Color</td>
-                        <td>Defines the white shade of text.</td>
-                    </tr>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$responsive-text-points: 30;</code></pre></td>
-                        <td>Number</td>
-                        <td>How many breakpoints the <code class="inline">t-responsive</code> (responsive text) class uses, bare in mind the more you use will, the smoother it will become but at a cost to kb.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+'Helvetica Neue', sans-serif;</code></pre>
+                    </td>
+                    <td>CSS font family</td>
+                    <td>Add your chosen font stack here, to use "Roboto" (default for mesh) make sure you use a google
+                        import.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre class="variables highlight"><code class="scss">$h1-font-size: 3.31rem;</code></pre>
+                    </td>
+                    <td>Pixel/em/rem</td>
+                    <td>H1 font size in pixels, ems or rems.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre class="variables highlight"><code class="scss">$h2-font-size: 2.25rem;</code></pre>
+                    </td>
+                    <td>Pixel/em/rem</td>
+                    <td>H2 font size in pixels, ems or rems.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre class="variables highlight"><code class="scss">$h3-font-size: 1.56rem;</code></pre>
+                    </td>
+                    <td>Pixel/em/rem</td>
+                    <td>H3 font size in pixels, ems or rems.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre class="variables highlight"><code class="scss">$h4-font-size: 1.12rem;</code></pre>
+                    </td>
+                    <td>Pixel/em/rem</td>
+                    <td>H4 font size in pixels, ems or rems.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre class="variables highlight"><code class="scss">$h5-font-size: 1.06rem;</code></pre>
+                    </td>
+                    <td>Pixel/em/rem</td>
+                    <td>H5 font size in pixels, ems or rems.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre class="variables highlight"><code class="scss">$h6-font-size: 0.75rem;</code></pre>
+                    </td>
+                    <td>Pixel/em/rem</td>
+                    <td>H6 font size in pixels, ems or rems.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre class="variables highlight"><code class="scss">$lead-font-size: 1.25rem;</code></pre>
+                    </td>
+                    <td>Pixel/em/rem</td>
+                    <td>Lead font size in pixels, ems or rems.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre class="variables highlight"><code class="scss">$paragraph-font-size: 1rem;</code></pre>
+                    </td>
+                    <td>Pixel/em/rem</td>
+                    <td>Paragraph font size in pixels, ems or rems.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre class="variables highlight"><code class="scss">$small-font-size: 75%;</code></pre>
+                    </td>
+                    <td>Percentage/pixel/em/rem</td>
+                    <td>Small tag font size in percentage, pixels, ems or rems.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre class="variables highlight"><code class="scss">$black-text-color: #3c4858;</code></pre>
+                    </td>
+                    <td>Color</td>
+                    <td><strong>Important:</strong>defines the color of all text, the mesh default uses an off black.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre class="variables highlight"><code class="scss">$white-text-color: #ffffff;</code></pre>
+                    </td>
+                    <td>Color</td>
+                    <td>Defines the white shade of text.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre class="variables highlight"><code class="scss">$responsive-text-points: 30;</code></pre>
+                    </td>
+                    <td>Number</td>
+                    <td>How many breakpoints the <code class="inline">t-responsive</code> (responsive text) class uses.
+                        Please bear in mind that the more you use, the smoother it will become but at a cost to kb.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </article>
 
 @endsection

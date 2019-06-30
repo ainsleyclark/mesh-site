@@ -24,14 +24,19 @@
     <h2 class="b-b-light hash">Usage</h2>
     <p class="secondary-lead">
         Our visibility classes help you to remove an elements visibility from the DOM at different breakpoints.
-        <br><strong>Note</strong> that its different from using <code class="inline">display: none;</code>, this will completely remove it from the page but <code class="inline">visibility: hidden;</code> means it's hidden but the space is allocated for it on the page, and the tag is rendered.
+        <br><strong>Note</strong> that it's different from using <code class="inline">display: none;</code> as that will
+        completely remove it from the page. With <code class="inline">visibility: hidden;</code> the element is hidden
+        but the space is allocated for it on the page, and the tag is rendered.
     </p>
     <div class="text-cont">
         <h3>Notation:</h3>
         <ul class="list-line">
-            <li>You can target the visibility classes by using <code class="inline">visible-{breakpoint}</code>. The breakpoint being optional and one of our five breakpoints</li>
+            <li>You can target the visibility classes by using <code class="inline">visible-{breakpoint}</code>. The
+                breakpoint being optional and one of our five breakpoints</li>
             <li>You can also make an element invisible by using <code class="inline">invisible-{breakpoint}</code>.</li>
-            <li>These classes effect the breakpoint and upwards, for example <code class="inline">invisible-tab</code> will make the element's visibility hidden on tablet, desktop & HD screens but visible at mobile or extra small.</li>
+            <li>These classes affect the breakpoint and upwards, for example <code class="inline">invisible-tab</code>
+                will make the element's visibility hidden on tablet, desktop & HD screens but visible at mobile or extra
+                small.</li>
         </ul>
     </div>
     <div class="text-cont">
@@ -64,15 +69,19 @@
     <h2 class="b-b-light hash">Examples</h2>
     <h3 class="mt-3">Vanishing act:</h3>
     <p>
-        Here, the first element is floated to the left, the second to the right on desktop screens, the clearfix class is used on the parent. <span class="d-none d-desk-inline">See the effect it has with it turned off by using the button.</span>
+        Here, the first element is floated to the left, the second to the right on desktop screens, the clearfix class
+        is used on the parent. <span class="d-none d-desk-inline">See the effect it has with it turned off by using the
+            button.</span>
     </p>
-    <button class="btn btn-rounded btn-secondary d-none d-desk-block mt-3" id="visibleBtn">Switch to display none</button>
+    <button class="btn btn-rounded btn-secondary d-none d-desk-block mt-3" id="visibleBtn">Switch to display
+        none</button>
     <div class="column-demo c-white mb-3 d-flex">
         <div class="text br mr-2 mb-2 p-4 w-30"></div>
         <div class="text br mx-2 mb-2 p-3 w-30 invisible" id="invisibleDemo"></div>
         <div class="text br ml-2 mb-2 p-3 w-30"></div>
     </div>
-    <pre class="highlight"><code class="html" id="invisibleCode">&lt;div class="d-flex"&gt;
+    <pre
+        class="highlight"><code class="html" id="invisibleCode">&lt;div class="d-flex"&gt;
     &lt;div class="w-30"&gt;&lt;/div&gt;
     &lt;div class="invisible w-30"&gt;&lt;/div&gt;
     &lt;div class="w-30"&gt;&lt;/div&gt;
@@ -82,7 +91,8 @@
 <!-- Variations -->
 <article class="section-scroll" id="variations">
     <h2 class="b-b-light hash">Variations</h2>
-    <pre class="highlight mt-3"><code class="html">&lt;!-- Default --&gt;
+    <pre
+        class="highlight mt-3"><code class="html">&lt;!-- Default --&gt;
 &lt;div class="visible"&gt;&lt;/div&gt;
 &lt;div class="invisible"&gt;&lt;/div&gt;
 &lt;!-- Mobile --&gt;

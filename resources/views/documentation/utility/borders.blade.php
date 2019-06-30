@@ -13,8 +13,9 @@
     justify-content: center;
     margin-bottom: 10px;
 }
+
 .h-300 {
-	height: 300px;
+    height: 300px;
 }
 </style>
 @endpush
@@ -35,12 +36,15 @@
 <article class="section-scroll" id="borders">
     <h2 class="b-b-light hash">Borders</h2>
     <p class="secondary-lead">
-        The border classes help you to create borders on the fly easily. Choose from all different sides (top, right, bottom & left) as well as all sides.
+        The border classes allow you to easily create borders on the fly. Choose from all different sides (top, right,
+        bottom & left) as well as all sides.
     </p>
     <div class="text-cont">
         <h3>Notation:</h3>
         <ul class="list-line">
-            <li>All border classes shown below are prefixed with <code class="inline">b-{side}-{shade}</code> where side is <code class="inline">t, r, b, l</code>, (top, right, bottom or left) and optional and shade being light or dark, which is optional too.</li>
+            <li>All border classes shown below are prefixed with <code class="inline">b-{side}-{shade}</code> where side
+                is <code class="inline">t, r, b, l</code>, (top, right, bottom or left) and optional and shade being
+                light or dark, which is optional too.</li>
         </ul>
     </div>
     <div class="text-cont">
@@ -145,7 +149,8 @@
 <article class="section-scroll" id="radius">
     <h2 class="b-b-light hash">Border Radius</h2>
     <p class="secondary-lead">
-        The border classes help you to create borders on the fly easily. Choose from all different sides (top, right, bottom & left) as well as all sides.
+        The border classes help you to create borders on the fly easily. Choose from all different sides (top, right,
+        bottom & left) as well as all sides.
     </p>
     <div class="text-cont">
         <h3>Notation:</h3>
@@ -242,47 +247,61 @@
     </p>
     <div class="table-scroll">
         <table class="table">
-                <thead>
-                    <tr>
-                        <th>Variable</th>
-                        <th class="w-20">Value</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="vertical-align: middle;"><pre class="variables highlight"><code class="scss">$border-colors: (
+            <thead>
+                <tr>
+                    <th>Variable</th>
+                    <th class="w-20">Value</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="vertical-align: middle;">
+                        <pre class="variables highlight"><code class="scss">$border-colors: (
     default: rgba(0, 0, 0, 0.3),
     light: rgba(0, 0, 0, 0.1),
     dark: rgba(0, 0, 0, 0.6)
-);</code></pre></td>
-                        <td>Map(name:color)</td>
-                        <td>The name of the <code class="inline">border-colors</code> map corresponds to the class name (apart from default) and the color determines the color of that class name. 
-                            <br><strong>Note:</strong> changing the default name var will throw an errror.</td>
-                    </tr>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$border-width: 1px;</code></pre></td>
-                        <td>Pixel/em/rem</td>
-                        <td>Width amount of borders in pixels, em's or rem's.</td>
-                    </tr>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$border-radius: 0.5em;</code></pre></td>
-                        <td>Pixel/em/rem</td>
-                        <td>The default border radius amount of the <code class="inline">br</code> (border-radius) class.</td>
-                    </tr>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$border-radius-small: 0.25em;</code></pre></td>
-                        <td>Pixel/em/rem</td>
-                        <td>The small border radius amount of the <code class="inline">br-sm</code> (border-radius) class.</td>
-                    </tr>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$border-radius-large: 1em;</code></pre></td>
-                        <td>Pixel/em/rem</td>
-                        <td>The large border radius amount of the <code class="inline">br-large</code> (border-radius) class.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+);</code></pre>
+                    </td>
+                    <td>Map(name:color)</td>
+                    <td>The name of the <code class="inline">border-colors</code> map corresponds to the class name
+                        (apart from default) and the color determines the color of that class name.
+                        <br><strong>Note:</strong> changing the default name var will throw an errror.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre class="variables highlight"><code class="scss">$border-width: 1px;</code></pre>
+                    </td>
+                    <td>Pixel/em/rem</td>
+                    <td>Width amount of borders in pixels, em's or rem's.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre class="variables highlight"><code class="scss">$border-radius: 0.5em;</code></pre>
+                    </td>
+                    <td>Pixel/em/rem</td>
+                    <td>The default border radius amount of the <code class="inline">br</code> (border-radius) class.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre class="variables highlight"><code class="scss">$border-radius-small: 0.25em;</code></pre>
+                    </td>
+                    <td>Pixel/em/rem</td>
+                    <td>The small border radius amount of the <code class="inline">br-sm</code> (border-radius) class.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre class="variables highlight"><code class="scss">$border-radius-large: 1em;</code></pre>
+                    </td>
+                    <td>Pixel/em/rem</td>
+                    <td>The large border radius amount of the <code class="inline">br-large</code> (border-radius)
+                        class.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </article>
 
 @endsection
