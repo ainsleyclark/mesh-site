@@ -163,21 +163,6 @@ class ComponentController extends Controller
         return view('documentation.components.form', $this->pageData);
     }
 
-    public function header() { 
-
-        $this->pageData = array_merge($this->pageData, [
-            'pageTitle' => 'Header',
-            'pageDescription' => 'A lightweight header for your website',
-            'activePage' => 'header',
-            'pageContents' => [
-                'usage' => 'Usage',
-                'variables' => 'Variables',
-            ]
-        ]);
-
-        return view('documentation.components.header', $this->pageData);
-    }
-
     public function list() { 
 
         $this->pageData = array_merge($this->pageData, [
@@ -236,6 +221,21 @@ class ComponentController extends Controller
         ]);
 
         return view('documentation.components.nav', $this->pageData);
+    }
+
+    public function navbar() { 
+
+        $this->pageData = array_merge($this->pageData, [
+            'pageTitle' => 'Navbar',
+            'pageDescription' => 'A lightweight header for your build with endless combinations to use in conjunction with the meshNav.',
+            'activePage' => 'navbar',
+            'pageContents' => [
+                'usage' => 'Usage',
+                'variables' => 'Variables',
+            ]
+        ]);
+
+        return view('documentation.components.navbar', $this->pageData);
     }
 
     public function pagination() { 

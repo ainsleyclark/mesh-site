@@ -18,7 +18,7 @@ let navBreakpoint = 1024;
 if (window.innerWidth < navBreakpoint) {
     document.querySelectorAll('.nav-btn').forEach(btn => {
         btn.addEventListener('click', () => {
-            let nav = btn.parentNode.querySelector('.nav-menu');
+            let nav = btn.parentNode.querySelector('.nav-menu ul');
             let height = 0;
             Array.prototype.forEach.call(nav.children, child => {
                 console.log(child);

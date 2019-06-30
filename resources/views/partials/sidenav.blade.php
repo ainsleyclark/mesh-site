@@ -53,10 +53,10 @@
                 <a class="{{($activePage == 'collapse') ? 'active' : ''}}" href="/documentation/components/collapse"><li>Collapse</li></a>
                 <a class="{{($activePage == 'epic') ? 'active' : ''}}" href="/documentation/components/epic"><li>Epic</li></a>
                 <a class="{{($activePage == 'form') ? 'active' : ''}}" href="/documentation/components/form"><li>Form</li></a>
-                <a class="{{($activePage == 'header') ? 'active' : ''}}" href="/documentation/components/header"><li>Header</li></a>
                 <a class="{{($activePage == 'list') ? 'active' : ''}}" href="/documentation/components/list"><li>List</li></a>
                 <a class="{{($activePage == 'modal') ? 'active' : ''}}" href="/documentation/components/modal"><li>Modal</li></a>
                 <a class="{{($activePage == 'nav') ? 'active' : ''}}" href="/documentation/components/nav"><li>Nav</li></a>
+                <a class="{{($activePage == 'navbar') ? 'active' : ''}}" href="/documentation/components/navbar"><li>Header</li></a>
                 <a class="{{($activePage == 'pagination') ? 'active' : ''}}" href="/documentation/components/pagination"><li>Pagination</li></a>
                 <a class="{{($activePage == 'table') ? 'active' : ''}}" href="/documentation/components/table"><li>Table</li></a>
                 <a class="{{($activePage == 'tabs') ? 'active' : ''}}" href="/documentation/components/tabs"><li>Tabs</li></a>
