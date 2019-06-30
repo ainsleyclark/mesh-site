@@ -114,7 +114,7 @@
                 <li class="nav-item">
                     <a href="#">Item</a>
                 </li>
-                <li class="nav-item nav-dropdown-link">
+                {{-- <li class="nav-item nav-dropdown-link">
                     <a class="nav-arrow" href="#">Dropdown</a>
                     <ul>
                         <li class="nav-item">
@@ -127,7 +127,7 @@
                             <a href="#">Item</a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
             </ul>
         </li>
         <li class="nav-item">
