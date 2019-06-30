@@ -11,31 +11,148 @@
 <!-- =====================
     Page JS (Place in <script></script> tags)
     ===================== -->
-<script>
-const nav = document.querySelector("#nav-5");
-const navList = document.querySelector("#nav-list-5");
 
-
-function handleNav() {
-    nav.classList.toggle("show-nav");
-};
-
-function toggleDesktop() {
-    if (nav.offsetWidth > 789 || window.innerWidth > 1530) {
-        nav.classList.add("desktop-view");
-        navList.classList.add("nav-row");
-
-
-    }
-};
-
-
-document.addEventListener('DOMContentLoaded', toggleDesktop)
-</script>
 @endpush
 
 @section('docscontent')
-<!-- =====================
+
+
+
+
+
+
+<div class="navbar bg-primary d-desk-none">
+	
+	<div class="d-flex align-items-center">
+        <h3 class="mb-0">meshCSS</h3>
+	</div>
+	
+	<label class="nav-btn">
+		<img class="nav-icon" src="https://raw.githubusercontent.com/ainsleyclark/mesh/master/res/nav-menu-white.svg?sanitize=true">
+    </label>
+
+    <ul class="nav d-none">
+        <li class="nav-item active">
+            <a  href="#">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="#">About</a>
+        </li>
+        <li class="nav-item">
+            <a href="#">Contact</a>
+        </li>
+    </ul>
+
+</div>
+
+{{-- <div class="navbar bg-primary c-white">
+	
+    <div class="d-flex align-items-center">
+        <img class="img-responsive w-20" src="https://raw.githubusercontent.com/ainsleyclark/mesh/master/res/meshlogo-white.svg?sanitize=true">
+        <h3 class="mb-0">meshCSS</h3>
+    </div>
+    
+    <label class="nav-btn">
+        <img class="nav-icon" src="https://raw.githubusercontent.com/ainsleyclark/mesh/master/res/nav-menu-white.svg?sanitize=true">
+    </label>
+
+    <ul class="nav">
+        <li class="nav-item active">
+            <a class="c-white" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="c-white" href="#">About</a>
+        </li>
+        <li class="nav-item nav-dropdown-link">
+            <a class="nav-arrow c-white" href="#">Dropdown</a>
+            <ul class="nav-dropdown bg-white br c-muted">
+                <li class="nav-item">
+                    <a href="#">Item</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Item</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Item</a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <button class="btn btn-outline btn-white px-3 py-1 br mb-0 t-initial">Download</button>
+        </li>
+    </ul>
+
+</div> --}}
+
+<div class="navbar" style="background: #f8f8f8;">
+	
+    <div class="d-flex align-items-center">
+        <img class="img-responsive w-20" src="https://raw.githubusercontent.com/ainsleyclark/mesh/master/res/meshlogo.svg?sanitize=true">
+        <h3 class="mb-0">meshCSS</h3>
+    </div>
+    
+    <label class="nav-btn">
+        <img class="nav-icon" src="https://raw.githubusercontent.com/ainsleyclark/mesh/master/res/nav-menu.svg?sanitize=true">
+    </label>
+
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a href="#">Item</a>
+        </li>
+        <li class="nav-item nav-dropdown-link">
+            <a class="nav-arrow" href="#">Dropdown</a>
+            <ul class="nav-dropdown br">
+                <li class="nav-item">
+                    <a class="active" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Item</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Item</a>
+                </li>
+                <li class="nav-item nav-dropdown-link">
+                    <a class="nav-arrow" href="#">Dropdown</a>
+                    <ul>
+                        <li class="nav-item">
+                            <a href="#">Item</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">Item</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">Item</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <button class="btn btn-outline px-3 py-1 br mb-0 t-initial">Download</button>
+        </li>
+    </ul>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{-- <!-- =====================
     Docs Section - Main HTML
     ===================== -->
 
@@ -611,6 +728,6 @@ document.addEventListener('DOMContentLoaded', toggleDesktop)
             </tbody>
         </table>
     </div>
-</article>
+</article> --}}
 
 @endsection
