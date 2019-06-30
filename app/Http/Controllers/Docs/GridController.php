@@ -17,7 +17,7 @@ class GridController extends Controller
 
         $this->pageData = array_merge($this->pageData, [
             'pageTitle' => 'Grid',
-            'pageDescription' => 'See how powerful our mobile-first flexbox grid is. With five breakpoints to choose from, it\'s easy sculpting elements to be responsive.',
+            'pageDescription' => 'See how powerful our mobile-first flexbox grid is. With five breakpoints to choose from, sculpting elements to be responsive is a breeze.',
             'activePage' => 'grid',
             'pageContents' => [
                 'howItWorks' => 'How it works',
@@ -37,7 +37,7 @@ class GridController extends Controller
 
         $this->pageData = array_merge($this->pageData, [
             'pageTitle' => 'Flex',
-            'pageDescription' => 'The whole of flexbox is bundled with mesh, meaning you can use them inline in html, making vertical and horizontal centering a doddle. As a bonus all classes are responsive.',
+            'pageDescription' => 'The whole of flexbox is bundled with mesh, meaning you can use it inline, in the html. This makes vertical and horizontal centering a doddle. Of course all classes are responsive too.',
             'activePage' => 'flex',
             'pageContents' => [
                 'usage' => 'Usage',
