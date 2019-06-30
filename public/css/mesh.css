@@ -6484,6 +6484,14 @@ label.close {
   list-style-type: none;
   flex-direction: column;
   width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.nav-dropdown-link ul {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s;
 }
 .nav ul {
   list-style-type: none;

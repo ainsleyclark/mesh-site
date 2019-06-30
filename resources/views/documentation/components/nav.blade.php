@@ -11,17 +11,83 @@
 <!-- =====================
     Page JS (Place in <script></script> tags)
     ===================== -->
+<script>
+
+document.querySelectorAll('.nav-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        let nav = btn.parentNode.querySelector('.nav');
+        let height = 0;
+        Array.prototype.forEach.call(nav.children, child => {
+            height += child.clientHeight;
+        });
+        nav.style.maxHeight == 0 + 'px' ? nav.style.maxHeight = height + 'px' : nav.style.maxHeight = 0 + 'px';
+    });
+});
+
+document.querySelectorAll('.nav-dropdown-link').forEach(btn => {
+    btn.addEventListener('click', () => {
+        console.log(btn);
+        let nav = btn.parentNode.querySelector('ul');
+        console.log(nav);
+        let height = 0;
+        Array.prototype.forEach.call(nav.children, child => {
+            height += child.clientHeight;
+        });
+        console.log(height);
+        nav.style.maxHeight == 0 + 'px' ? nav.style.maxHeight = height + 'px' : nav.style.maxHeight = 0 + 'px';
+    });
+});
+</script>
+
 
 @endpush
 
 @section('docscontent')
 
+<div class="navbar my-5" style="background: #f8f8f8;">
+	
+    <div class="d-flex align-items-center">
+        <img class="img-responsive w-20" src="https://raw.githubusercontent.com/ainsleyclark/mesh/master/res/meshlogo.svg?sanitize=true">
+        <h3 class="mb-0">meshCSS</h3>
+    </div>
+    
+    <label class="nav-btn">
+        <img class="nav-icon" src="https://raw.githubusercontent.com/ainsleyclark/mesh/master/res/nav-menu.svg?sanitize=true">
+    </label>
+
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a href="#">Item</a>
+        </li>
+        <li class="nav-item nav-dropdown-link">
+            <a class="nav-arrow" href="#">Dropdown</a>
+            <ul class="nav-dropdown br">
+                <li class="nav-item">
+                    <a class="active" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Item</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Item</a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <button class="btn btn-outline px-3 py-1 br mb-0 t-initial">Download</button>
+        </li>
+    </ul>
+
+</div>
 
 
 
 
 
-<div class="navbar bg-primary d-desk-none">
+<div class="navbar bg-primary d-none">
 	
 	<div class="d-flex align-items-center">
         <h3 class="mb-0">meshCSS</h3>
@@ -84,58 +150,6 @@
 
 </div> --}}
 
-<div class="navbar mt-4" style="background: #f8f8f8;">
-	
-    <div class="d-flex align-items-center">
-        <img class="img-responsive w-20" src="https://raw.githubusercontent.com/ainsleyclark/mesh/master/res/meshlogo.svg?sanitize=true">
-        <h3 class="mb-0">meshCSS</h3>
-    </div>
-    
-    <label class="nav-btn">
-        <img class="nav-icon" src="https://raw.githubusercontent.com/ainsleyclark/mesh/master/res/nav-menu.svg?sanitize=true">
-    </label>
-
-    <ul class="nav">
-        <li class="nav-item">
-            <a class="active" href="#">Active</a>
-        </li>
-        <li class="nav-item">
-            <a href="#">Item</a>
-        </li>
-        <li class="nav-item nav-dropdown-link">
-            <a class="nav-arrow" href="#">Dropdown</a>
-            <ul class="nav-dropdown br">
-                <li class="nav-item">
-                    <a class="active" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#">Item</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#">Item</a>
-                </li>
-                {{-- <li class="nav-item nav-dropdown-link">
-                    <a class="nav-arrow" href="#">Dropdown</a>
-                    <ul>
-                        <li class="nav-item">
-                            <a href="#">Item</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">Item</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">Item</a>
-                        </li>
-                    </ul>
-                </li> --}}
-            </ul>
-        </li>
-        <li class="nav-item">
-            <button class="btn btn-outline px-3 py-1 br mb-0 t-initial">Download</button>
-        </li>
-    </ul>
-
-</div>
 
 
 

@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //Alerts
     if(main == 'page-alert') {
-        document.querySelectorAll('.js-alert .alert .close').forEach((close) => {
+        document.querySelectorAll('.js-alert .alert .close').forEach(close => {
             close.addEventListener('click', () => {
                 close.parentNode.remove();
             });
