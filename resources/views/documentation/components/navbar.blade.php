@@ -32,7 +32,7 @@
 <article class="section-scroll" id="usage">
     <h2 class="b-b-light hash">Usage</h2>
     <p class="secondary-lead">
-        A navbar is a contaienr to wrap branding, a menu and fields into one. The mesh navbar is a simple and lightweight design. We recommend using it to hold the mesh nav. 
+        A navbar is a container to wrap branding, a menu and fields into one. The mesh navbar is a simple and lightweight design. We recommend using it to hold the mesh nav. 
         <br>For more information regarding dropdowns & expanding head over to the <a class="external-link" href="/documentation/components/nav">the nav page.</a>
         <br>Check out the examples below.
     </p>
@@ -115,7 +115,7 @@
         <h3>Notation:</h3>
         <ul class="list-line">
             <li>The navbar is prefixed with the <code class="inline">navbar</code> class, its recommended you use the <code class="inline">nav</code> HTML semantic element like so, <code class="inline">&lt;nav class=&quot;navbar&quot;&gt;</code>.
-            <li>The navbar usually consists of <span class="t-bold">2 or 3 child elements</span>, depending on what you require; all of which are entierley optional, see below:
+            <li>The navbar usually consists of <span class="t-bold">2 or 3 child elements</span>, depending on what you require; all of which are entirely optional, see below:
                 <div class="d-flex flex-column my-2">
                     <div>
                         <span class="t-bold">1) Branding</span> -
@@ -298,7 +298,7 @@
 <article class="section-scroll" id="button">
     <h2 class="b-b-light hash">Button</h2>
     <p class="secondary-lead">
-        Using buttons within your navbar is as easy as inserting the predfined mesh button classes within the container. See the <a class="external-link" href="/documentation/components/nav">button page</a> for more details.
+        Using buttons within your navbar is as easy as inserting the predefined mesh button classes within the container. See the <a class="external-link" href="/documentation/components/nav">button page</a> for more details.
     </p>
     <nav class="navbar my-3">
         <a class="navbar-brand" href="#!">Logo</a>
@@ -397,7 +397,7 @@
 <article class="section-scroll" id="tabs">
     <h2 class="b-b-light hash">Tabs</h2>
     <p class="secondary-lead">
-        To add materialistic tabs to to the navbar, append the navbar container with the <a class="external-link" href="/documentation/components/tabs" rel="noopener nofollow">tabs component</a>.
+        To add materialistic tabs to the navbar, append the navbar container with the <a class="external-link" href="/documentation/components/tabs" rel="noopener nofollow">tabs component</a>.
         <br>Then apply the <code class="inline">navbar-tabs</code> to the navbar element.
         <br>This will 0 out padding on the navbar and apply slight padding to the <code class="inline">nav-menu</code> and <code class="inline">nav-brand</code> elements.
         <br><span class="t-bold">Note:</span> Be sure to add the <code class="inline">navbar-dark</code> and <code class="inline">tabs-dark</code> if you have a dark background selected like below.</span>
@@ -464,19 +464,19 @@
         &lt;label class=&quot;tabs-label&quot; for=&quot;tab-animate-1&quot;&gt;First Tab&lt;/label&gt;
         &lt;div class=&quot;tabs-panel&quot;&gt;
             &lt;h3&gt;First Tab Content&lt;/h3&gt;
-            &lt;p&gt;+1 gluten-free fingerstache banh mi normcore beard marfa coloring book four dollar toast chartreuse. Tbh la croix lo-fi squid poke before they sold out air plant tumblr fanny pack. Aesthetic chartreuse chambray, locavore tattooed food truck banh mi gastropub air plant organic bitters keffiyeh lo-fi jean shorts glossier. Leggings scenester PBR&amp;amp;B, bitters ramps sustainable lo-fi tofu. Truffaut flannel cray tacos, occupy organic sustainable bicycle rights flexitarian squid woke scenester.&lt;/p&gt;
+            &lt;p&gt;+1 gluten-free fingerstache banh mi normcore...&lt;/p&gt;
         &lt;/div&gt;
         &lt;input type=&quot;radio&quot; class=&quot;tabs-toggle&quot; name=&quot;tabs-animate&quot; id=&quot;tab-animate-2&quot;&gt;
         &lt;label class=&quot;tabs-label&quot; for=&quot;tab-animate-2&quot;&gt;Second Tab&lt;/label&gt;
         &lt;div class=&quot;tabs-panel&quot;&gt;
             &lt;h3&gt;Second Tab Content&lt;/h3&gt;
-            &lt;p&gt;Glossier brooklyn church-key, fingerstache sartorial pickled pork belly keffiyeh before they sold out. Butcher beard hashtag bespoke affogato viral. Wayfarers distillery pok pok chillwave kogi pabst. Tote bag chicharrones stumptown disrupt, truffaut shaman thundercats pok pok PBR&amp;amp;B pitchfork tbh vexillologist man braid. Tbh four dollar toast yr glossier leggings, subway tile kickstarter. Crucifix scenester green juice, normcore distillery locavore tattooed semiotics hashtag tousled venmo. Meditation bespoke sriracha selfies.&lt;/p&gt;
+            &lt;p&gt;Glossier brooklyn church-key, fingerstache...&lt;/p&gt;
         &lt;/div&gt;
         &lt;input type=&quot;radio&quot; class=&quot;tabs-toggle&quot; name=&quot;tabs-animate&quot; id=&quot;tab-animate-3&quot;&gt;
         &lt;label class=&quot;tabs-label&quot; for=&quot;tab-animate-3&quot;&gt;Third Tab&lt;/label&gt;
         &lt;div class=&quot;tabs-panel&quot;&gt;
             &lt;h3&gt;Third Tab Content&lt;/h3&gt;
-            &lt;p&gt;Vexillologist messenger bag master cleanse lumbersexual williamsburg. Before they sold out direct trade readymade ugh paleo irony street art. Slow-carb lomo kale chips venmo lumbersexual jean shorts. Vexillologist marfa pour-over normcore, kitsch wayfarers squid put a bird on it man bun quinoa pitchfork chartreuse occupy kale chips. Pour-over man braid microdosing ugh kale chips.&lt;/p&gt;
+            &lt;p&gt;Vexillologist messenger bag master...&lt;/p&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/nav&gt;</code><img class="copy-to-clipboard"src="/assets/icons/copy.svg" alt="Copy icon"><img class="copy-tick"src="/assets/icons/checked.svg" alt="Success icon"></pre>
@@ -632,7 +632,7 @@
 <article class="section-scroll" id="variables">
     <h2 class="b-b-light hash">Variables</h2>
     <p class="secondary-lead">
-        Chnage padding amounts & default background color the navbar with the scss variables below.
+        Change padding amounts & default background color the navbar with the scss variables below.
     </p>
     <div class="table-scroll">
         <table class="table">
