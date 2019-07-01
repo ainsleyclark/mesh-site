@@ -632,7 +632,7 @@
 <article class="section-scroll" id="variables">
     <h2 class="b-b-light hash">Variables</h2>
     <p class="secondary-lead">
-        Add a description here:
+        Chnage padding amounts & default background color the navbar with the scss variables below.
     </p>
     <div class="table-scroll">
         <table class="table">
