@@ -154,6 +154,14 @@
 </article>
 
 <!-- Examples -->
+<article class="section-scroll" id="full">
+    <h2 class="b-b-light hash">Full screen</h2>
+    <p class="secondary-lead">You can make an element span all of the viewport horiziontally or vertically by using the <code class="inline">full-width</code> and <code class="inline">full-height</code> classes.</p>
+    <pre class="highlight"><code class="html">&lt;div class=&quot;full-width&quot;&gt;&lt;/div&gt;    
+&lt;div class=&quot;full-height&quot;&gt;&lt;/div&gt;</code><img class="copy-to-clipboard"src="/assets/icons/copy.svg" alt="Copy icon"><img class="copy-tick"src="/assets/icons/checked.svg" alt="Success icon"></pre>
+</article>
+
+<!-- Examples -->
 <article class="section-scroll" id="examples">
     <h2 class="b-b-light hash">Examples</h2>
     <h3 class="mt-3">Responsive width:</h3>
@@ -189,8 +197,7 @@
             </div>
         </div>
     </div>
-    <pre
-        class="highlight"><code class="html">&lt;div class="w-100 h-60 h-desk-40"&gt;w-100 h-60 h-desk-40&lt;/div&gt;
+    <pre class="highlight"><code class="html">&lt;div class="w-100 h-60 h-desk-40"&gt;w-100 h-60 h-desk-40&lt;/div&gt;
 &lt;div class="w-100 h-40 h-desk-60"&gt;w-100 h-40 h-desk-60&lt;/div&gt;</code><img class="copy-to-clipboard"src="/assets/icons/copy.svg" alt="Copy icon"><img class="copy-tick"src="/assets/icons/checked.svg" alt="Success icon"></pre>
 </article>
 

@@ -4370,6 +4370,14 @@ ul {
     height: 100% !important;
   }
 }
+.full-width {
+  width: 100vw !important;
+}
+
+.full-height {
+  height: 100vh !important;
+}
+
 .c-white {
   color: #ffffff !important;
 }
@@ -6253,68 +6261,6 @@ label.close {
   }
 }
 
-.msh-header {
-  position: relative;
-  top: 0;
-  left: 0;
-  min-height: 3rem;
-  z-index: 90;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 1rem;
-  background-color: #ffffff;
-  box-shadow: 0 0 3px -2px;
-}
-
-.msh-header-relative {
-  position: fixed;
-}
-
-.msh-header-fixed {
-  position: fixed;
-}
-
-.msh-header-sticky {
-  position: fixed;
-}
-
-.msh-header-brand {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 0 0 1rem;
-  text-decoration: none;
-  font-size: 125%;
-}
-.msh-header-brand:hover, .msh-header-brand:active {
-  opacity: 0.7;
-}
-
-.msh-header-title {
-  text-decoration: none;
-}
-
-.brand-logo {
-  cursor: pointer;
-  width: 45px;
-}
-.brand-logo:hover {
-  opacity: 0.8;
-}
-
-#nav1 {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-#nav2 {
-  position: relative;
-  top: 10rem;
-  left: 0;
-}
-
 .list {
   padding: 0;
   list-style-type: none;
@@ -6461,25 +6407,6 @@ label.close {
   margin: auto;
 }
 
-.navbar {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: space-between;
-  padding: 1.2em;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-  min-height: 70px;
-}
-@media (min-width: 1024px) {
-  .navbar {
-    flex-wrap: nowrap;
-    padding: 10px 15px;
-    padding: 1.2em 1.5em;
-  }
-}
-
 .nav-menu {
   width: 100%;
   max-height: 0;
@@ -6514,11 +6441,12 @@ label.close {
   font-size: 14px;
   cursor: pointer;
 }
-.nav-item > a, .nav-item > span {
+.nav-item a,
+.nav-item span {
   color: #999;
 }
 .nav-item .active {
-  color: #ff2451;
+  color: rgba(0, 0, 0, 0.9);
 }
 @media (min-width: 1024px) {
   .nav-item {
@@ -6526,10 +6454,7 @@ label.close {
     margin-top: 0;
   }
   .nav-item:hover:not(.active) > a, .nav-item:hover:not(.active) > span {
-    color: #222;
-  }
-  .nav-item:hover:not(.active) .active {
-    color: #ff2451;
+    color: rgba(0, 0, 0, 0.9);
   }
 }
 
@@ -6628,6 +6553,72 @@ label.close {
 @media (min-width: 1024px) {
   .nav-btn {
     display: none;
+  }
+}
+
+.navbar {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  padding: 1.2em;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  min-height: 70px;
+  background-color: #ebeaea;
+}
+.navbar-dark .navbar-brand {
+  color: #fff;
+}
+.navbar-dark .nav-item a,
+.navbar-dark .nav-item span {
+  color: rgba(255, 255, 255, 0.5);
+}
+.navbar-dark .nav-item .active {
+  color: #fff;
+}
+.navbar-dark .nav-item:hover:not(.active) > a, .navbar-dark .nav-item:hover:not(.active) > span {
+  color: #fff;
+}
+.navbar-brand {
+  font-size: 1.3rem;
+  margin: 0;
+}
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 1024px) {
+  .navbar {
+    flex-wrap: nowrap;
+    padding: 1.2em 1.5em;
+  }
+  .navbar-left {
+    order: -1;
+  }
+  .navbar-right {
+    order: 99999;
+  }
+}
+.navbar-tabs {
+  padding: 0;
+}
+.navbar-tabs .navbar-brand,
+.navbar-tabs .nav-btn {
+  padding: 1.2em;
+  margin: 0;
+}
+@media (min-width: 1024px) {
+  .navbar-tabs {
+    flex-wrap: wrap;
+  }
+  .navbar-tabs .navbar-brand,
+.navbar-tabs .nav-btn {
+    padding: 1.2em 1.5em;
   }
 }
 
@@ -6762,7 +6753,7 @@ label.close {
   height: 48px;
   padding: 0 16px;
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 1;
   min-width: 60px;
   text-align: center;
   display: inline-flex;
@@ -6789,10 +6780,19 @@ label.close {
   bottom: 0;
   left: 0;
   display: block;
-  height: 2px;
+  height: 3px;
   width: 100%;
   background-color: #ff2451;
   opacity: 0;
+}
+.tabs-dark .tabs-label {
+  color: rgba(255, 255, 255, 0.5);
+}
+.tabs-dark .tabs-label:after {
+  background-color: #fff;
+}
+.tabs-dark .tabs-toggle:checked + .tabs-label {
+  color: #fff;
 }
 .tabs-animate .tabs-label:after {
   transform: scaleX(0);

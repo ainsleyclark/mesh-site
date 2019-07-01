@@ -27,7 +27,7 @@
         <br>mesh tabs automatically stack when the viewport is smaller than the tab container.
         <br>Checkout the example below.
     </p>
-    <div class="tabs tabs-animate my-4">
+    <div class="tabs tabs-animate tabs-active-white my-4">
         <input type="radio" class="tabs-toggle" name="tabs" id="tab-1" checked="checked">
         <label class="tabs-label" for="tab-1">First Tab</label>
         <input type="radio" class="tabs-toggle" name="tabs" id="tab-2" >
@@ -322,11 +322,6 @@
                         <td><pre class="variables highlight"><code class="scss">$tabs-border-color: 1px solid rgba(0, 0, 0, 0.12);</code></pre></td>
                         <td>Color</td>
                         <td>The color of the border above the panel items.</td>
-                    </tr>
-                    <tr>
-                        <td><pre class="variables highlight"><code class="scss">$tabs-label-opacity: 0.7;</code></pre></td>
-                        <td>Number (0 - 1)</td>
-                        <td>Opacity of label text.</td>
                     </tr>
                     <tr>
                         <td><pre class="variables highlight"><code class="scss">$tabs-font-size: 14px;</code></pre></td>

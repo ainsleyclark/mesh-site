@@ -106,6 +106,7 @@ class UtilityController extends Controller
             'activePage' => 'sizing',
             'pageContents' => [
                 'usage' => 'Usage',
+                'full' => 'Full screen',
                 'examples' => 'Examples',
                 'variations' => 'Variations',
                 'variables' => 'Variables',

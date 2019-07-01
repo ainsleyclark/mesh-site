@@ -78,7 +78,7 @@ class BuilderController extends Controller
 
         } catch (Exception $e) {
 
-            //! LEARN HOW TO DEAL WITH EXCEPTIONS
+            //! Throw Error
 
         }
     }
