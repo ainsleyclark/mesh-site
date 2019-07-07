@@ -31,31 +31,6 @@
         <br>Of course if you prefer to use vanilla JS for modals, there is a simple script you can you use at the bottom
         of this page.
     </p>
-    <div class="text-cont">
-        <h3>Notation:</h3>
-        <p class="secondary-lead"></p>
-        <ul class="list-line">
-            <li>There needs to be an action button & checkbox that links to the modal in order for it to appear.</li>
-            <li>To achieve this, add a <code class="inline">&lt;label&gt;</code> element with a <code
-                    class="inline">for</code> attribute. Then create a checkbox with the class <code
-                    class="inline">modal-toggle</code> and set the ID the same as the <code class="inline">for</code>
-                attribute of the label.</li>
-            <li>If you wish to add multiple close buttons, just simply add more labels with the <code
-                    class="inline">for</code> attribute set equal to the ID of the checkbox.</li>
-            <li>The modal comprises of a <code class="inline">modal-container</code> to wrap the modal content, a
-                <code class="inline">modal-header</code> for the title & close button, the <code
-                    class="inline">modal-body</code> for the main content & the <code class="inline">modal-footer</code>
-                for action buttons.</li>
-            <li>The <code class="inline">modal-overlay</code> is entirely optional, if you wish to disable the close
-                functionality, simply change the <code class="inline">&lt;label&gt;</code> to a <code
-                    class="inline">&lt;div&gt;</code></li>
-        </ul>
-    </div>
-    <div class="text-cont">
-        <h3>Example:</h3>
-        <p class="secondary-lead">Click the modal button! The id's have been highlighted to see where you need to change
-            them.</p>
-    </div>
     <div class="modal-cont">
         <label for="exampleModal" class="btn btn-secondary c-white">Click Me</label>
         <input type="checkbox" class="modal-toggle" id="exampleModal">
@@ -84,8 +59,27 @@
             <label for="exampleModal" class="modal-overlay"></label>
         </div>
     </div>
-    <pre
-        class="highlight"><code class="html">&lt;label for=&quot;<strong>exampleModal</strong>&quot; class=&quot;btn btn-secondary c-white&quot;&gt;Centered&lt;/label&gt;
+    <div class="text-cont">
+        <h3>Notation:</h3>
+        <p class="secondary-lead"></p>
+        <ul class="list-line">
+            <li>There needs to be an action button & checkbox that links to the modal in order for it to appear.</li>
+            <li>To achieve this, add a <code class="inline">&lt;label&gt;</code> element with a <code
+                    class="inline">for</code> attribute. Then create a checkbox with the class <code
+                    class="inline">modal-toggle</code> and set the ID the same as the <code class="inline">for</code>
+                attribute of the label.</li>
+            <li>If you wish to add multiple close buttons, just simply add more labels with the <code
+                    class="inline">for</code> attribute set equal to the ID of the checkbox.</li>
+            <li>The modal comprises of a <code class="inline">modal-container</code> to wrap the modal content, a
+                <code class="inline">modal-header</code> for the title & close button, the <code
+                    class="inline">modal-body</code> for the main content & the <code class="inline">modal-footer</code>
+                for action buttons.</li>
+            <li>The <code class="inline">modal-overlay</code> is entirely optional, if you wish to disable the close
+                functionality, simply change the <code class="inline">&lt;label&gt;</code> to a <code
+                    class="inline">&lt;div&gt;</code></li>
+        </ul>
+    </div>
+    <pre class="highlight"><code class="html">&lt;label for=&quot;<strong>exampleModal</strong>&quot; class=&quot;btn btn-secondary c-white&quot;&gt;Centered&lt;/label&gt;
 &lt;input type=&quot;checkbox&quot; class=&quot;modal-toggle&quot; id=&quot;<strong>exampleModal</strong>&quot;&gt;
 
 &lt;div class=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;

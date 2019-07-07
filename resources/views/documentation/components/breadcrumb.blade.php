@@ -26,28 +26,20 @@
         Breadcrumbs are a secondary navigation screen which allows users to see clearly where they are in the website
         heirarchy.
     </p>
-    <div class="text-cont">
-        <h3>Notation:</h3>
-        <ul class="list-line">
-            <li>In order to use breadcrumbs with mesh you need to wrap the parent with a <code
-                    class="inline">breadcrumb</code> class, and child (breadcrumb items) to have the <code
-                    class="inline">breadcrumbs-item</code> class.</li>
-            <li>Be sure to add the <code class="inline">active</code> class to the page where the user currently is.
-                This will give the link a color of <code class="inline">rgba(0, 0, 0, 0.5);</code></li>
-            <li><strong>Note:</strong> It is recommended you use the <code class="inline">&lt;/ul&gt;</code> and <code
-                    class="inline">&lt;/li&gt;</code> semantic tags with breadcrumbs.</li>
-        </ul>
-    </div>
-    <div class="text-cont">
-        <h3>Example:</h3>
-        <p>The default breadcrumb class uses forward slashes as it's separator. You can attach colors to the breadcrumb
-            container by using our <a href="/documentation/utility/colors.php">color utility classes</a>.</p>
-    </div>
     <ul class="breadcrumb bg-light c-primary">
         <li class="breadcrumb-item"><a href="#">Nav item</a></li>
         <li class="breadcrumb-item"><a href="#">Nav item</a></li>
         <li class="breadcrumb-item active"><a href="#">Active nav item</a></li>
     </ul>
+    <div class="text-cont">
+        <h3>Notation:</h3>
+        <ul class="list-line">
+            <li>In order to use breadcrumbs with mesh you need to wrap the parent with a <code class="inline">breadcrumb</code> class, and child (breadcrumb items) to have the <code class="inline">breadcrumbs-item</code> class.</li>
+            <li>Be sure to add the <code class="inline">active</code> class to the page where the user currently is. This will give the link a color of <code class="inline">rgba(0, 0, 0, 0.5);</code></li>
+            <li>The default breadcrumb class uses forward slashes as it's separator. You can attach colors to the breadcrumb container by using our <a href="/documentation/utility/colors.php">color utility classes</a>.</li>
+            <li><strong>Note:</strong> It is recommended you use the <code class="inline">&lt;/ul&gt;</code> and <code class="inline">&lt;/li&gt;</code> semantic tags with breadcrumbs.</li>
+        </ul>
+    </div>
     <pre
         class="highlight"><code class="html">&lt;ul class="breadcrumb bg-light c-primary"&gt;
     &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;Nav item&lt;/a&gt;&lt;/li&gt;

@@ -31,6 +31,17 @@
         well versed fashion. The parent of the content must have the <code class="inline">card</code> class attached to
         give access to the properties outlined below.
     </p>
+    <!-- Basic Card -->
+    <div class="card-cont">
+        <div class="card">
+            <div class="card-content">
+                <h3 class="normal-headings card-title">Basic card</h3>
+                <h5 class="normal-headings card-subtitle">Card subtitle</h5>
+                <p class="card-text">I am a basic card with a header, subtitle & content. You can use me to display
+                    basic content.</p>
+            </div>
+        </div>
+    </div>
     <div class="text-cont">
         <h3>Notation:</h3>
         <ul class="list-line">
@@ -44,17 +55,6 @@
     </div>
     <p class="mb-3"><strong>Note:</strong> You can have <strong>any combination</strong> of the classes listed below.
     </p>
-    <!-- Basic Card -->
-    <div class="card-cont">
-        <div class="card">
-            <div class="card-content">
-                <h3 class="normal-headings card-title">Basic card</h3>
-                <h5 class="normal-headings card-subtitle">Card subtitle</h5>
-                <p class="card-text">I am a basic card with a header, subtitle & content. You can use me to display
-                    basic content.</p>
-            </div>
-        </div>
-    </div>
     <pre
         class="highlight"><code class="html">&lt;div class=&quot;card&quot;&gt;
     &lt;div class=&quot;card-content&quot;&gt;
