@@ -76,7 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //Toast
     if(main == 'page-toast') {
-//
+        
+        //Main toast function
         function meshToast(text, opts = {}) {
 
             const defaults = {
@@ -103,15 +104,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        //Make toast button
-        document.querySelector('#makeToast').addEventListener('click', function() {
+        //Toast demos
+        document.querySelector('.toast-btn').addEventListener('click', function() {
+            alert('in');
             meshToast('Mmmmmmmmmmmm Toast', { displayTime: '5s' });
         });
-        
-        //Demos
-        //meshToast('Mmmmmmmmmmmm Toast', { displayTime: '5s' });
-        //meshToast('<span>Message sent</span><i class="fab fa-telegram-plane ml-4 fa-lg"></i>', { displayTime: '5s', color: "bg-secondary" });
-
     }
 
     //Collapse

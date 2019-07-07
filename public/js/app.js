@@ -104,7 +104,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/lib/loader.js):\n\n\t\tmargin: 0 auto 10px auto;\r\n                         ^\n      Expected \"{\".\n   ╷\n31 │         margin: 0 auto 10px auto;\r\n   │                                 ^\n   ╵\n  mesh-src/src/components/_toast.scss 31:27  root stylesheet\n  stdin 63:9                                 root stylesheet\n      in /Users/Ainsley/Desktop/Web/mesh-site/mesh-src/src/components/_toast.scss (line 31, column 27)\n    at runLoaders (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/webpack/lib/NormalModule.js:302:20)\n    at /Users/Ainsley/Desktop/Web/mesh-site/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /Users/Ainsley/Desktop/Web/mesh-site/node_modules/loader-runner/lib/LoaderRunner.js:233:18\n    at context.callback (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at render (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass-loader/lib/loader.js:52:13)\n    at Function.$2 (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:24443:48)\n    at wP.$2 (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:15367:15)\n    at uU.vt (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:9079:42)\n    at uU.vs (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:9081:32)\n    at iB.uF (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:8429:46)\n    at us.$0 (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:8571:7)\n    at Object.eH (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:1512:80)\n    at ad.ba (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:8492:3)\n    at iO.ba (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:8422:25)\n    at iO.cv (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:8409:6)\n    at py.cv (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:8199:35)\n    at Object.m (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:1383:19)\n    at /Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:5078:51\n    at xf.a (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:1394:71)\n    at xf.$2 (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:8214:23)\n    at vS.$2 (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:8209:25)\n    at uU.vt (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:9079:42)\n    at uU.vs (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:9081:32)\n    at iB.uF (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:8429:46)\n    at us.$0 (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:8571:7)\n    at Object.eH (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:1512:80)\n    at ad.ba (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:8492:3)\n    at iO.ba (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:8422:25)\n    at iO.cv (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:8409:6)\n    at Object.eval (eval at CM (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:648:15), <anonymous>:3:37)\n    at uU.vt (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:9079:42)\n    at uU.vs (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:9081:32)\n    at iB.uF (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:8429:46)\n    at us.$0 (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:8571:7)\n    at Object.eH (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:1512:80)\n    at ad.ba (/Users/Ainsley/Desktop/Web/mesh-site/node_modules/sass/sass.dart.js:8492:3)");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -340,7 +340,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   if (main == 'page-toast') {
-    //
+    //Main toast function
     var meshToast = function meshToast(text) {
       var opts = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
       var defaults = {
@@ -362,16 +362,15 @@ document.addEventListener('DOMContentLoaded', function () {
       if (options.displayTime) {
         toastBody.style.animationDuration = options.displayTime;
       }
-    }; //Make toast button
+    }; //Toast demos
 
 
-    document.querySelector('#makeToast').addEventListener('click', function () {
+    document.querySelector('.toast-btn').addEventListener('click', function () {
+      alert('in');
       meshToast('Mmmmmmmmmmmm Toast', {
         displayTime: '5s'
       });
-    }); //Demos
-    //meshToast('Mmmmmmmmmmmm Toast', { displayTime: '5s' });
-    //meshToast('<span>Message sent</span><i class="fab fa-telegram-plane ml-4 fa-lg"></i>', { displayTime: '5s', color: "bg-secondary" });
+    });
   } //Collapse
 
 
