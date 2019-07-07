@@ -7011,7 +7011,6 @@ label.close {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  z-index: 100;
   font-weight: 300;
   line-height: 1.6;
   z-index: 9999;
