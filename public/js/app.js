@@ -344,10 +344,25 @@ document.addEventListener('DOMContentLoaded', function () {
     var meshToast = function meshToast(text) {
       var opts = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
       var defaults = {
-        classes: "bg-primary"
+        classes: "bg-primary",
+        container: document.getElementsByClassName("toast")[0]
       };
       var options = Object.assign(defaults, opts);
-      var toastContainer = document.getElementsByClassName("toast")[0];
+
+      if (!document.querySelector('.toast')) {
+        var toast = document.createElement('div');
+        toast.setAttribute('class', "toast");
+        console.log(toast);
+        document.body.appendChild(toast);
+      } // if (document.querySelector(opts.container) == null) {
+      //     options.container = document.getElementsByClassName("toast")[0];
+      //     console.log('mesh Toast container not found!');
+      // } else if (opts.container != undefined) {
+      //     options.container = document.querySelector(opts.container);
+      // }
+
+
+      var toastContainer = options.container;
       var toastBody = document.createElement("div");
       var toastText = document.createElement("span");
       toastBody.setAttribute('class', "toast-body " + options.classes);
@@ -362,15 +377,18 @@ document.addEventListener('DOMContentLoaded', function () {
       if (options.displayTime) {
         toastBody.style.animationDuration = options.displayTime;
       }
-    }; //Toast demos
+    };
 
+    meshToast('Mmmmmmmmmmmm Toast', {
+      displayTime: '5s' //container: '.oast-top-right'
 
-    document.querySelector('.toast-btn').addEventListener('click', function () {
-      alert('in');
-      meshToast('Mmmmmmmmmmmm Toast', {
-        displayTime: '5s'
-      });
-    });
+    }); //Toast demos
+    // document.querySelector('.toast-btn').addEventListener('click', function() {
+    //     meshToast('Mmmmmmmmmmmm Toast', { 
+    //         displayTime: '5s',
+    //         // container: 
+    //     });
+    // });
   } //Collapse
 
 

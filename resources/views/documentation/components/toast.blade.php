@@ -18,7 +18,7 @@
 <!-- =====================
     Docs Section - Main HTML
     ===================== -->
-
+{{-- 
 <!-- Usage -->
 <article class="section-scroll" id="usage">
     <h2 class="b-b-light hash">Usage</h2>
@@ -100,12 +100,12 @@
 </article>
 
 <!-- Javascript -->
-<article class="section-scroll" id="icon">
+<article class="section-scroll" id="javascript">
     <h2 class="b-b-light hash">Javascript</h2>
     <p class="secondary-lead">
         Copy & paste our toast script below to achieve the toast effect. The toast object accepts two objects:  
     </p>
-    <div class="text-cont my03">
+    <div class="text-cont my-3">
         <ul class="list-line">
             <li>The first being any HTML markup you want to display within the toast. Handy for icons & </li>
             <li>The second being an object which has a display time property (passed in with seconds) and a classes property, allowing you to pass in any classes you want to append to to the <code class="inline">toast-body</code> element.</li>
@@ -184,6 +184,6 @@ meshToast('mesh toast', { displayTime: '5s', classes: 'bg-secondary' });</code><
                 </tbody>
             </table>
         </div>
-</article>
+</article> --}}
 
 @endsection

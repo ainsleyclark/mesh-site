@@ -81,11 +81,27 @@ document.addEventListener('DOMContentLoaded', () => {
         function meshToast(text, opts = {}) {
 
             const defaults = {
-                classes: "bg-primary"
+                classes: "bg-primary",
+                container: document.getElementsByClassName("toast")[0]
             };
-        
+            
             const options = Object.assign(defaults, opts);
-            const toastContainer = document.getElementsByClassName("toast")[0];
+
+            if (!document.querySelector('.toast')) {
+                const toast = document.createElement('div');
+                toast.setAttribute('class', "toast");
+                console.log(toast)
+                document.body.appendChild(toast);
+            }
+
+            // if (document.querySelector(opts.container) == null) {
+            //     options.container = document.getElementsByClassName("toast")[0];
+            //     console.log('mesh Toast container not found!');
+            // } else if (opts.container != undefined) {
+            //     options.container = document.querySelector(opts.container);
+            // }
+        
+            const toastContainer = options.container;
             const toastBody = document.createElement("div");
             const toastText = document.createElement("span");
         
@@ -104,11 +120,18 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        //Toast demos
-        document.querySelector('.toast-btn').addEventListener('click', function() {
-            alert('in');
-            meshToast('Mmmmmmmmmmmm Toast', { displayTime: '5s' });
+        meshToast('Mmmmmmmmmmmm Toast', { 
+            displayTime: '5s',
+            //container: '.oast-top-right'
         });
+
+        //Toast demos
+        // document.querySelector('.toast-btn').addEventListener('click', function() {
+        //     meshToast('Mmmmmmmmmmmm Toast', { 
+        //         displayTime: '5s',
+        //         // container: 
+        //     });
+        // });
     }
 
     //Collapse

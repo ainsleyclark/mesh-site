@@ -302,6 +302,9 @@ class ComponentController extends Controller
             'activePage' => 'toast',
             'pageContents' => [
                 'usage' => 'Usage',
+                'position' => 'Position',
+                'icon' => 'Icon',
+                'javascript' => 'Javascript',
                 'variables' => 'Variables',
             ]
         ]);
