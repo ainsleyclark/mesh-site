@@ -23,14 +23,16 @@
     <meta name="twitter:title" content="{{$pageTitle}}">
     <meta name="twitter:image" content="{{$ogImage}}">
     <!-- CSS -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    {{-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet"> --}}
     <!-- //! Consider using one style sheet here for font awesome -->
     {{-- <link rel="stylesheet" href="{{asset('css/vendor/fontawesome/css/all.min.css')}}">
     <link rel="stylesheet"  type="text/css" href="{{asset('css/mesh.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}"> --}}
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" onload="this.rel='stylesheet'" as="style">
     <link rel="preload" href="{{asset('css/vendor/fontawesome/css/all.min.css')}}" onload="this.rel='stylesheet'" as="style">
     <link rel="preload" href="{{asset('css/mesh.css')}}" onload="this.rel='stylesheet'" as="style">
     <link rel="preload" href="{{asset('css/app.css')}}" onload="this.rel='stylesheet'" as="style">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap"></noscript>
     <noscript><link rel="stylesheet" href="{{asset('css/vendor/fontawesome/css/all.min.css')}}"></noscript>
     <noscript><link rel="stylesheet" href="{{asset('css/mesh.css')}}"></noscript>
     <noscript><link rel="stylesheet" href="{{asset('css/app.css')}}"></noscript>
