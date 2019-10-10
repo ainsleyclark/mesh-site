@@ -111,7 +111,7 @@ h1 {
             <div class="col-10 col-desk-6 col-hd-7">
                 <div class="img-cont">
                     <picture>
-                        <source media="(min-width: 650px)" srcset="assets/img/mesh-illustration-mob-min.png">
+                        <source media="(max-width: 768px)" class="home-illustration img-responsive" srcset="assets/img/mesh-illustration-mob-min.png">
                         <img class="home-illustration img-responsive" src="assets/img/mesh-illustration-desk-min.png">
                     </picture>
                 </div>
