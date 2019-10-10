@@ -8,6 +8,7 @@
     <meta name="description" content="{{$pageDescription}}">
     <link rel="canonical" href="{{$siteURL}}" />
     <meta name="csrf" content="{{csrf_token()}}" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Open Graph -->
     <meta property="og:locale" content="en_GB">
     <meta property="og:type" content="website">
@@ -22,12 +23,15 @@
     <meta name="twitter:title" content="{{$pageTitle}}">
     <meta name="twitter:image" content="{{$ogImage}}">
     <!-- CSS -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
     <!-- //! Consider using one style sheet here for font awesome -->
     <link rel="stylesheet" href="{{asset('css/vendor/fontawesome/css/all.min.css')}}">
-    <link rel="stylesheet"  type="text/css" href="{{asset('css/mesh.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
+    {{-- <link rel="stylesheet"  type="text/css" href="{{asset('css/mesh.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}"> --}}
+    <link rel="preload" href="{{asset('css/mesh.css')}}" onload="this.rel='stylesheet'" as="style">
+    <link rel="preload" href="{{asset('css/app.css')}}" onload="this.rel='stylesheet'" as="style">
+    <noscript><link rel="stylesheet" href="{{asset('css/mesh.css')}}"></noscript>
+    <noscript><link rel="stylesheet" href="{{asset('css/app.css')}}"></noscript>
     @stack('styles')
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
