@@ -18,12 +18,11 @@
 <!-- =====================
     Docs Section - Main HTML
     ===================== -->
-{{-- 
 <!-- Usage -->
 <article class="section-scroll" id="usage">
     <h2 class="b-b-light hash">Usage</h2>
     <p class="secondary-lead">
-        Toasts are great for showing meaningful content easily and provide breif messages about proccesses of the app the user is working with.
+        Toasts are great for showing meaningful content easily and provide brief messages about processes of the app the user is working with.
         <br>As they only appear temporarily, <strong>they can't be done with CSS alone</strong>. Which is why we have provided a stupidly simple script to help you at the bottom of the page.
         <br>Checkout the demo below.
     </p>
@@ -95,7 +94,7 @@
         <div class="toast toast-bottom-right" data-toast="toastBottomRight"></div>
     </div>
     <pre class="highlight mb-5"><code class="html">
-        
+
     </code><img class="copy-to-clipboard"src="/assets/icons/copy.svg" alt="Copy icon"><img class="copy-tick"src="/assets/icons/checked.svg" alt="Success icon"></pre>
 </article>
 
@@ -103,7 +102,7 @@
 <article class="section-scroll" id="javascript">
     <h2 class="b-b-light hash">Javascript</h2>
     <p class="secondary-lead">
-        Copy & paste our toast script below to achieve the toast effect. The toast object accepts two objects:  
+        Copy & paste our toast script below to achieve the toast effect. The toast object accepts two objects:
     </p>
     <div class="text-cont my-3">
         <ul class="list-line">
@@ -121,28 +120,28 @@ meshToast('mesh toast', { displayTime: '5s', classes: 'bg-secondary' });</code><
         const defaults = {
             classes: "bg-primary"
         };
-    
+
         const options = Object.assign(defaults, opts);
         const toastContainer = document.getElementsByClassName("toast")[0];
         const toastBody = document.createElement("div");
         const toastText = document.createElement("span");
-    
+
         toastBody.setAttribute('class', "toast-body " + options.classes);
         toastText.innerHTML = text;
         toastBody.appendChild(toastText);
         toastContainer.appendChild(toastBody);
-    
+
         toastBody.addEventListener("animationend", e => {
             toastBody.remove(1);
         });
-    
+
         toastBody.classList.add("toast-show");
         if (options.displayTime) {
             toastBody.style.animationDuration = options.displayTime;
         }
     }</code><img class="copy-to-clipboard"src="/assets/icons/copy.svg" alt="Copy icon"><img class="copy-tick"src="/assets/icons/checked.svg" alt="Success icon"></pre>
 </article>
-    
+
 
 
 <!-- Variables -->
@@ -184,6 +183,6 @@ meshToast('mesh toast', { displayTime: '5s', classes: 'bg-secondary' });</code><
                 </tbody>
             </table>
         </div>
-</article> --}}
+</article>
 
 @endsection

@@ -93,13 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log(toast)
                 document.body.appendChild(toast);
             }
-
-            // if (document.querySelector(opts.container) == null) {
-            //     options.container = document.getElementsByClassName("toast")[0];
-            //     console.log('mesh Toast container not found!');
-            // } else if (opts.container != undefined) {
-            //     options.container = document.querySelector(opts.container);
-            // }
         
             const toastContainer = options.container;
             const toastBody = document.createElement("div");
@@ -120,18 +113,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        meshToast('Mmmmmmmmmmmm Toast', { 
-            displayTime: '5s',
-            //container: '.oast-top-right'
-        });
 
         //Toast demos
-        // document.querySelector('.toast-btn').addEventListener('click', function() {
-        //     meshToast('Mmmmmmmmmmmm Toast', { 
-        //         displayTime: '5s',
-        //         // container: 
-        //     });
-        // });
+        document.querySelector('#makeToast').addEventListener('click', function() {
+            meshToast('Mmmmmmmmmmmm Toast', {
+                displayTime: '5s',
+                // container:
+            });
+        });
     }
 
     //Collapse
