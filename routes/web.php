@@ -38,6 +38,7 @@ Route::get('/builder/download/{id}', 'DownloadZipController@index');
 
 Route::get('/documentation/getting-started/introduction', 'Docs\GettingStartedController@introduction' );
 Route::get('/documentation/getting-started/installation', 'Docs\GettingStartedController@installation' );
+Route::get('/documentation/thanks', 'Docs\GettingStartedController@thanks');
 Route::get('/documentation/getting-started/javascript', 'Docs\GettingStartedController@javascript' );
 Route::get('/documentation/getting-started/notation', 'Docs\GettingStartedController@notation' );
 

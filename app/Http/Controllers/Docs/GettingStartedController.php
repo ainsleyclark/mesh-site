@@ -46,6 +46,23 @@ class GettingStartedController extends Controller
         return view('documentation.gettingstarted.installation',  $this->pageData);
     }
 
+    public function thanks() {
+
+        $this->pageData = array_merge($this->pageData, [
+            'pageTitle' => 'Installation',
+            'pageDescription' => 'thanks',
+            'activePage' => 'thanks',
+            'pageContents' => [
+                'cdn' => 'mesh CDN',
+                'css' => 'Source Files (CSS)',
+                'sass' => 'Source Files (SCSS)',
+                'npm' => 'npm',
+            ]
+        ]);
+
+        return view('documentation.thanks',  $this->pageData);
+    }
+
     public function builder() { 
 
         $this->pageData = array_merge($this->pageData, [

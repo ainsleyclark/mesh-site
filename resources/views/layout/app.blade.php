@@ -2,7 +2,6 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
-    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{{($activePage == 'home') ? ("meshCSS | " . $pageDescription) : ($pageTitle . ' | meshCSS')}}</title>
     <meta name="description" content="{{$pageDescription}}">
@@ -29,7 +28,8 @@
     <link rel="stylesheet"  type="text/css" href="{{asset('css/mesh.css')}}"> --}}
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" onload="this.rel='stylesheet'" as="style">
     <link rel="preload" href="{{asset('css/vendor/fontawesome/css/all.min.css')}}" onload="this.rel='stylesheet'" as="style">
-    <link rel="preload" href="{{asset('css/mesh.css')}}" onload="this.rel='stylesheet'" as="style">
+
+    <link rel="prefetch" href="{{asset('css/mesh.css')}}" onload="this.rel='stylesheet'" as="style">
     {{-- <link rel="preload" href="{{asset('css/app.css')}}" onload="this.rel='stylesheet'" as="style"> --}}
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap"></noscript>
     <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}"> 

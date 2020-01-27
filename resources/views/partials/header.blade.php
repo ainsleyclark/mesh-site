@@ -21,7 +21,7 @@
                     <ul class="d-flex align-items-center my-0 t-uppercase">
                         <a class="hover" href="/documentation/getting-started/introduction"><li class="mx-3">Documentation</li></a>
                         <a class="hover" href="https://github.com/ainsleyclark/mesh" target="_blank"><li class="mx-3">Github</li></a>
-                        <a class="ml-3" href="/documentation/getting-started/introduction">
+                        <a class="ml-3" href="/documentation/thanks">
                             <button class="btn btn-rounded btn-outline btn-primary btn-icon download">Download
                             <svg class="ml-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 471.2 471.2" style="enable-background:new 0 0 471.2 471.2;" xml:space="preserve">
                                 <g>
