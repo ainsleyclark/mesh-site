@@ -32,8 +32,6 @@
     <div class="text-cont">
         <h3>Notation:</h3>
         <ul class="list-line">
-
-
             <li>You can target the breakpoint class by using <code class="inline">{property}-{breakpoint}-{size}</code>.
             </li>
             <li>The optional breakpoint being one of our five breakpoints, outlined below.</li>

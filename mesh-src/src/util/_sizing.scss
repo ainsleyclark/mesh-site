@@ -13,6 +13,10 @@
 					#{$property}: #{$value} !important;
 				}
 			}
+			//Auto classes
+			.#{$abbrev}#{$modifier}-auto {
+				#{$property}: auto !important;
+			}
 		}
 	}
 }
